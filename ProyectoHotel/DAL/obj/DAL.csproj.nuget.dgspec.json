@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\DAL\\DAL.csproj": {}
+    "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\DAL\\DAL.csproj": {
+    "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\DAL\\DAL.csproj",
+        "projectPath": "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\marit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\DAL\\obj\\",
+        "outputPath": "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

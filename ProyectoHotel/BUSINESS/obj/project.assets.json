@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\BUSINESS\\BUSINESS.csproj",
+      "projectUniqueName": "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\BUSINESS\\BUSINESS.csproj",
       "projectName": "BUSINESS",
-      "projectPath": "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\BUSINESS\\BUSINESS.csproj",
+      "projectPath": "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\BUSINESS\\BUSINESS.csproj",
       "packagesPath": "C:\\Users\\marit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marit\\source\\repos\\ProyectoHotel\\BUSINESS\\obj\\",
+      "outputPath": "D:\\Escritorio\\Repositorios GitHub\\PROGRAMACION-II_TBD_2022\\ProyectoHotel\\BUSINESS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

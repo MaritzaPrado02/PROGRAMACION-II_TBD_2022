@@ -125,13 +125,11 @@ namespace UI
             subMenuClientes.Visible = false;
             subMenuEmpleados.Visible = false;
             subMenuEstacionamiento.Visible = false;
+            subMenuReportes.Visible = false;
         }
         #endregion
 
         #region Mostrar submenús
-
-        #endregion
-
         private void btnHabitaciones_Click(object sender, EventArgs e)
         {
             mostrarSubMenu(subMenuHabitaciones);
@@ -166,5 +164,19 @@ namespace UI
         {
             mostrarSubMenu(subMenuEstacionamiento);
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            mostrarSubMenu(subMenuReportes);
+        }
+        #endregion
+
+        private void btnRegistrarReservacion_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmReservaciones());
+            ocultarSubmenu();
+        }
+
+       
     }
 }

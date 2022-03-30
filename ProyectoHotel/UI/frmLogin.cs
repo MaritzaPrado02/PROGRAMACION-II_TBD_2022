@@ -85,9 +85,20 @@ namespace UI
         #region Programacion botones
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            #region Validacion campos vacios
             frmMenuPrincipal panPrincipal = new frmMenuPrincipal();
-            panPrincipal.Show();
-            this.Hide();
+            //Validacion campos nulos
+            if (txtPass.Text == "" || txtUser.Text == "" || txtPass.Text == "Ingrese contraseña" || txtUser.Text == "Ingrese nombre de usuario")
+            {
+                MessageBox.Show("Los campos no deben de estar vacios", "Error Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //Mostrar pantalla principal (se agrega la sentencia SQL para ver si existen el usuario)
+            else
+            {
+                panPrincipal.Show();
+                this.Hide();
+            }
+            #endregion
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
@@ -102,6 +113,21 @@ namespace UI
         {
             recuperar.Show();
             this.Hide();
+        }
+
+
+        private void pcbBloquer_Click(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = false;
+            pcbDesbloquear.Visible = true;
+            pcbBloquear.Visible = false;
+        }
+
+        private void pcbDesbloquear_Click(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = true;
+            pcbDesbloquear.Visible = false;
+            pcbBloquear.Visible = true;
         }
     }
 }

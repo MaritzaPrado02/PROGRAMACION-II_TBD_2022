@@ -14,3 +14,21 @@ C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmRegistro.resources
 C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmCambiarContrasena.resources
 C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmRecuperarContrasena.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\UI.exe.config
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\UI.exe
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\UI.pdb
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\AltoControls.dll
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.csprojAssemblyReference.cache
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmCambiarContrasena.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmLogin.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmMenuPrincipal.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmRecuperarContrasena.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmRegistro.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmReservaciones.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.Properties.Resources.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.csproj.GenerateResource.cache
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.csproj.CopyComplete
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.exe
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.pdb
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmBuscarCliente.resources

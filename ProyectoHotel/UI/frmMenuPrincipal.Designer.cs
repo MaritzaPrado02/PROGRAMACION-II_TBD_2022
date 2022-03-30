@@ -45,7 +45,6 @@ namespace UI
             this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
             this.pnlEmpleados = new System.Windows.Forms.Panel();
             this.subMenuFacturas = new System.Windows.Forms.Panel();
-            this.btnConsultarFactura = new System.Windows.Forms.Button();
             this.btnFacturar = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.subMenuClientes = new System.Windows.Forms.Panel();
@@ -90,6 +89,10 @@ namespace UI
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.subMenuReportes = new System.Windows.Forms.Panel();
+            this.btnConsultarReportes = new System.Windows.Forms.Button();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
+            this.pnlReportes = new System.Windows.Forms.Panel();
             this.barraTitulo.SuspendLayout();
             this.menuVertical.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -112,6 +115,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.subMenuReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -156,6 +160,7 @@ namespace UI
             // MenuOpciones
             // 
             this.MenuOpciones.AutoScroll = true;
+            this.MenuOpciones.Controls.Add(this.subMenuReportes);
             this.MenuOpciones.Controls.Add(this.btnReportes);
             this.MenuOpciones.Controls.Add(this.subMenuEstacionamiento);
             this.MenuOpciones.Controls.Add(this.btnEstacionamiento);
@@ -184,7 +189,7 @@ namespace UI
             this.subMenuEstacionamiento.Controls.Add(this.btnRegistrarEstacionamiento);
             this.subMenuEstacionamiento.Controls.Add(this.pnlEstacionamiento);
             this.subMenuEstacionamiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuEstacionamiento.Location = new System.Drawing.Point(0, 805);
+            this.subMenuEstacionamiento.Location = new System.Drawing.Point(0, 769);
             this.subMenuEstacionamiento.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuEstacionamiento.Name = "subMenuEstacionamiento";
             this.subMenuEstacionamiento.Size = new System.Drawing.Size(203, 81);
@@ -244,7 +249,7 @@ namespace UI
             this.subMenuEmpleados.Controls.Add(this.btnRegistrarEmpleado);
             this.subMenuEmpleados.Controls.Add(this.pnlEmpleados);
             this.subMenuEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuEmpleados.Location = new System.Drawing.Point(0, 649);
+            this.subMenuEmpleados.Location = new System.Drawing.Point(0, 613);
             this.subMenuEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuEmpleados.Name = "subMenuEmpleados";
             this.subMenuEmpleados.Size = new System.Drawing.Size(203, 117);
@@ -320,35 +325,14 @@ namespace UI
             // 
             // subMenuFacturas
             // 
-            this.subMenuFacturas.Controls.Add(this.btnConsultarFactura);
             this.subMenuFacturas.Controls.Add(this.btnFacturar);
             this.subMenuFacturas.Controls.Add(this.panel18);
             this.subMenuFacturas.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuFacturas.Location = new System.Drawing.Point(0, 525);
             this.subMenuFacturas.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuFacturas.Name = "subMenuFacturas";
-            this.subMenuFacturas.Size = new System.Drawing.Size(203, 80);
+            this.subMenuFacturas.Size = new System.Drawing.Size(203, 44);
             this.subMenuFacturas.TabIndex = 22;
-            // 
-            // btnConsultarFactura
-            // 
-            this.btnConsultarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
-            this.btnConsultarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsultarFactura.FlatAppearance.BorderSize = 0;
-            this.btnConsultarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
-            this.btnConsultarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFactura.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarFactura.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFactura.Location = new System.Drawing.Point(20, 37);
-            this.btnConsultarFactura.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultarFactura.Name = "btnConsultarFactura";
-            this.btnConsultarFactura.Size = new System.Drawing.Size(183, 37);
-            this.btnConsultarFactura.TabIndex = 14;
-            this.btnConsultarFactura.Text = "Consultar/Modifcar";
-            this.btnConsultarFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConsultarFactura.UseVisualStyleBackColor = false;
             // 
             // btnFacturar
             // 
@@ -376,7 +360,7 @@ namespace UI
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(20, 80);
+            this.panel18.Size = new System.Drawing.Size(20, 44);
             this.panel18.TabIndex = 12;
             // 
             // subMenuClientes
@@ -529,6 +513,7 @@ namespace UI
             this.btnRegistrarReservacion.Text = "Registrar";
             this.btnRegistrarReservacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrarReservacion.UseVisualStyleBackColor = false;
+            this.btnRegistrarReservacion.Click += new System.EventHandler(this.btnRegistrarReservacion_Click);
             // 
             // pnlReservaciones
             // 
@@ -738,7 +723,7 @@ namespace UI
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = global::UI.Properties.Resources.reportes;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 886);
+            this.btnReportes.Location = new System.Drawing.Point(0, 850);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(203, 39);
@@ -747,6 +732,7 @@ namespace UI
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.btnReportes, "Reportes");
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnEstacionamiento
             // 
@@ -760,7 +746,7 @@ namespace UI
             this.btnEstacionamiento.ForeColor = System.Drawing.Color.White;
             this.btnEstacionamiento.Image = global::UI.Properties.Resources.estacionamiento;
             this.btnEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstacionamiento.Location = new System.Drawing.Point(0, 766);
+            this.btnEstacionamiento.Location = new System.Drawing.Point(0, 730);
             this.btnEstacionamiento.Margin = new System.Windows.Forms.Padding(4);
             this.btnEstacionamiento.Name = "btnEstacionamiento";
             this.btnEstacionamiento.Size = new System.Drawing.Size(203, 39);
@@ -783,7 +769,7 @@ namespace UI
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
             this.btnEmpleados.Image = global::UI.Properties.Resources.empleados;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 605);
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 569);
             this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(203, 44);
@@ -1018,6 +1004,65 @@ namespace UI
             this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar aplicación");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // subMenuReportes
+            // 
+            this.subMenuReportes.Controls.Add(this.btnConsultarReportes);
+            this.subMenuReportes.Controls.Add(this.btnGenerarReporte);
+            this.subMenuReportes.Controls.Add(this.pnlReportes);
+            this.subMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subMenuReportes.Location = new System.Drawing.Point(0, 889);
+            this.subMenuReportes.Margin = new System.Windows.Forms.Padding(4);
+            this.subMenuReportes.Name = "subMenuReportes";
+            this.subMenuReportes.Size = new System.Drawing.Size(203, 81);
+            this.subMenuReportes.TabIndex = 28;
+            // 
+            // btnConsultarReportes
+            // 
+            this.btnConsultarReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
+            this.btnConsultarReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultarReportes.FlatAppearance.BorderSize = 0;
+            this.btnConsultarReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
+            this.btnConsultarReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarReportes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarReportes.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarReportes.Location = new System.Drawing.Point(20, 37);
+            this.btnConsultarReportes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarReportes.Name = "btnConsultarReportes";
+            this.btnConsultarReportes.Size = new System.Drawing.Size(183, 37);
+            this.btnConsultarReportes.TabIndex = 14;
+            this.btnConsultarReportes.Text = "Consultar reportes";
+            this.btnConsultarReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultarReportes.UseVisualStyleBackColor = false;
+            // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
+            this.btnGenerarReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
+            this.btnGenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
+            this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarReporte.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarReporte.Location = new System.Drawing.Point(20, 0);
+            this.btnGenerarReporte.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(183, 37);
+            this.btnGenerarReporte.TabIndex = 13;
+            this.btnGenerarReporte.Text = "Generar reportes";
+            this.btnGenerarReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerarReporte.UseVisualStyleBackColor = false;
+            // 
+            // pnlReportes
+            // 
+            this.pnlReportes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlReportes.Location = new System.Drawing.Point(0, 0);
+            this.pnlReportes.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlReportes.Name = "pnlReportes";
+            this.pnlReportes.Size = new System.Drawing.Size(20, 81);
+            this.pnlReportes.TabIndex = 12;
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1055,6 +1100,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.subMenuReportes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1080,7 +1126,6 @@ namespace UI
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel MenuOpciones;
         private System.Windows.Forms.Panel subMenuFacturas;
-        private System.Windows.Forms.Button btnConsultarFactura;
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Button btnFacturas;
@@ -1120,6 +1165,10 @@ namespace UI
         public System.Windows.Forms.Timer fechaHora;
         public System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.PictureBox pbIconHotel;
+        private System.Windows.Forms.Panel subMenuReportes;
+        private System.Windows.Forms.Button btnConsultarReportes;
+        private System.Windows.Forms.Button btnGenerarReporte;
+        private System.Windows.Forms.Panel pnlReportes;
     }
 }
 

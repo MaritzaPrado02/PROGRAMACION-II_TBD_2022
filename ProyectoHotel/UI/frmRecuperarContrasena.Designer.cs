@@ -33,21 +33,21 @@ namespace UI
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblRecuperarContrasena = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlLogoLogin = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.txtTEL = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnValidar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.barraLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlLogoLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // barraLogin
@@ -61,6 +61,7 @@ namespace UI
             this.barraLogin.Name = "barraLogin";
             this.barraLogin.Size = new System.Drawing.Size(530, 30);
             this.barraLogin.TabIndex = 23;
+            this.barraLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraLogin_MouseDown);
             // 
             // btnCerrar
             // 
@@ -72,6 +73,7 @@ namespace UI
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 21;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblRecuperarContrasena
             // 
@@ -94,6 +96,18 @@ namespace UI
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 20;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // pnlLogoLogin
+            // 
+            this.pnlLogoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(98)))));
+            this.pnlLogoLogin.Controls.Add(this.pictureBox3);
+            this.pnlLogoLogin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLogoLogin.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogoLogin.Name = "pnlLogoLogin";
+            this.pnlLogoLogin.Size = new System.Drawing.Size(250, 330);
+            this.pnlLogoLogin.TabIndex = 22;
+            this.pnlLogoLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlLogoLogin_MouseDown);
             // 
             // pictureBox3
             // 
@@ -105,16 +119,6 @@ namespace UI
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // pnlLogoLogin
-            // 
-            this.pnlLogoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(98)))));
-            this.pnlLogoLogin.Controls.Add(this.pictureBox3);
-            this.pnlLogoLogin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLogoLogin.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogoLogin.Name = "pnlLogoLogin";
-            this.pnlLogoLogin.Size = new System.Drawing.Size(250, 330);
-            this.pnlLogoLogin.TabIndex = 22;
-            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -122,10 +126,9 @@ namespace UI
             this.lblID.ForeColor = System.Drawing.Color.Black;
             this.lblID.Location = new System.Drawing.Point(308, 178);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(60, 19);
+            this.lblID.Size = new System.Drawing.Size(22, 19);
             this.lblID.TabIndex = 37;
-            this.lblID.Text = "Código";
-            this.lblID.Visible = false;
+            this.lblID.Text = "ID";
             // 
             // lblTelefono
             // 
@@ -137,7 +140,6 @@ namespace UI
             this.lblTelefono.Size = new System.Drawing.Size(66, 19);
             this.lblTelefono.TabIndex = 36;
             this.lblTelefono.Text = "Teléfono";
-            this.lblTelefono.Visible = false;
             // 
             // lblNombreUsuario
             // 
@@ -149,18 +151,17 @@ namespace UI
             this.lblNombreUsuario.Size = new System.Drawing.Size(117, 19);
             this.lblNombreUsuario.TabIndex = 35;
             this.lblNombreUsuario.Text = "Nombre Usuario";
-            this.lblNombreUsuario.Visible = false;
             // 
-            // txtTEL
+            // txtTelefono
             // 
-            this.txtTEL.BackColor = System.Drawing.Color.White;
-            this.txtTEL.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTEL.ForeColor = System.Drawing.Color.Black;
-            this.txtTEL.Location = new System.Drawing.Point(310, 141);
-            this.txtTEL.MaxLength = 12;
-            this.txtTEL.Name = "txtTEL";
-            this.txtTEL.Size = new System.Drawing.Size(408, 27);
-            this.txtTEL.TabIndex = 34;
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.Black;
+            this.txtTelefono.Location = new System.Drawing.Point(310, 141);
+            this.txtTelefono.MaxLength = 12;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(408, 27);
+            this.txtTelefono.TabIndex = 34;
             // 
             // btnCancelar
             // 
@@ -179,15 +180,15 @@ namespace UI
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtCodigo
+            // txtID
             // 
-            this.txtCodigo.BackColor = System.Drawing.Color.White;
-            this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.ForeColor = System.Drawing.Color.Black;
-            this.txtCodigo.Location = new System.Drawing.Point(310, 200);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(408, 27);
-            this.txtCodigo.TabIndex = 32;
+            this.txtID.BackColor = System.Drawing.Color.White;
+            this.txtID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.Black;
+            this.txtID.Location = new System.Drawing.Point(310, 200);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(408, 27);
+            this.txtID.TabIndex = 32;
             // 
             // btnValidar
             // 
@@ -220,13 +221,14 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblNombreUsuario);
-            this.Controls.Add(this.txtTEL);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.barraLogin);
@@ -239,8 +241,8 @@ namespace UI
             this.barraLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlLogoLogin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,9 +259,9 @@ namespace UI
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombreUsuario;
-        private System.Windows.Forms.TextBox txtTEL;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnValidar;
         private System.Windows.Forms.TextBox txtUsuario;
     }

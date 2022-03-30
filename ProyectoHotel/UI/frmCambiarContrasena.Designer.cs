@@ -59,6 +59,7 @@ namespace UI
             this.barraLogin.Name = "barraLogin";
             this.barraLogin.Size = new System.Drawing.Size(530, 30);
             this.barraLogin.TabIndex = 21;
+            this.barraLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraLogin_MouseDown);
             // 
             // btnCerrar
             // 
@@ -70,6 +71,7 @@ namespace UI
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 21;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblCambiarContrasena
             // 
@@ -92,6 +94,7 @@ namespace UI
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 20;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // pnlLogoLogin
             // 
@@ -102,6 +105,7 @@ namespace UI
             this.pnlLogoLogin.Name = "pnlLogoLogin";
             this.pnlLogoLogin.Size = new System.Drawing.Size(250, 330);
             this.pnlLogoLogin.TabIndex = 20;
+            this.pnlLogoLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlLogoLogin_MouseDown);
             // 
             // pictureBox3
             // 
@@ -195,6 +199,7 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.lblConfirmeContrasena);
             this.Controls.Add(this.lblNuevaContrasena);

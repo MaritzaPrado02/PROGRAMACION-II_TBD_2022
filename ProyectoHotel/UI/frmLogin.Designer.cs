@@ -40,14 +40,18 @@ namespace UI
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.linkPass = new System.Windows.Forms.LinkLabel();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.pcbDesbloquear = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pcbBloquear = new System.Windows.Forms.PictureBox();
             this.pnlLogoLogin.SuspendLayout();
             this.barraLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBloquear)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLogoLogin
@@ -179,6 +183,19 @@ namespace UI
             this.btnRegistrarse.UseVisualStyleBackColor = false;
             this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
+            // pcbDesbloquear
+            // 
+            this.pcbDesbloquear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbDesbloquear.Image = global::UI.Properties.Resources.desbloquear;
+            this.pcbDesbloquear.Location = new System.Drawing.Point(732, 178);
+            this.pcbDesbloquear.Name = "pcbDesbloquear";
+            this.pcbDesbloquear.Size = new System.Drawing.Size(35, 35);
+            this.pcbDesbloquear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbDesbloquear.TabIndex = 23;
+            this.pcbDesbloquear.TabStop = false;
+            this.pcbDesbloquear.Visible = false;
+            this.pcbDesbloquear.Click += new System.EventHandler(this.pcbDesbloquear_Click);
+            // 
             // btnCerrar
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -213,12 +230,26 @@ namespace UI
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
+            // pcbBloquear
+            // 
+            this.pcbBloquear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbBloquear.Image = global::UI.Properties.Resources.bloquear;
+            this.pcbBloquear.Location = new System.Drawing.Point(732, 178);
+            this.pcbBloquear.Name = "pcbBloquear";
+            this.pcbBloquear.Size = new System.Drawing.Size(35, 35);
+            this.pcbBloquear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbBloquear.TabIndex = 24;
+            this.pcbBloquear.TabStop = false;
+            this.pcbBloquear.Click += new System.EventHandler(this.pcbBloquer_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(151)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.pcbBloquear);
+            this.Controls.Add(this.pcbDesbloquear);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.linkPass);
             this.Controls.Add(this.barraLogin);
@@ -236,9 +267,11 @@ namespace UI
             this.pnlLogoLogin.ResumeLayout(false);
             this.barraLogin.ResumeLayout(false);
             this.barraLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBloquear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +292,7 @@ namespace UI
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.LinkLabel linkPass;
         private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.PictureBox pcbDesbloquear;
+        private System.Windows.Forms.PictureBox pcbBloquear;
     }
 }
