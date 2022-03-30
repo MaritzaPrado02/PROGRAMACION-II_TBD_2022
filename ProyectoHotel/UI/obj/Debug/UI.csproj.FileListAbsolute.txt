@@ -1,0 +1,16 @@
+C:\Users\marit\source\repos\ProyectoHotel\UI\bin\Debug\UI.exe.config
+C:\Users\marit\source\repos\ProyectoHotel\UI\bin\Debug\UI.exe
+C:\Users\marit\source\repos\ProyectoHotel\UI\bin\Debug\UI.pdb
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmMenuPrincipal.resources
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.exe
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.pdb
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmLogin.resources
+C:\Users\marit\source\repos\ProyectoHotel\UI\bin\Debug\AltoControls.dll
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmRegistro.resources
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmCambiarContrasena.resources
+C:\Users\marit\source\repos\ProyectoHotel\UI\obj\Debug\UI.frmRecuperarContrasena.resources
