@@ -177,6 +177,22 @@ namespace UI
             ocultarSubmenu();
         }
 
-       
+        private void btnRegistrarPromocion_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmPromociones());
+            ocultarSubmenu();
+        }
+
+        private void btnRegistrarHabitacion_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmRegistrarHabitacion());
+            ocultarSubmenu();
+        }
+
+        private void btnConsultarReservacion_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmBuscarReservaciones());
+            ocultarSubmenu();
+        }
     }
 }

@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class frmReservaciones : Form
+    public partial class frmBuscarReportes : Form
     {
-        public frmReservaciones()
+        public frmBuscarReportes()
         {
             InitializeComponent();
         }
-
     }
 }

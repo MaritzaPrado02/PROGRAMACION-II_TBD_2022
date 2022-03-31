@@ -49,17 +49,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBuscarCliente.cs">
+    <Compile Include="frmBuscarReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscarCliente.Designer.cs">
-      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    <Compile Include="frmBuscarReportes.Designer.cs">
+      <DependentUpon>frmBuscarReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarReservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarReservaciones.Designer.cs">
+      <DependentUpon>frmBuscarReservaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCambiarContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCambiarContrasena.Designer.cs">
       <DependentUpon>frmCambiarContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstacionamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstacionamiento.Designer.cs">
+      <DependentUpon>frmEstacionamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerarReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarReporte.Designer.cs">
+      <DependentUpon>frmGenerarReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -73,11 +91,23 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPromociones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromociones.Designer.cs">
+      <DependentUpon>frmPromociones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRecuperarContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRecuperarContrasena.Designer.cs">
       <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarHabitacion.Designer.cs">
+      <DependentUpon>frmRegistrarHabitacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
@@ -93,11 +123,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBuscarCliente.resx">
-      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscarReportes.resx">
+      <DependentUpon>frmBuscarReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarReservaciones.resx">
+      <DependentUpon>frmBuscarReservaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCambiarContrasena.resx">
       <DependentUpon>frmCambiarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstacionamiento.resx">
+      <DependentUpon>frmEstacionamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerarReporte.resx">
+      <DependentUpon>frmGenerarReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -105,8 +144,14 @@
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPromociones.resx">
+      <DependentUpon>frmPromociones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarContrasena.resx">
       <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarHabitacion.resx">
+      <DependentUpon>frmRegistrarHabitacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
@@ -242,6 +287,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\desbloquear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

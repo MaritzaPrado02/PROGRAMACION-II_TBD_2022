@@ -33,6 +33,16 @@ namespace UI
             this.pnlLogoRegistro = new System.Windows.Forms.Panel();
             this.pcbLogoRegistro = new System.Windows.Forms.PictureBox();
             this.pnlRegistro = new System.Windows.Forms.Panel();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.txtPuesto = new System.Windows.Forms.ComboBox();
+            this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
+            this.grbUsuario = new System.Windows.Forms.GroupBox();
+            this.altoTextBox9 = new AltoControls.AltoTextBox();
+            this.lblConfirmarContrasena = new System.Windows.Forms.Label();
+            this.txtContrasena = new AltoControls.AltoTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRegistrarUsuario = new AltoControls.AltoTextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.txtEmail = new AltoControls.AltoTextBox();
             this.txtTelefono = new AltoControls.AltoTextBox();
             this.txtRFC = new AltoControls.AltoTextBox();
@@ -50,22 +60,12 @@ namespace UI
             this.lblRegistro = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.grbUsuario = new System.Windows.Forms.GroupBox();
-            this.txtRegistrarUsuario = new AltoControls.AltoTextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtContrasena = new AltoControls.AltoTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.altoTextBox9 = new AltoControls.AltoTextBox();
-            this.lblConfirmarContrasena = new System.Windows.Forms.Label();
-            this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
-            this.txtPuesto = new System.Windows.Forms.ComboBox();
-            this.btnRegistrarse = new System.Windows.Forms.Button();
             this.pnlLogoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoRegistro)).BeginInit();
             this.pnlRegistro.SuspendLayout();
+            this.grbUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            this.grbUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogoRegistro
@@ -121,6 +121,128 @@ namespace UI
             this.pnlRegistro.Size = new System.Drawing.Size(499, 590);
             this.pnlRegistro.TabIndex = 1;
             this.pnlRegistro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlRegistro_MouseDown);
+            // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.BackColor = System.Drawing.Color.Black;
+            this.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarse.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegistrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarse.ForeColor = System.Drawing.Color.LightGray;
+            this.btnRegistrarse.Location = new System.Drawing.Point(353, 544);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(121, 34);
+            this.btnRegistrarse.TabIndex = 44;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.UseVisualStyleBackColor = false;
+            // 
+            // txtPuesto
+            // 
+            this.txtPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuesto.FormattingEnabled = true;
+            this.txtPuesto.Location = new System.Drawing.Point(211, 371);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(175, 28);
+            this.txtPuesto.TabIndex = 43;
+            // 
+            // cmbAreaTrabajo
+            // 
+            this.cmbAreaTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAreaTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAreaTrabajo.FormattingEnabled = true;
+            this.cmbAreaTrabajo.Location = new System.Drawing.Point(212, 327);
+            this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
+            this.cmbAreaTrabajo.Size = new System.Drawing.Size(175, 28);
+            this.cmbAreaTrabajo.TabIndex = 42;
+            // 
+            // grbUsuario
+            // 
+            this.grbUsuario.Controls.Add(this.altoTextBox9);
+            this.grbUsuario.Controls.Add(this.lblConfirmarContrasena);
+            this.grbUsuario.Controls.Add(this.txtContrasena);
+            this.grbUsuario.Controls.Add(this.label1);
+            this.grbUsuario.Controls.Add(this.txtRegistrarUsuario);
+            this.grbUsuario.Controls.Add(this.lblUsuario);
+            this.grbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbUsuario.Location = new System.Drawing.Point(28, 398);
+            this.grbUsuario.Name = "grbUsuario";
+            this.grbUsuario.Size = new System.Drawing.Size(446, 127);
+            this.grbUsuario.TabIndex = 41;
+            this.grbUsuario.TabStop = false;
+            this.grbUsuario.Text = "Usuario";
+            // 
+            // altoTextBox9
+            // 
+            this.altoTextBox9.BackColor = System.Drawing.Color.Transparent;
+            this.altoTextBox9.Br = System.Drawing.Color.White;
+            this.altoTextBox9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altoTextBox9.ForeColor = System.Drawing.Color.DimGray;
+            this.altoTextBox9.Location = new System.Drawing.Point(186, 95);
+            this.altoTextBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.altoTextBox9.Name = "altoTextBox9";
+            this.altoTextBox9.Size = new System.Drawing.Size(228, 27);
+            this.altoTextBox9.TabIndex = 47;
+            // 
+            // lblConfirmarContrasena
+            // 
+            this.lblConfirmarContrasena.AutoSize = true;
+            this.lblConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(5, 100);
+            this.lblConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(177, 19);
+            this.lblConfirmarContrasena.TabIndex = 46;
+            this.lblConfirmarContrasena.Text = "Confirmar contraseña";
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.txtContrasena.Br = System.Drawing.Color.White;
+            this.txtContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContrasena.Location = new System.Drawing.Point(184, 59);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(229, 27);
+            this.txtContrasena.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(82, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 19);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Contraseña";
+            // 
+            // txtRegistrarUsuario
+            // 
+            this.txtRegistrarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.txtRegistrarUsuario.Br = System.Drawing.Color.White;
+            this.txtRegistrarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegistrarUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtRegistrarUsuario.Location = new System.Drawing.Point(184, 21);
+            this.txtRegistrarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRegistrarUsuario.Name = "txtRegistrarUsuario";
+            this.txtRegistrarUsuario.Size = new System.Drawing.Size(230, 27);
+            this.txtRegistrarUsuario.TabIndex = 43;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(111, 29);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(65, 19);
+            this.lblUsuario.TabIndex = 42;
+            this.lblUsuario.Text = "Usuario";
             // 
             // txtEmail
             // 
@@ -317,128 +439,6 @@ namespace UI
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
-            // grbUsuario
-            // 
-            this.grbUsuario.Controls.Add(this.altoTextBox9);
-            this.grbUsuario.Controls.Add(this.lblConfirmarContrasena);
-            this.grbUsuario.Controls.Add(this.txtContrasena);
-            this.grbUsuario.Controls.Add(this.label1);
-            this.grbUsuario.Controls.Add(this.txtRegistrarUsuario);
-            this.grbUsuario.Controls.Add(this.lblUsuario);
-            this.grbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbUsuario.Location = new System.Drawing.Point(28, 398);
-            this.grbUsuario.Name = "grbUsuario";
-            this.grbUsuario.Size = new System.Drawing.Size(446, 127);
-            this.grbUsuario.TabIndex = 41;
-            this.grbUsuario.TabStop = false;
-            this.grbUsuario.Text = "Usuario";
-            // 
-            // txtRegistrarUsuario
-            // 
-            this.txtRegistrarUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.txtRegistrarUsuario.Br = System.Drawing.Color.White;
-            this.txtRegistrarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegistrarUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtRegistrarUsuario.Location = new System.Drawing.Point(142, 21);
-            this.txtRegistrarUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.txtRegistrarUsuario.Name = "txtRegistrarUsuario";
-            this.txtRegistrarUsuario.Size = new System.Drawing.Size(237, 27);
-            this.txtRegistrarUsuario.TabIndex = 43;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(73, 26);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(65, 19);
-            this.lblUsuario.TabIndex = 42;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.txtContrasena.Br = System.Drawing.Color.White;
-            this.txtContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContrasena.Location = new System.Drawing.Point(146, 59);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(115, 27);
-            this.txtContrasena.TabIndex = 45;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 64);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 19);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Contraseña";
-            // 
-            // altoTextBox9
-            // 
-            this.altoTextBox9.BackColor = System.Drawing.Color.Transparent;
-            this.altoTextBox9.Br = System.Drawing.Color.White;
-            this.altoTextBox9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoTextBox9.ForeColor = System.Drawing.Color.DimGray;
-            this.altoTextBox9.Location = new System.Drawing.Point(221, 95);
-            this.altoTextBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.altoTextBox9.Name = "altoTextBox9";
-            this.altoTextBox9.Size = new System.Drawing.Size(115, 27);
-            this.altoTextBox9.TabIndex = 47;
-            // 
-            // lblConfirmarContrasena
-            // 
-            this.lblConfirmarContrasena.AutoSize = true;
-            this.lblConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmarContrasena.Location = new System.Drawing.Point(40, 103);
-            this.lblConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(177, 19);
-            this.lblConfirmarContrasena.TabIndex = 46;
-            this.lblConfirmarContrasena.Text = "Confirmar contraseña";
-            // 
-            // cmbAreaTrabajo
-            // 
-            this.cmbAreaTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAreaTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAreaTrabajo.FormattingEnabled = true;
-            this.cmbAreaTrabajo.Location = new System.Drawing.Point(212, 327);
-            this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
-            this.cmbAreaTrabajo.Size = new System.Drawing.Size(175, 28);
-            this.cmbAreaTrabajo.TabIndex = 42;
-            // 
-            // txtPuesto
-            // 
-            this.txtPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuesto.FormattingEnabled = true;
-            this.txtPuesto.Location = new System.Drawing.Point(211, 371);
-            this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(175, 28);
-            this.txtPuesto.TabIndex = 43;
-            // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.BackColor = System.Drawing.Color.Black;
-            this.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrarse.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRegistrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarse.ForeColor = System.Drawing.Color.LightGray;
-            this.btnRegistrarse.Location = new System.Drawing.Point(353, 544);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(121, 34);
-            this.btnRegistrarse.TabIndex = 44;
-            this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.UseVisualStyleBackColor = false;
-            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,10 +456,10 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoRegistro)).EndInit();
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.grbUsuario.ResumeLayout(false);
             this.grbUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
