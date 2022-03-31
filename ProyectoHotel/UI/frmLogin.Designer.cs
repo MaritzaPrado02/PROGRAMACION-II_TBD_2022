@@ -31,26 +31,26 @@ namespace UI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnlLogoLogin = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContrasena = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.barraLogin = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.linkPass = new System.Windows.Forms.LinkLabel();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.pcbDesbloquear = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pcbBloquear = new System.Windows.Forms.PictureBox();
             this.pnlLogoLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.barraLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBloquear)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,17 +60,30 @@ namespace UI
             this.pnlLogoLogin.Controls.Add(this.pictureBox3);
             this.pnlLogoLogin.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLogoLogin.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogoLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLogoLogin.Name = "pnlLogoLogin";
-            this.pnlLogoLogin.Size = new System.Drawing.Size(250, 330);
+            this.pnlLogoLogin.Size = new System.Drawing.Size(333, 406);
             this.pnlLogoLogin.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::UI.Properties.Resources.iconoHotel;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 59);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(325, 262);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(313, 65);
+            this.lblUsuario.Location = new System.Drawing.Point(417, 80);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(92, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(116, 30);
             this.lblUsuario.TabIndex = 11;
             this.lblUsuario.Text = "USUARIO";
             // 
@@ -78,9 +91,10 @@ namespace UI
             // 
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasena.Location = new System.Drawing.Point(313, 147);
+            this.lblContrasena.Location = new System.Drawing.Point(417, 181);
+            this.lblContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(139, 22);
+            this.lblContrasena.Size = new System.Drawing.Size(175, 30);
             this.lblContrasena.TabIndex = 12;
             this.lblContrasena.Text = "CONTRASEÑA";
             // 
@@ -94,9 +108,10 @@ namespace UI
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLogin.Location = new System.Drawing.Point(371, 223);
+            this.btnLogin.Location = new System.Drawing.Point(495, 274);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(303, 37);
+            this.btnLogin.Size = new System.Drawing.Size(404, 46);
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "ACCEDER";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -106,10 +121,10 @@ namespace UI
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.Gray;
-            this.txtUser.Location = new System.Drawing.Point(316, 100);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtUser.Location = new System.Drawing.Point(421, 123);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(409, 27);
+            this.txtUser.Size = new System.Drawing.Size(544, 32);
             this.txtUser.TabIndex = 17;
             this.txtUser.Text = "Ingrese nombre de usuario";
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
@@ -119,10 +134,10 @@ namespace UI
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.Gray;
-            this.txtPass.Location = new System.Drawing.Point(316, 182);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtPass.Location = new System.Drawing.Point(421, 224);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(409, 27);
+            this.txtPass.Size = new System.Drawing.Size(544, 32);
             this.txtPass.TabIndex = 18;
             this.txtPass.Text = "Ingrese contraseña";
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
@@ -135,21 +150,49 @@ namespace UI
             this.barraLogin.Controls.Add(this.lblBienvenido);
             this.barraLogin.Controls.Add(this.btnMinimizar);
             this.barraLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barraLogin.Location = new System.Drawing.Point(250, 0);
+            this.barraLogin.Location = new System.Drawing.Point(333, 0);
+            this.barraLogin.Margin = new System.Windows.Forms.Padding(4);
             this.barraLogin.Name = "barraLogin";
-            this.barraLogin.Size = new System.Drawing.Size(530, 30);
+            this.barraLogin.Size = new System.Drawing.Size(707, 37);
             this.barraLogin.TabIndex = 19;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::UI.Properties.Resources.boton_de_quitar_cuadrado;
+            this.btnCerrar.Location = new System.Drawing.Point(675, 9);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(20, 18);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 21;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.Color.White;
-            this.lblBienvenido.Location = new System.Drawing.Point(213, 7);
+            this.lblBienvenido.Location = new System.Drawing.Point(284, 9);
+            this.lblBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(96, 19);
+            this.lblBienvenido.Size = new System.Drawing.Size(119, 23);
             this.lblBienvenido.TabIndex = 13;
             this.lblBienvenido.Text = "Bienvenido";
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar1;
+            this.btnMinimizar.Location = new System.Drawing.Point(645, 9);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 18);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 20;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
             // 
             // linkPass
             // 
@@ -157,9 +200,10 @@ namespace UI
             this.linkPass.AutoSize = true;
             this.linkPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkPass.LinkColor = System.Drawing.Color.Black;
-            this.linkPass.Location = new System.Drawing.Point(432, 271);
+            this.linkPass.Location = new System.Drawing.Point(576, 334);
+            this.linkPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkPass.Name = "linkPass";
-            this.linkPass.Size = new System.Drawing.Size(198, 17);
+            this.linkPass.Size = new System.Drawing.Size(255, 21);
             this.linkPass.TabIndex = 20;
             this.linkPass.TabStop = true;
             this.linkPass.Text = "¿Ha olvidado la contraseña?";
@@ -175,9 +219,10 @@ namespace UI
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarse.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.Color.LightGray;
-            this.btnRegistrarse.Location = new System.Drawing.Point(475, 296);
+            this.btnRegistrarse.Location = new System.Drawing.Point(633, 364);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(100, 26);
+            this.btnRegistrarse.Size = new System.Drawing.Size(133, 32);
             this.btnRegistrarse.TabIndex = 21;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
@@ -187,56 +232,24 @@ namespace UI
             // 
             this.pcbDesbloquear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbDesbloquear.Image = global::UI.Properties.Resources.desbloquear;
-            this.pcbDesbloquear.Location = new System.Drawing.Point(732, 178);
+            this.pcbDesbloquear.Location = new System.Drawing.Point(976, 219);
+            this.pcbDesbloquear.Margin = new System.Windows.Forms.Padding(4);
             this.pcbDesbloquear.Name = "pcbDesbloquear";
-            this.pcbDesbloquear.Size = new System.Drawing.Size(35, 35);
+            this.pcbDesbloquear.Size = new System.Drawing.Size(47, 43);
             this.pcbDesbloquear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbDesbloquear.TabIndex = 23;
             this.pcbDesbloquear.TabStop = false;
             this.pcbDesbloquear.Visible = false;
             this.pcbDesbloquear.Click += new System.EventHandler(this.pcbDesbloquear_Click);
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::UI.Properties.Resources.boton_de_quitar_cuadrado;
-            this.btnCerrar.Location = new System.Drawing.Point(506, 7);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 21;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar1;
-            this.btnMinimizar.Location = new System.Drawing.Point(484, 7);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 20;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::UI.Properties.Resources.iconoHotel;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 48);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(244, 213);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // pcbBloquear
             // 
             this.pcbBloquear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbBloquear.Image = global::UI.Properties.Resources.bloquear;
-            this.pcbBloquear.Location = new System.Drawing.Point(732, 178);
+            this.pcbBloquear.Location = new System.Drawing.Point(976, 219);
+            this.pcbBloquear.Margin = new System.Windows.Forms.Padding(4);
             this.pcbBloquear.Name = "pcbBloquear";
-            this.pcbBloquear.Size = new System.Drawing.Size(35, 35);
+            this.pcbBloquear.Size = new System.Drawing.Size(47, 43);
             this.pcbBloquear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbBloquear.TabIndex = 24;
             this.pcbBloquear.TabStop = false;
@@ -244,10 +257,10 @@ namespace UI
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(151)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.ClientSize = new System.Drawing.Size(1040, 406);
             this.Controls.Add(this.pcbBloquear);
             this.Controls.Add(this.pcbDesbloquear);
             this.Controls.Add(this.btnRegistrarse);
@@ -261,16 +274,17 @@ namespace UI
             this.Controls.Add(this.pnlLogoLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Opacity = 0.9D;
             this.Text = "frmLogin";
             this.pnlLogoLogin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.barraLogin.ResumeLayout(false);
             this.barraLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBloquear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
