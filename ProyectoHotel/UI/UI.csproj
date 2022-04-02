@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarCategoriaHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCategoriaHabitacion.Designer.cs">
+      <DependentUpon>frmAgregarCategoriaHabitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarComplemento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarComplemento.Designer.cs">
+      <DependentUpon>frmAgregarComplemento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarCategoriaHabitacion.resx">
+      <DependentUpon>frmAgregarCategoriaHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarComplemento.resx">
+      <DependentUpon>frmAgregarComplemento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarReportes.resx">
       <DependentUpon>frmBuscarReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +308,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\habitacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muebles.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

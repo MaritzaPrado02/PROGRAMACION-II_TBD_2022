@@ -51,12 +51,12 @@ namespace UI
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNuevaContrasena.Text == "" || txtConfirmacionContrasena.Text == "")
+            if (txtNuevaContrasena.Text == "" || txtConfirmarContrasena.Text == "")
             {
                 MessageBox.Show("Los campos no deben de estar vacios", "Error Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //Mostrar pantalla principal (se agrega la sentencia SQL para ver si existen el usuario)
-            else if (txtNuevaContrasena.Text == txtConfirmacionContrasena.Text)
+            else if (txtNuevaContrasena.Text == txtConfirmarContrasena.Text)
             {
                 MessageBox.Show("Nueva contraseña guardada");
                 frmLogin login = new frmLogin();
@@ -85,6 +85,81 @@ namespace UI
                 this.Hide();
             }
         }
+        #endregion
+
+        #region Iconos de bloquear y desbloquear
+        private void btnBloquearNC_Click(object sender, EventArgs e)
+        {
+            txtNuevaContrasena.UseSystemPasswordChar = false;
+            btnDesbloquearNC.Visible = true;
+            btnBloquearNC.Visible = false;
+        }
+
+        private void btnDesbloquearNC_Click(object sender, EventArgs e)
+        {
+            txtConfirmarContrasena.UseSystemPasswordChar = true;
+            btnDesbloquearNC.Visible = false;
+            btnBloquearNC.Visible = true;
+        }
+
+        private void btnDesbloquearCC_Click(object sender, EventArgs e)
+        {
+         
+
+            txtConfirmarContrasena.UseSystemPasswordChar = true;
+            btnDesbloquearCC.Visible = false;
+            btnBloquerCC.Visible = true;
+        }
+  
+        private void btnBloquerCC_Click(object sender, EventArgs e)
+        {
+            txtNuevaContrasena.UseSystemPasswordChar = false;
+            btnDesbloquearNC.Visible = true;
+            btnBloquearNC.Visible = false;
+        }
+        #endregion
+
+        #region Eventos de cuadros de texto: Nueva contraseña y confirmar contraseña
+        private void txtNuevaContrasena_Enter(object sender, EventArgs e)
+        {
+            if (txtNuevaContrasena.Text == "Ingrese nueva contraseña")
+            {
+                txtNuevaContrasena.Text = "";
+                txtNuevaContrasena.ForeColor = Color.Black;
+                txtNuevaContrasena.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtNuevaContrasena_Leave(object sender, EventArgs e)
+        {
+            if (txtNuevaContrasena.Text == "")
+            {
+                txtNuevaContrasena.Text = "Ingrese nueva contraseña";
+                txtNuevaContrasena.ForeColor = Color.Black;
+                txtNuevaContrasena.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txtConfirmarContrasena_Enter(object sender, EventArgs e)
+        {
+            if (txtConfirmarContrasena.Text == "Confirme contraseña")
+            {
+                txtConfirmarContrasena.Text = "";
+                txtConfirmarContrasena.ForeColor = Color.Black;
+                txtConfirmarContrasena.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtConfirmarContrasena_Leave(object sender, EventArgs e)
+        {
+            if (txtConfirmarContrasena.Text == "")
+            {
+                txtConfirmarContrasena.Text = "Ingrese contraseña";
+                txtConfirmarContrasena.ForeColor = Color.Black;
+                txtConfirmarContrasena.UseSystemPasswordChar = false;
+            }
+        }
+
         #endregion
     }
 }

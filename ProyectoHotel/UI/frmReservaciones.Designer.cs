@@ -41,6 +41,7 @@ namespace UI
             this.grbCliente = new System.Windows.Forms.GroupBox();
             this.txtEmail = new AltoControls.AltoTextBox();
             this.txtTelefono = new AltoControls.AltoTextBox();
+            this.btnBusqueda = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtApellidoMaterno = new AltoControls.AltoTextBox();
@@ -59,7 +60,6 @@ namespace UI
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
-            this.btnBusqueda = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.grbCliente.SuspendLayout();
@@ -88,6 +88,7 @@ namespace UI
             // btnReservar
             // 
             this.btnReservar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(129)))), ((int)(((byte)(209)))));
+            this.btnReservar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReservar.FlatAppearance.BorderSize = 0;
             this.btnReservar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.btnReservar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
@@ -132,6 +133,7 @@ namespace UI
             // btnSeleccionarHabitaciones
             // 
             this.btnSeleccionarHabitaciones.BackColor = System.Drawing.Color.Black;
+            this.btnSeleccionarHabitaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccionarHabitaciones.FlatAppearance.BorderSize = 0;
             this.btnSeleccionarHabitaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.btnSeleccionarHabitaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
@@ -170,6 +172,7 @@ namespace UI
             // 
             this.txtEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtEmail.Br = System.Drawing.Color.White;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
             this.txtEmail.Location = new System.Drawing.Point(190, 282);
@@ -181,12 +184,25 @@ namespace UI
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.Transparent;
             this.txtTelefono.Br = System.Drawing.Color.White;
+            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
             this.txtTelefono.Location = new System.Drawing.Point(190, 224);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(212, 33);
             this.txtTelefono.TabIndex = 26;
+            // 
+            // btnBusqueda
+            // 
+            this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBusqueda.Image = global::UI.Properties.Resources.lupa;
+            this.btnBusqueda.Location = new System.Drawing.Point(38, 33);
+            this.btnBusqueda.Name = "btnBusqueda";
+            this.btnBusqueda.Size = new System.Drawing.Size(38, 38);
+            this.btnBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBusqueda.TabIndex = 25;
+            this.btnBusqueda.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnBusqueda, "Buscar cliente");
             // 
             // label5
             // 
@@ -212,6 +228,7 @@ namespace UI
             // 
             this.txtApellidoMaterno.BackColor = System.Drawing.Color.Transparent;
             this.txtApellidoMaterno.Br = System.Drawing.Color.White;
+            this.txtApellidoMaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellidoMaterno.Location = new System.Drawing.Point(190, 161);
@@ -223,6 +240,7 @@ namespace UI
             // 
             this.txtApellidoPaterno.BackColor = System.Drawing.Color.Transparent;
             this.txtApellidoPaterno.Br = System.Drawing.Color.White;
+            this.txtApellidoPaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellidoPaterno.Location = new System.Drawing.Point(190, 99);
@@ -234,6 +252,7 @@ namespace UI
             // 
             this.txtNombre.BackColor = System.Drawing.Color.Transparent;
             this.txtNombre.Br = System.Drawing.Color.White;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombre.Location = new System.Drawing.Point(190, 38);
@@ -273,6 +292,7 @@ namespace UI
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Location = new System.Drawing.Point(212, 189);
             this.dateTimePicker3.Name = "dateTimePicker3";
@@ -281,6 +301,7 @@ namespace UI
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(212, 122);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -289,6 +310,7 @@ namespace UI
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(212, 62);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -344,6 +366,7 @@ namespace UI
             // btnGuardarCambios
             // 
             this.btnGuardarCambios.BackColor = System.Drawing.Color.Black;
+            this.btnGuardarCambios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarCambios.FlatAppearance.BorderSize = 0;
             this.btnGuardarCambios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.btnGuardarCambios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
@@ -356,18 +379,6 @@ namespace UI
             this.btnGuardarCambios.TabIndex = 67;
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
-            // 
-            // btnBusqueda
-            // 
-            this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBusqueda.Image = global::UI.Properties.Resources.lupa;
-            this.btnBusqueda.Location = new System.Drawing.Point(38, 33);
-            this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(38, 38);
-            this.btnBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBusqueda.TabIndex = 25;
-            this.btnBusqueda.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnBusqueda, "Buscar cliente");
             // 
             // frmReservaciones
             // 
@@ -389,7 +400,7 @@ namespace UI
             this.Controls.Add(this.lblFechaIngreso);
             this.Controls.Add(this.lblFechaReservacion);
             this.Controls.Add(this.pnlTitulo);
-            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmReservaciones";
             this.Text = "frmReservaciones";
             this.pnlTitulo.ResumeLayout(false);

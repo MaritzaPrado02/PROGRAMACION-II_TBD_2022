@@ -34,3 +34,8 @@ D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmPromociones.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmRegistrarHabitacion.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmBuscarReservaciones.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmBuscarReportes.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmEstacionamiento.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmGenerarReporte.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmAgregarCategoriaHabitacion.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmAgregarComplemento.resources

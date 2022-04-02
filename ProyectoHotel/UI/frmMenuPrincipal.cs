@@ -194,5 +194,11 @@ namespace UI
             abrirFormularioHijo(new frmBuscarReservaciones());
             ocultarSubmenu();
         }
+
+        private void btnRegistrarEstacionamiento_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmEstacionamiento());
+            ocultarSubmenu();
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void grbRegistroNuevaPromocion_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

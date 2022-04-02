@@ -24,6 +24,19 @@ namespace UI
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+
+        private void barraLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pnlLogoLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
         #endregion
 
         #region Cerrar, Minimizar
@@ -56,7 +69,6 @@ namespace UI
             {
                 txtUser.Text = "";
                 txtUser.ForeColor = Color.Black;
-                lblUsuario.Visible = true;
             }
         }
 
@@ -82,7 +94,7 @@ namespace UI
 
         #endregion
 
-        #region Programacion botones
+        #region Programacion botones: Login, Registrarse, ¿Ha olvidado su contraseña?
         private void btnLogin_Click(object sender, EventArgs e)
         {
             #region Validacion campos vacios
@@ -98,9 +110,8 @@ namespace UI
                 panPrincipal.Show();
                 this.Hide();
             }
-            #endregion
+           
         }
-
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             frmRegistro panRegistro = new frmRegistro();
@@ -129,5 +140,6 @@ namespace UI
             pcbDesbloquear.Visible = false;
             pcbBloquear.Visible = true;
         }
+        #endregion
     }
 }

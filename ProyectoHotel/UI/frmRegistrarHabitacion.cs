@@ -16,5 +16,17 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void btnAgregarCatHabitacion_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategoriaHabitacion agregarCategoria = new frmAgregarCategoriaHabitacion();
+            agregarCategoria.Show();
+        }
+
+        private void btnAgregarComplemento_Click(object sender, EventArgs e)
+        {
+            frmAgregarComplemento agregarComplemento = new frmAgregarComplemento();
+            agregarComplemento.Show();
+        }
     }
 }

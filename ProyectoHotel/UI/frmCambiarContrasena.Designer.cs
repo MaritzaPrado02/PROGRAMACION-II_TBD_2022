@@ -39,21 +39,21 @@ namespace UI
             this.lblNuevaContrasena = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtConfirmacionContrasena = new System.Windows.Forms.TextBox();
+            this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
             this.txtNuevaContrasena = new System.Windows.Forms.TextBox();
-            this.pcbBloquearNC = new System.Windows.Forms.PictureBox();
-            this.pcbDesbloquearNC = new System.Windows.Forms.PictureBox();
-            this.pcbBloquerCC = new System.Windows.Forms.PictureBox();
-            this.pcbDesbloquearCC = new System.Windows.Forms.PictureBox();
+            this.btnBloquearNC = new System.Windows.Forms.PictureBox();
+            this.btnDesbloquearNC = new System.Windows.Forms.PictureBox();
+            this.btnBloquerCC = new System.Windows.Forms.PictureBox();
+            this.btnDesbloquearCC = new System.Windows.Forms.PictureBox();
             this.barraLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.pnlLogoLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbBloquearNC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquearNC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbBloquerCC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquearCC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBloquearNC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesbloquearNC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBloquerCC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesbloquearCC)).BeginInit();
             this.SuspendLayout();
             // 
             // barraLogin
@@ -63,10 +63,9 @@ namespace UI
             this.barraLogin.Controls.Add(this.lblCambiarContrasena);
             this.barraLogin.Controls.Add(this.btnMinimizar);
             this.barraLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barraLogin.Location = new System.Drawing.Point(333, 0);
-            this.barraLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLogin.Location = new System.Drawing.Point(250, 0);
             this.barraLogin.Name = "barraLogin";
-            this.barraLogin.Size = new System.Drawing.Size(707, 37);
+            this.barraLogin.Size = new System.Drawing.Size(530, 30);
             this.barraLogin.TabIndex = 21;
             this.barraLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraLogin_MouseDown);
             // 
@@ -74,10 +73,9 @@ namespace UI
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::UI.Properties.Resources.boton_de_quitar_cuadrado;
-            this.btnCerrar.Location = new System.Drawing.Point(675, 9);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Location = new System.Drawing.Point(506, 7);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(20, 18);
+            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 21;
             this.btnCerrar.TabStop = false;
@@ -88,10 +86,9 @@ namespace UI
             this.lblCambiarContrasena.AutoSize = true;
             this.lblCambiarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambiarContrasena.ForeColor = System.Drawing.Color.White;
-            this.lblCambiarContrasena.Location = new System.Drawing.Point(235, 9);
-            this.lblCambiarContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCambiarContrasena.Location = new System.Drawing.Point(176, 7);
             this.lblCambiarContrasena.Name = "lblCambiarContrasena";
-            this.lblCambiarContrasena.Size = new System.Drawing.Size(211, 23);
+            this.lblCambiarContrasena.Size = new System.Drawing.Size(170, 19);
             this.lblCambiarContrasena.TabIndex = 13;
             this.lblCambiarContrasena.Text = "Cambiar contraseña";
             // 
@@ -99,10 +96,9 @@ namespace UI
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar1;
-            this.btnMinimizar.Location = new System.Drawing.Point(645, 9);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimizar.Location = new System.Drawing.Point(484, 7);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(20, 18);
+            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 20;
             this.btnMinimizar.TabStop = false;
@@ -114,19 +110,17 @@ namespace UI
             this.pnlLogoLogin.Controls.Add(this.pictureBox3);
             this.pnlLogoLogin.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLogoLogin.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogoLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLogoLogin.Name = "pnlLogoLogin";
-            this.pnlLogoLogin.Size = new System.Drawing.Size(333, 406);
+            this.pnlLogoLogin.Size = new System.Drawing.Size(250, 330);
             this.pnlLogoLogin.TabIndex = 20;
             this.pnlLogoLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlLogoLogin_MouseDown);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::UI.Properties.Resources.iconoHotel;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 59);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 48);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(325, 262);
+            this.pictureBox3.Size = new System.Drawing.Size(244, 213);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -136,10 +130,9 @@ namespace UI
             this.lblConfirmeContrasena.AutoSize = true;
             this.lblConfirmeContrasena.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblConfirmeContrasena.ForeColor = System.Drawing.Color.Black;
-            this.lblConfirmeContrasena.Location = new System.Drawing.Point(413, 186);
-            this.lblConfirmeContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblConfirmeContrasena.Location = new System.Drawing.Point(310, 151);
             this.lblConfirmeContrasena.Name = "lblConfirmeContrasena";
-            this.lblConfirmeContrasena.Size = new System.Drawing.Size(216, 23);
+            this.lblConfirmeContrasena.Size = new System.Drawing.Size(175, 21);
             this.lblConfirmeContrasena.TabIndex = 27;
             this.lblConfirmeContrasena.Text = "Confirme contraseña";
             // 
@@ -148,10 +141,9 @@ namespace UI
             this.lblNuevaContrasena.AutoSize = true;
             this.lblNuevaContrasena.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblNuevaContrasena.ForeColor = System.Drawing.Color.Black;
-            this.lblNuevaContrasena.Location = new System.Drawing.Point(413, 102);
-            this.lblNuevaContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNuevaContrasena.Location = new System.Drawing.Point(310, 83);
             this.lblNuevaContrasena.Name = "lblNuevaContrasena";
-            this.lblNuevaContrasena.Size = new System.Drawing.Size(195, 23);
+            this.lblNuevaContrasena.Size = new System.Drawing.Size(157, 21);
             this.lblNuevaContrasena.TabIndex = 26;
             this.lblNuevaContrasena.Text = "Nueva contraseña";
             // 
@@ -164,10 +156,9 @@ namespace UI
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnCancelar.Location = new System.Drawing.Point(419, 287);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(314, 233);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(256, 52);
+            this.btnCancelar.Size = new System.Drawing.Size(192, 42);
             this.btnCancelar.TabIndex = 25;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -182,99 +173,102 @@ namespace UI
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnGuardar.Location = new System.Drawing.Point(701, 287);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(526, 233);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(256, 52);
+            this.btnGuardar.Size = new System.Drawing.Size(192, 42);
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtConfirmacionContrasena
+            // txtConfirmarContrasena
             // 
-            this.txtConfirmacionContrasena.BackColor = System.Drawing.Color.White;
-            this.txtConfirmacionContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmacionContrasena.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmacionContrasena.Location = new System.Drawing.Point(420, 215);
-            this.txtConfirmacionContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtConfirmacionContrasena.MaxLength = 16;
-            this.txtConfirmacionContrasena.Name = "txtConfirmacionContrasena";
-            this.txtConfirmacionContrasena.Size = new System.Drawing.Size(543, 32);
-            this.txtConfirmacionContrasena.TabIndex = 23;
+            this.txtConfirmarContrasena.BackColor = System.Drawing.Color.White;
+            this.txtConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarContrasena.ForeColor = System.Drawing.Color.Gray;
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(315, 175);
+            this.txtConfirmarContrasena.MaxLength = 16;
+            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(408, 27);
+            this.txtConfirmarContrasena.TabIndex = 23;
+            this.txtConfirmarContrasena.Text = "Confirme contraseña";
+            this.txtConfirmarContrasena.Enter += new System.EventHandler(this.txtConfirmarContrasena_Enter);
+            this.txtConfirmarContrasena.Leave += new System.EventHandler(this.txtConfirmarContrasena_Leave);
             // 
             // txtNuevaContrasena
             // 
             this.txtNuevaContrasena.BackColor = System.Drawing.Color.White;
             this.txtNuevaContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaContrasena.ForeColor = System.Drawing.Color.Black;
-            this.txtNuevaContrasena.Location = new System.Drawing.Point(419, 132);
-            this.txtNuevaContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNuevaContrasena.ForeColor = System.Drawing.Color.Gray;
+            this.txtNuevaContrasena.Location = new System.Drawing.Point(314, 107);
             this.txtNuevaContrasena.MaxLength = 16;
             this.txtNuevaContrasena.Name = "txtNuevaContrasena";
-            this.txtNuevaContrasena.Size = new System.Drawing.Size(543, 32);
+            this.txtNuevaContrasena.Size = new System.Drawing.Size(408, 27);
             this.txtNuevaContrasena.TabIndex = 22;
+            this.txtNuevaContrasena.Text = "Ingrese nueva contraseña";
+            this.txtNuevaContrasena.Enter += new System.EventHandler(this.txtNuevaContrasena_Enter);
+            this.txtNuevaContrasena.Leave += new System.EventHandler(this.txtNuevaContrasena_Leave);
             // 
-            // pcbBloquearNC
+            // btnBloquearNC
             // 
-            this.pcbBloquearNC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbBloquearNC.Image = global::UI.Properties.Resources.bloquear;
-            this.pcbBloquearNC.Location = new System.Drawing.Point(970, 125);
-            this.pcbBloquearNC.Margin = new System.Windows.Forms.Padding(4);
-            this.pcbBloquearNC.Name = "pcbBloquearNC";
-            this.pcbBloquearNC.Size = new System.Drawing.Size(47, 43);
-            this.pcbBloquearNC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbBloquearNC.TabIndex = 29;
-            this.pcbBloquearNC.TabStop = false;
+            this.btnBloquearNC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBloquearNC.Image = global::UI.Properties.Resources.bloquear;
+            this.btnBloquearNC.Location = new System.Drawing.Point(728, 102);
+            this.btnBloquearNC.Name = "btnBloquearNC";
+            this.btnBloquearNC.Size = new System.Drawing.Size(35, 35);
+            this.btnBloquearNC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBloquearNC.TabIndex = 29;
+            this.btnBloquearNC.TabStop = false;
+            this.btnBloquearNC.Click += new System.EventHandler(this.btnBloquearNC_Click);
             // 
-            // pcbDesbloquearNC
+            // btnDesbloquearNC
             // 
-            this.pcbDesbloquearNC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbDesbloquearNC.Image = global::UI.Properties.Resources.desbloquear;
-            this.pcbDesbloquearNC.Location = new System.Drawing.Point(970, 125);
-            this.pcbDesbloquearNC.Margin = new System.Windows.Forms.Padding(4);
-            this.pcbDesbloquearNC.Name = "pcbDesbloquearNC";
-            this.pcbDesbloquearNC.Size = new System.Drawing.Size(47, 43);
-            this.pcbDesbloquearNC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbDesbloquearNC.TabIndex = 28;
-            this.pcbDesbloquearNC.TabStop = false;
-            this.pcbDesbloquearNC.Visible = false;
+            this.btnDesbloquearNC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDesbloquearNC.Image = global::UI.Properties.Resources.desbloquear;
+            this.btnDesbloquearNC.Location = new System.Drawing.Point(728, 102);
+            this.btnDesbloquearNC.Name = "btnDesbloquearNC";
+            this.btnDesbloquearNC.Size = new System.Drawing.Size(35, 35);
+            this.btnDesbloquearNC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDesbloquearNC.TabIndex = 28;
+            this.btnDesbloquearNC.TabStop = false;
+            this.btnDesbloquearNC.Visible = false;
+            this.btnDesbloquearNC.Click += new System.EventHandler(this.btnDesbloquearNC_Click);
             // 
-            // pcbBloquerCC
+            // btnBloquerCC
             // 
-            this.pcbBloquerCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbBloquerCC.Image = global::UI.Properties.Resources.bloquear;
-            this.pcbBloquerCC.Location = new System.Drawing.Point(970, 212);
-            this.pcbBloquerCC.Margin = new System.Windows.Forms.Padding(4);
-            this.pcbBloquerCC.Name = "pcbBloquerCC";
-            this.pcbBloquerCC.Size = new System.Drawing.Size(47, 43);
-            this.pcbBloquerCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbBloquerCC.TabIndex = 31;
-            this.pcbBloquerCC.TabStop = false;
+            this.btnBloquerCC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBloquerCC.Image = global::UI.Properties.Resources.bloquear;
+            this.btnBloquerCC.Location = new System.Drawing.Point(728, 172);
+            this.btnBloquerCC.Name = "btnBloquerCC";
+            this.btnBloquerCC.Size = new System.Drawing.Size(35, 35);
+            this.btnBloquerCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBloquerCC.TabIndex = 31;
+            this.btnBloquerCC.TabStop = false;
+            this.btnBloquerCC.Click += new System.EventHandler(this.btnBloquerCC_Click);
             // 
-            // pcbDesbloquearCC
+            // btnDesbloquearCC
             // 
-            this.pcbDesbloquearCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbDesbloquearCC.Image = global::UI.Properties.Resources.desbloquear;
-            this.pcbDesbloquearCC.Location = new System.Drawing.Point(970, 212);
-            this.pcbDesbloquearCC.Margin = new System.Windows.Forms.Padding(4);
-            this.pcbDesbloquearCC.Name = "pcbDesbloquearCC";
-            this.pcbDesbloquearCC.Size = new System.Drawing.Size(47, 43);
-            this.pcbDesbloquearCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbDesbloquearCC.TabIndex = 30;
-            this.pcbDesbloquearCC.TabStop = false;
-            this.pcbDesbloquearCC.Visible = false;
+            this.btnDesbloquearCC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDesbloquearCC.Image = global::UI.Properties.Resources.desbloquear;
+            this.btnDesbloquearCC.Location = new System.Drawing.Point(728, 172);
+            this.btnDesbloquearCC.Name = "btnDesbloquearCC";
+            this.btnDesbloquearCC.Size = new System.Drawing.Size(35, 35);
+            this.btnDesbloquearCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDesbloquearCC.TabIndex = 30;
+            this.btnDesbloquearCC.TabStop = false;
+            this.btnDesbloquearCC.Visible = false;
+            this.btnDesbloquearCC.Click += new System.EventHandler(this.btnDesbloquearCC_Click);
             // 
             // frmCambiarContrasena
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 406);
-            this.Controls.Add(this.pcbBloquerCC);
-            this.Controls.Add(this.pcbDesbloquearCC);
-            this.Controls.Add(this.pcbBloquearNC);
-            this.Controls.Add(this.pcbDesbloquearNC);
+            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.btnBloquerCC);
+            this.Controls.Add(this.btnDesbloquearCC);
+            this.Controls.Add(this.btnBloquearNC);
+            this.Controls.Add(this.btnDesbloquearNC);
             this.Controls.Add(this.lblConfirmeContrasena);
             this.Controls.Add(this.lblNuevaContrasena);
             this.Controls.Add(this.barraLogin);
@@ -282,9 +276,8 @@ namespace UI
             this.Controls.Add(this.pnlLogoLogin);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtNuevaContrasena);
-            this.Controls.Add(this.txtConfirmacionContrasena);
+            this.Controls.Add(this.txtConfirmarContrasena);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCambiarContrasena";
             this.Opacity = 0.95D;
             this.Text = "frmCambiarContrasena";
@@ -294,10 +287,10 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.pnlLogoLogin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbBloquearNC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquearNC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbBloquerCC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbDesbloquearCC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBloquearNC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesbloquearNC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBloquerCC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesbloquearCC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,11 +308,11 @@ namespace UI
         private System.Windows.Forms.Label lblNuevaContrasena;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtConfirmacionContrasena;
+        private System.Windows.Forms.TextBox txtConfirmarContrasena;
         private System.Windows.Forms.TextBox txtNuevaContrasena;
-        private System.Windows.Forms.PictureBox pcbBloquearNC;
-        private System.Windows.Forms.PictureBox pcbDesbloquearNC;
-        private System.Windows.Forms.PictureBox pcbBloquerCC;
-        private System.Windows.Forms.PictureBox pcbDesbloquearCC;
+        private System.Windows.Forms.PictureBox btnBloquearNC;
+        private System.Windows.Forms.PictureBox btnDesbloquearNC;
+        private System.Windows.Forms.PictureBox btnBloquerCC;
+        private System.Windows.Forms.PictureBox btnDesbloquearCC;
     }
 }
