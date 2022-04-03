@@ -43,5 +43,11 @@ namespace UI
             this.Hide();
         }
         #endregion
+
+        private void btnAgregarComplemento_Click(object sender, EventArgs e)
+        {
+            frmAgregarComplemento agregarComplemento = new frmAgregarComplemento();
+            agregarComplemento.Show();
+        }
     }
 }

@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarAreaTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarAreaTrabajo.Designer.cs">
+      <DependentUpon>frmAgregarAreaTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarCategoriaHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,30 @@
     </Compile>
     <Compile Include="frmAgregarComplemento.Designer.cs">
       <DependentUpon>frmAgregarComplemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarPuestoTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarPuestoTrabajo.Designer.cs">
+      <DependentUpon>frmAgregarPuestoTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarTipoVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarTipoVehiculo.Designer.cs">
+      <DependentUpon>frmAgregarTipoVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCliente.Designer.cs">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarEmpleado.Designer.cs">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarReportes.cs">
       <SubType>Form</SubType>
@@ -79,17 +109,41 @@
     <Compile Include="frmCambiarContrasena.Designer.cs">
       <DependentUpon>frmCambiarContrasena.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarReportes.Designer.cs">
+      <DependentUpon>frmConsultarReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleado.Designer.cs">
+      <DependentUpon>frmEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEstacionamiento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEstacionamiento.Designer.cs">
       <DependentUpon>frmEstacionamiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGenerarReporte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGenerarReporte.Designer.cs">
       <DependentUpon>frmGenerarReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarReportes.Designer.cs">
+      <DependentUpon>frmGenerarReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -141,6 +195,12 @@
     <EmbeddedResource Include="frmAgregarComplemento.resx">
       <DependentUpon>frmAgregarComplemento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarCliente.resx">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarEmpleado.resx">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarReportes.resx">
       <DependentUpon>frmBuscarReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,11 +210,23 @@
     <EmbeddedResource Include="frmCambiarContrasena.resx">
       <DependentUpon>frmCambiarContrasena.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarReportes.resx">
+      <DependentUpon>frmConsultarReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleado.resx">
+      <DependentUpon>frmEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEstacionamiento.resx">
       <DependentUpon>frmEstacionamiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGenerarReporte.resx">
       <DependentUpon>frmGenerarReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerarReportes.resx">
+      <DependentUpon>frmGenerarReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -317,6 +389,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\muebles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil-del-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elipsis.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

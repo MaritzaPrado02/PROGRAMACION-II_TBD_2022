@@ -22,11 +22,5 @@ namespace UI
             frmAgregarCategoriaHabitacion agregarCategoria = new frmAgregarCategoriaHabitacion();
             agregarCategoria.Show();
         }
-
-        private void btnAgregarComplemento_Click(object sender, EventArgs e)
-        {
-            frmAgregarComplemento agregarComplemento = new frmAgregarComplemento();
-            agregarComplemento.Show();
-        }
     }
 }

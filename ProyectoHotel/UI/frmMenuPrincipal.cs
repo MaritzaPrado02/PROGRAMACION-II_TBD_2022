@@ -83,8 +83,8 @@ namespace UI
         #region Evento para mostrar fecha y hora en tiempo real
         private void fechaHora_Tick(object sender, EventArgs e)
         {
-            lblFecha.Text = DateTime.Now.ToLongDateString();
-            lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
+            lblFecha.Text = "Fecha: " + DateTime.Now.ToLongDateString();
+            lblHora.Text = "Hora: " + DateTime.Now.ToString("HH:mm:ssss");
         }
         #endregion
 
@@ -171,6 +171,7 @@ namespace UI
         }
         #endregion
 
+        #region Mostrar formularios en contenedor
         private void btnRegistrarReservacion_Click(object sender, EventArgs e)
         {
             abrirFormularioHijo(new frmReservaciones());
@@ -200,5 +201,42 @@ namespace UI
             abrirFormularioHijo(new frmEstacionamiento());
             ocultarSubmenu();
         }
+
+        private void btnConsultarCliente_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmBuscarCliente());
+            ocultarSubmenu();
+        }
+
+        private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmEmpleado());
+            ocultarSubmenu();
+        }
+
+        private void btnConsultarEmpleado_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmBuscarEmpleado());
+            ocultarSubmenu();
+        }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmFactura());
+            ocultarSubmenu();
+        }
+
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmGenerarReporte());
+            ocultarSubmenu();
+        }
+
+        private void btnConsultarReportes_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmConsultarReportes());
+            ocultarSubmenu();
+        }
+        #endregion
     }
 }

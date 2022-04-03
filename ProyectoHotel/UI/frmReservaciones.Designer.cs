@@ -37,11 +37,9 @@ namespace UI
             this.clmClave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionarHabitaciones = new System.Windows.Forms.Button();
             this.grbCliente = new System.Windows.Forms.GroupBox();
             this.txtEmail = new AltoControls.AltoTextBox();
             this.txtTelefono = new AltoControls.AltoTextBox();
-            this.btnBusqueda = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtApellidoMaterno = new AltoControls.AltoTextBox();
@@ -60,6 +58,8 @@ namespace UI
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnBusqueda = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.grbCliente.SuspendLayout();
@@ -68,6 +68,7 @@ namespace UI
             // 
             // pnlTitulo
             // 
+            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.pnlTitulo.Controls.Add(this.lblTitulo);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
@@ -79,6 +80,7 @@ namespace UI
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(31, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(131, 19);
@@ -95,7 +97,7 @@ namespace UI
             this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservar.ForeColor = System.Drawing.Color.White;
-            this.btnReservar.Location = new System.Drawing.Point(521, 560);
+            this.btnReservar.Location = new System.Drawing.Point(521, 566);
             this.btnReservar.Name = "btnReservar";
             this.btnReservar.Size = new System.Drawing.Size(175, 42);
             this.btnReservar.TabIndex = 59;
@@ -109,10 +111,10 @@ namespace UI
             this.clmClave,
             this.clmTipo,
             this.clmCosto});
-            this.dgvHabitaciones.Location = new System.Drawing.Point(521, 47);
+            this.dgvHabitaciones.Location = new System.Drawing.Point(521, 62);
             this.dgvHabitaciones.Name = "dgvHabitaciones";
             this.dgvHabitaciones.RowHeadersWidth = 51;
-            this.dgvHabitaciones.Size = new System.Drawing.Size(385, 495);
+            this.dgvHabitaciones.Size = new System.Drawing.Size(385, 480);
             this.dgvHabitaciones.TabIndex = 58;
             // 
             // clmClave
@@ -130,23 +132,6 @@ namespace UI
             this.clmCosto.HeaderText = "COSTO";
             this.clmCosto.Name = "clmCosto";
             // 
-            // btnSeleccionarHabitaciones
-            // 
-            this.btnSeleccionarHabitaciones.BackColor = System.Drawing.Color.Black;
-            this.btnSeleccionarHabitaciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeleccionarHabitaciones.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionarHabitaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnSeleccionarHabitaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnSeleccionarHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionarHabitaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionarHabitaciones.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionarHabitaciones.Location = new System.Drawing.Point(135, 584);
-            this.btnSeleccionarHabitaciones.Name = "btnSeleccionarHabitaciones";
-            this.btnSeleccionarHabitaciones.Size = new System.Drawing.Size(226, 42);
-            this.btnSeleccionarHabitaciones.TabIndex = 57;
-            this.btnSeleccionarHabitaciones.Text = "Seleccionar habitaciones";
-            this.btnSeleccionarHabitaciones.UseVisualStyleBackColor = false;
-            // 
             // grbCliente
             // 
             this.grbCliente.Controls.Add(this.txtEmail);
@@ -161,7 +146,7 @@ namespace UI
             this.grbCliente.Controls.Add(this.lblNombre);
             this.grbCliente.Controls.Add(this.lblApellido);
             this.grbCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCliente.Location = new System.Drawing.Point(51, 231);
+            this.grbCliente.Location = new System.Drawing.Point(52, 215);
             this.grbCliente.Name = "grbCliente";
             this.grbCliente.Size = new System.Drawing.Size(415, 345);
             this.grbCliente.TabIndex = 56;
@@ -191,18 +176,6 @@ namespace UI
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(212, 33);
             this.txtTelefono.TabIndex = 26;
-            // 
-            // btnBusqueda
-            // 
-            this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBusqueda.Image = global::UI.Properties.Resources.lupa;
-            this.btnBusqueda.Location = new System.Drawing.Point(38, 33);
-            this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(38, 38);
-            this.btnBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBusqueda.TabIndex = 25;
-            this.btnBusqueda.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnBusqueda, "Buscar cliente");
             // 
             // label5
             // 
@@ -294,7 +267,7 @@ namespace UI
             // 
             this.dateTimePicker3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(212, 189);
+            this.dateTimePicker3.Location = new System.Drawing.Point(212, 146);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(211, 27);
             this.dateTimePicker3.TabIndex = 55;
@@ -303,7 +276,7 @@ namespace UI
             // 
             this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(212, 122);
+            this.dateTimePicker2.Location = new System.Drawing.Point(212, 102);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(211, 27);
             this.dateTimePicker2.TabIndex = 54;
@@ -321,7 +294,7 @@ namespace UI
             // 
             this.lblFechaSalida.AutoSize = true;
             this.lblFechaSalida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSalida.Location = new System.Drawing.Point(87, 194);
+            this.lblFechaSalida.Location = new System.Drawing.Point(87, 151);
             this.lblFechaSalida.Name = "lblFechaSalida";
             this.lblFechaSalida.Size = new System.Drawing.Size(109, 19);
             this.lblFechaSalida.TabIndex = 52;
@@ -331,7 +304,7 @@ namespace UI
             // 
             this.lblFechaIngreso.AutoSize = true;
             this.lblFechaIngreso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaIngreso.Location = new System.Drawing.Point(80, 125);
+            this.lblFechaIngreso.Location = new System.Drawing.Point(80, 105);
             this.lblFechaIngreso.Name = "lblFechaIngreso";
             this.lblFechaIngreso.Size = new System.Drawing.Size(118, 19);
             this.lblFechaIngreso.TabIndex = 51;
@@ -373,12 +346,41 @@ namespace UI
             this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarCambios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCambios.Location = new System.Drawing.Point(722, 560);
+            this.btnGuardarCambios.Location = new System.Drawing.Point(722, 566);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
             this.btnGuardarCambios.Size = new System.Drawing.Size(184, 42);
             this.btnGuardarCambios.TabIndex = 67;
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(176, 566);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 42);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "Guardar cambios";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnBusqueda
+            // 
+            this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBusqueda.Image = global::UI.Properties.Resources.lupa;
+            this.btnBusqueda.Location = new System.Drawing.Point(38, 33);
+            this.btnBusqueda.Name = "btnBusqueda";
+            this.btnBusqueda.Size = new System.Drawing.Size(38, 38);
+            this.btnBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBusqueda.TabIndex = 25;
+            this.btnBusqueda.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnBusqueda, "Buscar cliente");
             // 
             // frmReservaciones
             // 
@@ -386,12 +388,12 @@ namespace UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(962, 633);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.dgvHabitaciones);
-            this.Controls.Add(this.btnSeleccionarHabitaciones);
             this.Controls.Add(this.grbCliente);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.dateTimePicker2);
@@ -423,7 +425,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clmClave;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCosto;
-        private System.Windows.Forms.Button btnSeleccionarHabitaciones;
         private System.Windows.Forms.GroupBox grbCliente;
         private AltoControls.AltoTextBox txtEmail;
         private AltoControls.AltoTextBox txtTelefono;
@@ -446,5 +447,6 @@ namespace UI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.PictureBox btnBusqueda;
+        private System.Windows.Forms.Button button1;
     }
 }
