@@ -17,5 +17,10 @@ namespace UI
             InitializeComponent();
         }
 
+        private void btnAgregarTipoVehiculo_Click(object sender, EventArgs e)
+        {
+            frmAgregarTipoVehiculo tipoVehiculo = new frmAgregarTipoVehiculo();
+            tipoVehiculo.Show();
+        }
     }
 }

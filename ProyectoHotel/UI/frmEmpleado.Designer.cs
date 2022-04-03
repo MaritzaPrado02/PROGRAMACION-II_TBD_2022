@@ -45,12 +45,19 @@ namespace UI
             this.lblAreaTrabajo = new System.Windows.Forms.Label();
             this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnPuestoTrabajo = new System.Windows.Forms.PictureBox();
+            this.btnAgregarAreaTrabajo = new System.Windows.Forms.PictureBox();
             this.cmbPuestoTrabajo = new System.Windows.Forms.ComboBox();
             this.lblPuesto = new System.Windows.Forms.Label();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grbDireccion = new System.Windows.Forms.GroupBox();
+            this.cmbMunicipio = new System.Windows.Forms.ComboBox();
+            this.lblMunicipio = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.txtNumero = new AltoControls.AltoTextBox();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.txtColonia = new AltoControls.AltoTextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblColonia = new System.Windows.Forms.Label();
@@ -58,21 +65,14 @@ namespace UI
             this.lblCalle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.cmbMunicipio = new System.Windows.Forms.ComboBox();
-            this.lblMunicipio = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAgregarComplemento = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPuestoTrabajo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAreaTrabajo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             this.grbDireccion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarComplemento)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -227,6 +227,44 @@ namespace UI
             this.cmbAreaTrabajo.Size = new System.Drawing.Size(278, 29);
             this.cmbAreaTrabajo.TabIndex = 42;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::UI.Properties.Resources.elipsis;
+            this.pictureBox3.Location = new System.Drawing.Point(834, 241);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 123;
+            this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Seleccionar imagen de perfil");
+            // 
+            // btnPuestoTrabajo
+            // 
+            this.btnPuestoTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPuestoTrabajo.Image = global::UI.Properties.Resources.boton_agregar;
+            this.btnPuestoTrabajo.Location = new System.Drawing.Point(481, 491);
+            this.btnPuestoTrabajo.Name = "btnPuestoTrabajo";
+            this.btnPuestoTrabajo.Size = new System.Drawing.Size(32, 32);
+            this.btnPuestoTrabajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnPuestoTrabajo.TabIndex = 120;
+            this.btnPuestoTrabajo.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnPuestoTrabajo, "Agregar nuevo puesto de trabajo");
+            this.btnPuestoTrabajo.Click += new System.EventHandler(this.btnPuestoTrabajo_Click);
+            // 
+            // btnAgregarAreaTrabajo
+            // 
+            this.btnAgregarAreaTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarAreaTrabajo.Image = global::UI.Properties.Resources.boton_agregar;
+            this.btnAgregarAreaTrabajo.Location = new System.Drawing.Point(481, 444);
+            this.btnAgregarAreaTrabajo.Name = "btnAgregarAreaTrabajo";
+            this.btnAgregarAreaTrabajo.Size = new System.Drawing.Size(32, 32);
+            this.btnAgregarAreaTrabajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAgregarAreaTrabajo.TabIndex = 117;
+            this.btnAgregarAreaTrabajo.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnAgregarAreaTrabajo, "Agregar nueva área trabajo");
+            this.btnAgregarAreaTrabajo.Click += new System.EventHandler(this.btnAgregarAreaTrabajo_Click);
+            // 
             // cmbPuestoTrabajo
             // 
             this.cmbPuestoTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -288,6 +326,36 @@ namespace UI
             this.grbDireccion.TabStop = false;
             this.grbDireccion.Text = "Dirección";
             // 
+            // cmbMunicipio
+            // 
+            this.cmbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMunicipio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMunicipio.FormattingEnabled = true;
+            this.cmbMunicipio.Location = new System.Drawing.Point(144, 83);
+            this.cmbMunicipio.Name = "cmbMunicipio";
+            this.cmbMunicipio.Size = new System.Drawing.Size(205, 29);
+            this.cmbMunicipio.TabIndex = 130;
+            // 
+            // lblMunicipio
+            // 
+            this.lblMunicipio.AutoSize = true;
+            this.lblMunicipio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMunicipio.Location = new System.Drawing.Point(44, 89);
+            this.lblMunicipio.Name = "lblMunicipio";
+            this.lblMunicipio.Size = new System.Drawing.Size(85, 21);
+            this.lblMunicipio.TabIndex = 129;
+            this.lblMunicipio.Text = "Municipio";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(144, 34);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(205, 29);
+            this.cmbEstado.TabIndex = 128;
+            // 
             // txtNumero
             // 
             this.txtNumero.BackColor = System.Drawing.Color.Transparent;
@@ -299,6 +367,16 @@ namespace UI
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(205, 33);
             this.txtNumero.TabIndex = 27;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(65, 40);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(64, 21);
+            this.lblEstado.TabIndex = 127;
+            this.lblEstado.Text = "Estado";
             // 
             // txtColonia
             // 
@@ -374,46 +452,6 @@ namespace UI
             this.panel2.Size = new System.Drawing.Size(17, 597);
             this.panel2.TabIndex = 125;
             // 
-            // cmbEstado
-            // 
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(144, 34);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(205, 29);
-            this.cmbEstado.TabIndex = 128;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(65, 40);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(64, 21);
-            this.lblEstado.TabIndex = 127;
-            this.lblEstado.Text = "Estado";
-            // 
-            // cmbMunicipio
-            // 
-            this.cmbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMunicipio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMunicipio.FormattingEnabled = true;
-            this.cmbMunicipio.Location = new System.Drawing.Point(144, 83);
-            this.cmbMunicipio.Name = "cmbMunicipio";
-            this.cmbMunicipio.Size = new System.Drawing.Size(205, 29);
-            this.cmbMunicipio.TabIndex = 130;
-            // 
-            // lblMunicipio
-            // 
-            this.lblMunicipio.AutoSize = true;
-            this.lblMunicipio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMunicipio.Location = new System.Drawing.Point(44, 89);
-            this.lblMunicipio.Name = "lblMunicipio";
-            this.lblMunicipio.Size = new System.Drawing.Size(85, 21);
-            this.lblMunicipio.TabIndex = 129;
-            this.lblMunicipio.Text = "Municipio";
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(129)))), ((int)(((byte)(209)))));
@@ -431,18 +469,6 @@ namespace UI
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::UI.Properties.Resources.elipsis;
-            this.pictureBox3.Location = new System.Drawing.Point(834, 241);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 123;
-            this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, "Seleccionar imagen de perfil");
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
@@ -451,30 +477,6 @@ namespace UI
             this.pictureBox2.Size = new System.Drawing.Size(200, 200);
             this.pictureBox2.TabIndex = 122;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::UI.Properties.Resources.boton_agregar;
-            this.pictureBox1.Location = new System.Drawing.Point(481, 491);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 120;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Agregar nuevo puesto de trabajo");
-            // 
-            // btnAgregarComplemento
-            // 
-            this.btnAgregarComplemento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarComplemento.Image = global::UI.Properties.Resources.boton_agregar;
-            this.btnAgregarComplemento.Location = new System.Drawing.Point(481, 444);
-            this.btnAgregarComplemento.Name = "btnAgregarComplemento";
-            this.btnAgregarComplemento.Size = new System.Drawing.Size(32, 32);
-            this.btnAgregarComplemento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAgregarComplemento.TabIndex = 117;
-            this.btnAgregarComplemento.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnAgregarComplemento, "Agregar nueva área trabajo");
             // 
             // frmEmpleado
             // 
@@ -489,10 +491,10 @@ namespace UI
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pnlTitulo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnPuestoTrabajo);
             this.Controls.Add(this.cmbPuestoTrabajo);
             this.Controls.Add(this.lblPuesto);
-            this.Controls.Add(this.btnAgregarComplemento);
+            this.Controls.Add(this.btnAgregarAreaTrabajo);
             this.Controls.Add(this.cmbAreaTrabajo);
             this.Controls.Add(this.lblAreaTrabajo);
             this.Controls.Add(this.txtRFC);
@@ -509,14 +511,14 @@ namespace UI
             this.Controls.Add(this.lblApellido);
             this.Name = "frmEmpleado";
             this.Text = "frmEmpleado";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPuestoTrabajo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAreaTrabajo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             this.grbDireccion.ResumeLayout(false);
             this.grbDireccion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarComplemento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,9 +540,9 @@ namespace UI
         private System.Windows.Forms.Label lblRFC;
         private System.Windows.Forms.Label lblAreaTrabajo;
         private System.Windows.Forms.ComboBox cmbAreaTrabajo;
-        private System.Windows.Forms.PictureBox btnAgregarComplemento;
+        private System.Windows.Forms.PictureBox btnAgregarAreaTrabajo;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnPuestoTrabajo;
         private System.Windows.Forms.ComboBox cmbPuestoTrabajo;
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.Panel pnlTitulo;

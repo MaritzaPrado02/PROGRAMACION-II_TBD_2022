@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class frmGenerarReportes : Form
+    public partial class frmBuscarFactura : Form
     {
-        public frmGenerarReportes()
+        public frmBuscarFactura()
         {
             InitializeComponent();
         }

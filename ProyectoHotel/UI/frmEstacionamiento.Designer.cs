@@ -44,23 +44,23 @@ namespace UI
             this.clmEstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.grbRegistroEstacionamiento = new System.Windows.Forms.GroupBox();
+            this.btnAgregarTipoVehiculo = new System.Windows.Forms.PictureBox();
+            this.cmbEstatus = new System.Windows.Forms.ComboBox();
+            this.lblEstatus = new System.Windows.Forms.Label();
             this.altoTextBox1 = new AltoControls.AltoTextBox();
             this.lblCostoHabitacion = new System.Windows.Forms.Label();
             this.cmbTipoVehiculo = new System.Windows.Forms.ComboBox();
             this.lblTipoVehiculo = new System.Windows.Forms.Label();
-            this.cmbEstatus = new System.Windows.Forms.ComboBox();
-            this.lblEstatus = new System.Windows.Forms.Label();
-            this.btnAgregarTipovVehiculo = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromocion)).BeginInit();
             this.grbRegistroEstacionamiento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarTipovVehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarTipoVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -209,7 +209,7 @@ namespace UI
             // 
             // grbRegistroEstacionamiento
             // 
-            this.grbRegistroEstacionamiento.Controls.Add(this.btnAgregarTipovVehiculo);
+            this.grbRegistroEstacionamiento.Controls.Add(this.btnAgregarTipoVehiculo);
             this.grbRegistroEstacionamiento.Controls.Add(this.cmbEstatus);
             this.grbRegistroEstacionamiento.Controls.Add(this.lblEstatus);
             this.grbRegistroEstacionamiento.Controls.Add(this.altoTextBox1);
@@ -223,6 +223,39 @@ namespace UI
             this.grbRegistroEstacionamiento.TabIndex = 68;
             this.grbRegistroEstacionamiento.TabStop = false;
             this.grbRegistroEstacionamiento.Text = "Detalles estacionamiento";
+            // 
+            // btnAgregarTipoVehiculo
+            // 
+            this.btnAgregarTipoVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarTipoVehiculo.Image = global::UI.Properties.Resources.boton_agregar;
+            this.btnAgregarTipoVehiculo.Location = new System.Drawing.Point(330, 51);
+            this.btnAgregarTipoVehiculo.Name = "btnAgregarTipoVehiculo";
+            this.btnAgregarTipoVehiculo.Size = new System.Drawing.Size(32, 32);
+            this.btnAgregarTipoVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAgregarTipoVehiculo.TabIndex = 49;
+            this.btnAgregarTipoVehiculo.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnAgregarTipoVehiculo, "Añadir un nuevo tipo vehiculo");
+            this.btnAgregarTipoVehiculo.Click += new System.EventHandler(this.btnAgregarTipoVehiculo_Click);
+            // 
+            // cmbEstatus
+            // 
+            this.cmbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstatus.FormattingEnabled = true;
+            this.cmbEstatus.Location = new System.Drawing.Point(133, 144);
+            this.cmbEstatus.Name = "cmbEstatus";
+            this.cmbEstatus.Size = new System.Drawing.Size(220, 29);
+            this.cmbEstatus.TabIndex = 48;
+            // 
+            // lblEstatus
+            // 
+            this.lblEstatus.AutoSize = true;
+            this.lblEstatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatus.Location = new System.Drawing.Point(10, 147);
+            this.lblEstatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstatus.Name = "lblEstatus";
+            this.lblEstatus.Size = new System.Drawing.Size(70, 21);
+            this.lblEstatus.TabIndex = 47;
+            this.lblEstatus.Text = "Estatus:";
             // 
             // altoTextBox1
             // 
@@ -266,36 +299,17 @@ namespace UI
             this.lblTipoVehiculo.TabIndex = 41;
             this.lblTipoVehiculo.Text = "Tipo vehiculo:";
             // 
-            // cmbEstatus
+            // btnBuscar
             // 
-            this.cmbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstatus.FormattingEnabled = true;
-            this.cmbEstatus.Location = new System.Drawing.Point(133, 144);
-            this.cmbEstatus.Name = "cmbEstatus";
-            this.cmbEstatus.Size = new System.Drawing.Size(220, 29);
-            this.cmbEstatus.TabIndex = 48;
-            // 
-            // lblEstatus
-            // 
-            this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatus.Location = new System.Drawing.Point(10, 147);
-            this.lblEstatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEstatus.Name = "lblEstatus";
-            this.lblEstatus.Size = new System.Drawing.Size(70, 21);
-            this.lblEstatus.TabIndex = 47;
-            this.lblEstatus.Text = "Estatus:";
-            // 
-            // btnAgregarTipovVehiculo
-            // 
-            this.btnAgregarTipovVehiculo.Image = global::UI.Properties.Resources.boton_agregar;
-            this.btnAgregarTipovVehiculo.Location = new System.Drawing.Point(330, 51);
-            this.btnAgregarTipovVehiculo.Name = "btnAgregarTipovVehiculo";
-            this.btnAgregarTipovVehiculo.Size = new System.Drawing.Size(32, 32);
-            this.btnAgregarTipovVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAgregarTipovVehiculo.TabIndex = 49;
-            this.btnAgregarTipovVehiculo.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnAgregarTipovVehiculo, "Añadir un nuevo tipo vehiculo");
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
+            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnBuscar, "Buscar lugar de estacionamiento");
             // 
             // lblBuscar
             // 
@@ -330,18 +344,6 @@ namespace UI
             this.cmbFiltro.Name = "cmbFiltro";
             this.cmbFiltro.Size = new System.Drawing.Size(121, 28);
             this.cmbFiltro.TabIndex = 6;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
-            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnBuscar, "Buscar lugar de estacionamiento");
             // 
             // panel1
             // 
@@ -380,7 +382,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromocion)).EndInit();
             this.grbRegistroEstacionamiento.ResumeLayout(false);
             this.grbRegistroEstacionamiento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarTipovVehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarTipoVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -410,7 +412,7 @@ namespace UI
         private System.Windows.Forms.Label lblTipoVehiculo;
         private System.Windows.Forms.ComboBox cmbEstatus;
         private System.Windows.Forms.Label lblEstatus;
-        private System.Windows.Forms.PictureBox btnAgregarTipovVehiculo;
+        private System.Windows.Forms.PictureBox btnAgregarTipoVehiculo;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TextBox txtBuscar;

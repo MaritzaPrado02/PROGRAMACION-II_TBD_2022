@@ -16,5 +16,17 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void btnAgregarAreaTrabajo_Click(object sender, EventArgs e)
+        {
+            frmAgregarAreaTrabajo areaTrabajo = new frmAgregarAreaTrabajo();
+            areaTrabajo.Show();
+        }
+
+        private void btnPuestoTrabajo_Click(object sender, EventArgs e)
+        {
+            frmAgregarPuestoTrabajo puestoTrabajo = new frmAgregarPuestoTrabajo();
+            puestoTrabajo.Show();
+        }
     }
 }

@@ -40,6 +40,7 @@ namespace UI
             this.grbCliente = new System.Windows.Forms.GroupBox();
             this.txtEmail = new AltoControls.AltoTextBox();
             this.txtTelefono = new AltoControls.AltoTextBox();
+            this.btnBusqueda = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtApellidoMaterno = new AltoControls.AltoTextBox();
@@ -58,12 +59,22 @@ namespace UI
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBusqueda = new System.Windows.Forms.PictureBox();
+            this.lblAplicaPromocion = new System.Windows.Forms.Label();
+            this.ckbSiAplica = new System.Windows.Forms.CheckBox();
+            this.lblPromocion = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rdbNoEstacionamiento = new System.Windows.Forms.RadioButton();
+            this.rdbSiEstacionamiento = new System.Windows.Forms.RadioButton();
+            this.lblAplicaEstacionamiento = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.lblEspacioEstacionamiento = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.grbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -114,7 +125,7 @@ namespace UI
             this.dgvHabitaciones.Location = new System.Drawing.Point(521, 62);
             this.dgvHabitaciones.Name = "dgvHabitaciones";
             this.dgvHabitaciones.RowHeadersWidth = 51;
-            this.dgvHabitaciones.Size = new System.Drawing.Size(385, 480);
+            this.dgvHabitaciones.Size = new System.Drawing.Size(385, 185);
             this.dgvHabitaciones.TabIndex = 58;
             // 
             // clmClave
@@ -146,9 +157,9 @@ namespace UI
             this.grbCliente.Controls.Add(this.lblNombre);
             this.grbCliente.Controls.Add(this.lblApellido);
             this.grbCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCliente.Location = new System.Drawing.Point(52, 215);
+            this.grbCliente.Location = new System.Drawing.Point(48, 305);
             this.grbCliente.Name = "grbCliente";
-            this.grbCliente.Size = new System.Drawing.Size(415, 345);
+            this.grbCliente.Size = new System.Drawing.Size(415, 285);
             this.grbCliente.TabIndex = 56;
             this.grbCliente.TabStop = false;
             this.grbCliente.Text = "Cliente";
@@ -160,7 +171,7 @@ namespace UI
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(190, 282);
+            this.txtEmail.Location = new System.Drawing.Point(190, 208);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(212, 33);
             this.txtEmail.TabIndex = 27;
@@ -172,16 +183,28 @@ namespace UI
             this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(190, 224);
+            this.txtTelefono.Location = new System.Drawing.Point(190, 165);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(212, 33);
             this.txtTelefono.TabIndex = 26;
+            // 
+            // btnBusqueda
+            // 
+            this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBusqueda.Image = global::UI.Properties.Resources.lupa;
+            this.btnBusqueda.Location = new System.Drawing.Point(38, 33);
+            this.btnBusqueda.Name = "btnBusqueda";
+            this.btnBusqueda.Size = new System.Drawing.Size(38, 38);
+            this.btnBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBusqueda.TabIndex = 25;
+            this.btnBusqueda.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnBusqueda, "Buscar cliente");
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 289);
+            this.label5.Location = new System.Drawing.Point(34, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 21);
             this.label5.TabIndex = 24;
@@ -191,7 +214,7 @@ namespace UI
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(105, 229);
+            this.lblTelefono.Location = new System.Drawing.Point(105, 170);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(76, 21);
             this.lblTelefono.TabIndex = 23;
@@ -204,7 +227,7 @@ namespace UI
             this.txtApellidoMaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(190, 161);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(190, 122);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(212, 33);
             this.txtApellidoMaterno.TabIndex = 20;
@@ -216,7 +239,7 @@ namespace UI
             this.txtApellidoPaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(190, 99);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(190, 78);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(212, 33);
             this.txtApellidoPaterno.TabIndex = 19;
@@ -237,7 +260,7 @@ namespace UI
             // 
             this.lblApellidoMaterno.AutoSize = true;
             this.lblApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoMaterno.Location = new System.Drawing.Point(38, 171);
+            this.lblApellidoMaterno.Location = new System.Drawing.Point(38, 132);
             this.lblApellidoMaterno.Name = "lblApellidoMaterno";
             this.lblApellidoMaterno.Size = new System.Drawing.Size(146, 21);
             this.lblApellidoMaterno.TabIndex = 13;
@@ -257,7 +280,7 @@ namespace UI
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(42, 106);
+            this.lblApellido.Location = new System.Drawing.Point(42, 85);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(142, 21);
             this.lblApellido.TabIndex = 12;
@@ -353,34 +376,135 @@ namespace UI
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // lblAplicaPromocion
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(176, 566);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 42);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "Guardar cambios";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblAplicaPromocion.AutoSize = true;
+            this.lblAplicaPromocion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAplicaPromocion.Location = new System.Drawing.Point(44, 196);
+            this.lblAplicaPromocion.Name = "lblAplicaPromocion";
+            this.lblAplicaPromocion.Size = new System.Drawing.Size(151, 19);
+            this.lblAplicaPromocion.TabIndex = 69;
+            this.lblAplicaPromocion.Text = "Aplica promoción";
             // 
-            // btnBusqueda
+            // ckbSiAplica
             // 
-            this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBusqueda.Image = global::UI.Properties.Resources.lupa;
-            this.btnBusqueda.Location = new System.Drawing.Point(38, 33);
-            this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(38, 38);
-            this.btnBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBusqueda.TabIndex = 25;
-            this.btnBusqueda.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnBusqueda, "Buscar cliente");
+            this.ckbSiAplica.AutoSize = true;
+            this.ckbSiAplica.Location = new System.Drawing.Point(212, 198);
+            this.ckbSiAplica.Name = "ckbSiAplica";
+            this.ckbSiAplica.Size = new System.Drawing.Size(68, 17);
+            this.ckbSiAplica.TabIndex = 70;
+            this.ckbSiAplica.Text = "Sí aplica";
+            this.ckbSiAplica.UseVisualStyleBackColor = true;
+            // 
+            // lblPromocion
+            // 
+            this.lblPromocion.AutoSize = true;
+            this.lblPromocion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromocion.Location = new System.Drawing.Point(97, 237);
+            this.lblPromocion.Name = "lblPromocion";
+            this.lblPromocion.Size = new System.Drawing.Size(93, 19);
+            this.lblPromocion.TabIndex = 71;
+            this.lblPromocion.Text = "Promoción";
+            this.lblPromocion.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(212, 231);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(171, 29);
+            this.comboBox1.TabIndex = 72;
+            this.comboBox1.Visible = false;
+            // 
+            // rdbNoEstacionamiento
+            // 
+            this.rdbNoEstacionamiento.AutoSize = true;
+            this.rdbNoEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNoEstacionamiento.Location = new System.Drawing.Point(820, 273);
+            this.rdbNoEstacionamiento.Name = "rdbNoEstacionamiento";
+            this.rdbNoEstacionamiento.Size = new System.Drawing.Size(54, 25);
+            this.rdbNoEstacionamiento.TabIndex = 141;
+            this.rdbNoEstacionamiento.TabStop = true;
+            this.rdbNoEstacionamiento.Text = "NO";
+            this.rdbNoEstacionamiento.UseVisualStyleBackColor = true;
+            // 
+            // rdbSiEstacionamiento
+            // 
+            this.rdbSiEstacionamiento.AutoSize = true;
+            this.rdbSiEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSiEstacionamiento.Location = new System.Drawing.Point(742, 273);
+            this.rdbSiEstacionamiento.Name = "rdbSiEstacionamiento";
+            this.rdbSiEstacionamiento.Size = new System.Drawing.Size(41, 25);
+            this.rdbSiEstacionamiento.TabIndex = 140;
+            this.rdbSiEstacionamiento.TabStop = true;
+            this.rdbSiEstacionamiento.Text = "SI";
+            this.rdbSiEstacionamiento.UseVisualStyleBackColor = true;
+            // 
+            // lblAplicaEstacionamiento
+            // 
+            this.lblAplicaEstacionamiento.AutoSize = true;
+            this.lblAplicaEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAplicaEstacionamiento.Location = new System.Drawing.Point(517, 275);
+            this.lblAplicaEstacionamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAplicaEstacionamiento.Name = "lblAplicaEstacionamiento";
+            this.lblAplicaEstacionamiento.Size = new System.Drawing.Size(202, 21);
+            this.lblAplicaEstacionamiento.TabIndex = 139;
+            this.lblAplicaEstacionamiento.Text = "Aplica estacionamiento:";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Black;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(744, 360);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(130, 33);
+            this.btnAgregar.TabIndex = 138;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(521, 408);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(385, 138);
+            this.dataGridView1.TabIndex = 137;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "TRANSFERENCIA BANCARIA",
+            "PAGO EN EFECTIVO ",
+            "PAYPAL",
+            "TARJETA DE CREDITO",
+            "TARJETA DEBITO "});
+            this.comboBox4.Location = new System.Drawing.Point(741, 315);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(133, 29);
+            this.comboBox4.TabIndex = 136;
+            // 
+            // lblEspacioEstacionamiento
+            // 
+            this.lblEspacioEstacionamiento.AutoSize = true;
+            this.lblEspacioEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspacioEstacionamiento.Location = new System.Drawing.Point(572, 318);
+            this.lblEspacioEstacionamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEspacioEstacionamiento.Name = "lblEspacioEstacionamiento";
+            this.lblEspacioEstacionamiento.Size = new System.Drawing.Size(146, 21);
+            this.lblEspacioEstacionamiento.TabIndex = 135;
+            this.lblEspacioEstacionamiento.Text = "Estacionamiento:";
             // 
             // frmReservaciones
             // 
@@ -388,7 +512,17 @@ namespace UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(962, 633);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rdbNoEstacionamiento);
+            this.Controls.Add(this.rdbSiEstacionamiento);
+            this.Controls.Add(this.lblAplicaEstacionamiento);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.lblEspacioEstacionamiento);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblPromocion);
+            this.Controls.Add(this.ckbSiAplica);
+            this.Controls.Add(this.lblAplicaPromocion);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLeft);
@@ -411,6 +545,7 @@ namespace UI
             this.grbCliente.ResumeLayout(false);
             this.grbCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,6 +582,16 @@ namespace UI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.PictureBox btnBusqueda;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblAplicaPromocion;
+        private System.Windows.Forms.CheckBox ckbSiAplica;
+        private System.Windows.Forms.Label lblPromocion;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton rdbNoEstacionamiento;
+        private System.Windows.Forms.RadioButton rdbSiEstacionamiento;
+        private System.Windows.Forms.Label lblAplicaEstacionamiento;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label lblEspacioEstacionamiento;
     }
 }

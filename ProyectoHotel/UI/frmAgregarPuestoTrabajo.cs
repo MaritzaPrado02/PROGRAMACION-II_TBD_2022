@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace UI
 {
@@ -15,6 +16,38 @@ namespace UI
         public frmAgregarPuestoTrabajo()
         {
             InitializeComponent();
+        }
+
+        #region Método para arrastrar el formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private void pnlBarraSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        #endregion
+
+        #region Botones: Cerrar, Minimizar
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        #endregion
+
+        private void btnAgregarAreaTrabajo_Click(object sender, EventArgs e)
+        {
+            frmAgregarAreaTrabajo areaTrabajo = new frmAgregarAreaTrabajo();
+            areaTrabajo.Show();
         }
     }
 }
