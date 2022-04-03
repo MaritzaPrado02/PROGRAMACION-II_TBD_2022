@@ -41,6 +41,7 @@ namespace UI
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAgregarComplemento = new System.Windows.Forms.PictureBox();
             this.pcbImg = new System.Windows.Forms.PictureBox();
             this.nudCantidadComplemento = new System.Windows.Forms.NumericUpDown();
             this.btnGuardarComplemento = new System.Windows.Forms.Button();
@@ -54,23 +55,24 @@ namespace UI
             this.lblCosto = new System.Windows.Forms.Label();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.cmbComplementos = new System.Windows.Forms.ComboBox();
-            this.btnAgregarComplemento = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarComplemento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadComplemento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarComplemento)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(506, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(675, 59);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(306, 299);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(408, 368);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnEliminar
@@ -83,9 +85,10 @@ namespace UI
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(673, 369);
+            this.btnEliminar.Location = new System.Drawing.Point(897, 454);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 30);
+            this.btnEliminar.Size = new System.Drawing.Size(173, 37);
             this.btnEliminar.TabIndex = 75;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -100,9 +103,10 @@ namespace UI
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(513, 369);
+            this.btnEditar.Location = new System.Drawing.Point(684, 454);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(130, 30);
+            this.btnEditar.Size = new System.Drawing.Size(173, 37);
             this.btnEditar.TabIndex = 74;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -117,9 +121,10 @@ namespace UI
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(133, 369);
+            this.btnRegistrar.Location = new System.Drawing.Point(177, 454);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(130, 30);
+            this.btnRegistrar.Size = new System.Drawing.Size(173, 37);
             this.btnRegistrar.TabIndex = 73;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -133,9 +138,10 @@ namespace UI
             this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarCambios.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCambios.Location = new System.Drawing.Point(269, 369);
+            this.btnGuardarCambios.Location = new System.Drawing.Point(359, 454);
+            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
-            this.btnGuardarCambios.Size = new System.Drawing.Size(186, 30);
+            this.btnGuardarCambios.Size = new System.Drawing.Size(248, 37);
             this.btnGuardarCambios.TabIndex = 76;
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
@@ -146,9 +152,10 @@ namespace UI
             this.lblNombreCategoria.AutoSize = true;
             this.lblNombreCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblNombreCategoria.Location = new System.Drawing.Point(110, 53);
+            this.lblNombreCategoria.Location = new System.Drawing.Point(147, 65);
+            this.lblNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCategoria.Name = "lblNombreCategoria";
-            this.lblNombreCategoria.Size = new System.Drawing.Size(157, 19);
+            this.lblNombreCategoria.Size = new System.Drawing.Size(196, 23);
             this.lblNombreCategoria.TabIndex = 77;
             this.lblNombreCategoria.Text = "Nombre categoría:";
             // 
@@ -158,9 +165,10 @@ namespace UI
             this.txtNombreCategoria.Br = System.Drawing.Color.White;
             this.txtNombreCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCategoria.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombreCategoria.Location = new System.Drawing.Point(269, 48);
+            this.txtNombreCategoria.Location = new System.Drawing.Point(359, 59);
+            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreCategoria.Name = "txtNombreCategoria";
-            this.txtNombreCategoria.Size = new System.Drawing.Size(198, 33);
+            this.txtNombreCategoria.Size = new System.Drawing.Size(264, 41);
             this.txtNombreCategoria.TabIndex = 78;
             // 
             // pnlBarraSuperior
@@ -170,8 +178,9 @@ namespace UI
             this.pnlBarraSuperior.Controls.Add(this.btnMinimizar);
             this.pnlBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlBarraSuperior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBarraSuperior.Name = "pnlBarraSuperior";
-            this.pnlBarraSuperior.Size = new System.Drawing.Size(824, 28);
+            this.pnlBarraSuperior.Size = new System.Drawing.Size(1099, 34);
             this.pnlBarraSuperior.TabIndex = 79;
             this.pnlBarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraSuperior_MouseDown);
             // 
@@ -179,9 +188,10 @@ namespace UI
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::UI.Properties.Resources.cerrar;
-            this.btnCerrar.Location = new System.Drawing.Point(795, 7);
+            this.btnCerrar.Location = new System.Drawing.Point(1060, 9);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btnCerrar.Size = new System.Drawing.Size(20, 18);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 81;
             this.btnCerrar.TabStop = false;
@@ -192,21 +202,37 @@ namespace UI
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar__1_;
-            this.btnMinimizar.Location = new System.Drawing.Point(774, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(1032, 9);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 18);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 80;
             this.btnMinimizar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnMinimizar, "Minimizar");
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
+            // btnAgregarComplemento
+            // 
+            this.btnAgregarComplemento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarComplemento.Image = global::UI.Properties.Resources.boton_agregar;
+            this.btnAgregarComplemento.Location = new System.Drawing.Point(627, 170);
+            this.btnAgregarComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarComplemento.Name = "btnAgregarComplemento";
+            this.btnAgregarComplemento.Size = new System.Drawing.Size(43, 39);
+            this.btnAgregarComplemento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAgregarComplemento.TabIndex = 116;
+            this.btnAgregarComplemento.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnAgregarComplemento, "Añadir complemento");
+            this.btnAgregarComplemento.Click += new System.EventHandler(this.btnAgregarComplemento_Click);
+            // 
             // pcbImg
             // 
             this.pcbImg.Image = global::UI.Properties.Resources.habitacion;
-            this.pcbImg.Location = new System.Drawing.Point(13, 44);
+            this.pcbImg.Location = new System.Drawing.Point(17, 54);
+            this.pcbImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbImg.Name = "pcbImg";
-            this.pcbImg.Size = new System.Drawing.Size(91, 82);
+            this.pcbImg.Size = new System.Drawing.Size(121, 101);
             this.pcbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbImg.TabIndex = 0;
             this.pcbImg.TabStop = false;
@@ -214,9 +240,10 @@ namespace UI
             // nudCantidadComplemento
             // 
             this.nudCantidadComplemento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCantidadComplemento.Location = new System.Drawing.Point(237, 188);
+            this.nudCantidadComplemento.Location = new System.Drawing.Point(316, 231);
+            this.nudCantidadComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudCantidadComplemento.Name = "nudCantidadComplemento";
-            this.nudCantidadComplemento.Size = new System.Drawing.Size(51, 27);
+            this.nudCantidadComplemento.Size = new System.Drawing.Size(68, 32);
             this.nudCantidadComplemento.TabIndex = 109;
             // 
             // btnGuardarComplemento
@@ -229,9 +256,10 @@ namespace UI
             this.btnGuardarComplemento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarComplemento.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarComplemento.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarComplemento.Location = new System.Drawing.Point(294, 187);
+            this.btnGuardarComplemento.Location = new System.Drawing.Point(392, 230);
+            this.btnGuardarComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarComplemento.Name = "btnGuardarComplemento";
-            this.btnGuardarComplemento.Size = new System.Drawing.Size(175, 32);
+            this.btnGuardarComplemento.Size = new System.Drawing.Size(233, 39);
             this.btnGuardarComplemento.TabIndex = 107;
             this.btnGuardarComplemento.Text = "Agregar complemento";
             this.btnGuardarComplemento.UseVisualStyleBackColor = false;
@@ -243,26 +271,34 @@ namespace UI
             this.clmID,
             this.clmComplemento,
             this.clmCantidad});
-            this.dgvComplementos.Location = new System.Drawing.Point(61, 240);
+            this.dgvComplementos.Location = new System.Drawing.Point(81, 295);
+            this.dgvComplementos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvComplementos.Name = "dgvComplementos";
-            this.dgvComplementos.Size = new System.Drawing.Size(243, 107);
+            this.dgvComplementos.RowHeadersWidth = 51;
+            this.dgvComplementos.Size = new System.Drawing.Size(324, 132);
             this.dgvComplementos.TabIndex = 103;
             // 
             // clmID
             // 
             this.clmID.HeaderText = "ID";
+            this.clmID.MinimumWidth = 6;
             this.clmID.Name = "clmID";
             this.clmID.Visible = false;
+            this.clmID.Width = 125;
             // 
             // clmComplemento
             // 
             this.clmComplemento.HeaderText = "COMPLEMENTO";
+            this.clmComplemento.MinimumWidth = 6;
             this.clmComplemento.Name = "clmComplemento";
+            this.clmComplemento.Width = 125;
             // 
             // clmCantidad
             // 
             this.clmCantidad.HeaderText = "CANTIDAD";
+            this.clmCantidad.MinimumWidth = 6;
             this.clmCantidad.Name = "clmCantidad";
+            this.clmCantidad.Width = 125;
             // 
             // button1
             // 
@@ -274,9 +310,10 @@ namespace UI
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(310, 292);
+            this.button1.Location = new System.Drawing.Point(413, 359);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 30);
+            this.button1.Size = new System.Drawing.Size(173, 37);
             this.button1.TabIndex = 111;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = false;
@@ -291,9 +328,10 @@ namespace UI
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(310, 255);
+            this.button2.Location = new System.Drawing.Point(413, 314);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 30);
+            this.button2.Size = new System.Drawing.Size(173, 37);
             this.button2.TabIndex = 110;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = false;
@@ -304,9 +342,10 @@ namespace UI
             this.txtCosto.Br = System.Drawing.Color.White;
             this.txtCosto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCosto.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCosto.Location = new System.Drawing.Point(269, 91);
+            this.txtCosto.Location = new System.Drawing.Point(359, 112);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(198, 33);
+            this.txtCosto.Size = new System.Drawing.Size(264, 41);
             this.txtCosto.TabIndex = 113;
             // 
             // lblCosto
@@ -314,9 +353,10 @@ namespace UI
             this.lblCosto.AutoSize = true;
             this.lblCosto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCosto.ForeColor = System.Drawing.Color.White;
-            this.lblCosto.Location = new System.Drawing.Point(211, 96);
+            this.lblCosto.Location = new System.Drawing.Point(281, 118);
+            this.lblCosto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCosto.Name = "lblCosto";
-            this.lblCosto.Size = new System.Drawing.Size(55, 19);
+            this.lblCosto.Size = new System.Drawing.Size(73, 23);
             this.lblCosto.TabIndex = 112;
             this.lblCosto.Text = "Costo:";
             // 
@@ -325,9 +365,10 @@ namespace UI
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.Color.White;
-            this.lblComplemento.Location = new System.Drawing.Point(41, 139);
+            this.lblComplemento.Location = new System.Drawing.Point(55, 171);
+            this.lblComplemento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComplemento.Name = "lblComplemento";
-            this.lblComplemento.Size = new System.Drawing.Size(226, 19);
+            this.lblComplemento.Size = new System.Drawing.Size(286, 23);
             this.lblComplemento.TabIndex = 114;
             this.lblComplemento.Text = "Seleccionar complementos:";
             // 
@@ -336,30 +377,18 @@ namespace UI
             this.cmbComplementos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbComplementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbComplementos.FormattingEnabled = true;
-            this.cmbComplementos.Location = new System.Drawing.Point(273, 139);
+            this.cmbComplementos.Location = new System.Drawing.Point(364, 171);
+            this.cmbComplementos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbComplementos.Name = "cmbComplementos";
-            this.cmbComplementos.Size = new System.Drawing.Size(194, 28);
+            this.cmbComplementos.Size = new System.Drawing.Size(257, 33);
             this.cmbComplementos.TabIndex = 115;
-            // 
-            // btnAgregarComplemento
-            // 
-            this.btnAgregarComplemento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarComplemento.Image = global::UI.Properties.Resources.boton_agregar;
-            this.btnAgregarComplemento.Location = new System.Drawing.Point(470, 138);
-            this.btnAgregarComplemento.Name = "btnAgregarComplemento";
-            this.btnAgregarComplemento.Size = new System.Drawing.Size(32, 32);
-            this.btnAgregarComplemento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAgregarComplemento.TabIndex = 116;
-            this.btnAgregarComplemento.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnAgregarComplemento, "Añadir complemento");
-            this.btnAgregarComplemento.Click += new System.EventHandler(this.btnAgregarComplemento_Click);
             // 
             // frmAgregarCategoriaHabitacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(98)))));
-            this.ClientSize = new System.Drawing.Size(824, 411);
+            this.ClientSize = new System.Drawing.Size(1099, 506);
             this.Controls.Add(this.btnAgregarComplemento);
             this.Controls.Add(this.cmbComplementos);
             this.Controls.Add(this.lblComplemento);
@@ -380,17 +409,17 @@ namespace UI
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pcbImg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAgregarCategoriaHabitacion";
-            this.Opacity = 0.96D;
             this.Text = "frmAgregarCategoriaHabitacion";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlBarraSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarComplemento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadComplemento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarComplemento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

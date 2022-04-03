@@ -29,6 +29,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarContrasena));
             this.barraLogin = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblRecuperarContrasena = new System.Windows.Forms.Label();
@@ -57,9 +58,10 @@ namespace UI
             this.barraLogin.Controls.Add(this.lblRecuperarContrasena);
             this.barraLogin.Controls.Add(this.btnMinimizar);
             this.barraLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barraLogin.Location = new System.Drawing.Point(250, 0);
+            this.barraLogin.Location = new System.Drawing.Point(333, 0);
+            this.barraLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.barraLogin.Name = "barraLogin";
-            this.barraLogin.Size = new System.Drawing.Size(530, 30);
+            this.barraLogin.Size = new System.Drawing.Size(707, 37);
             this.barraLogin.TabIndex = 23;
             this.barraLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraLogin_MouseDown);
             // 
@@ -67,9 +69,10 @@ namespace UI
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::UI.Properties.Resources.boton_de_quitar_cuadrado;
-            this.btnCerrar.Location = new System.Drawing.Point(506, 7);
+            this.btnCerrar.Location = new System.Drawing.Point(675, 9);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btnCerrar.Size = new System.Drawing.Size(20, 18);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 21;
             this.btnCerrar.TabStop = false;
@@ -80,9 +83,10 @@ namespace UI
             this.lblRecuperarContrasena.AutoSize = true;
             this.lblRecuperarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecuperarContrasena.ForeColor = System.Drawing.Color.White;
-            this.lblRecuperarContrasena.Location = new System.Drawing.Point(176, 7);
+            this.lblRecuperarContrasena.Location = new System.Drawing.Point(235, 9);
+            this.lblRecuperarContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecuperarContrasena.Name = "lblRecuperarContrasena";
-            this.lblRecuperarContrasena.Size = new System.Drawing.Size(181, 19);
+            this.lblRecuperarContrasena.Size = new System.Drawing.Size(227, 23);
             this.lblRecuperarContrasena.TabIndex = 13;
             this.lblRecuperarContrasena.Text = "Recuperar contraseña";
             // 
@@ -90,9 +94,10 @@ namespace UI
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar1;
-            this.btnMinimizar.Location = new System.Drawing.Point(484, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(645, 9);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 18);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 20;
             this.btnMinimizar.TabStop = false;
@@ -104,17 +109,19 @@ namespace UI
             this.pnlLogoLogin.Controls.Add(this.pictureBox3);
             this.pnlLogoLogin.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLogoLogin.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogoLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLogoLogin.Name = "pnlLogoLogin";
-            this.pnlLogoLogin.Size = new System.Drawing.Size(250, 330);
+            this.pnlLogoLogin.Size = new System.Drawing.Size(333, 406);
             this.pnlLogoLogin.TabIndex = 22;
             this.pnlLogoLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlLogoLogin_MouseDown);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::UI.Properties.Resources.iconoHotel;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 48);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 59);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(244, 213);
+            this.pictureBox3.Size = new System.Drawing.Size(325, 262);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -124,9 +131,10 @@ namespace UI
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblID.ForeColor = System.Drawing.Color.Black;
-            this.lblID.Location = new System.Drawing.Point(308, 178);
+            this.lblID.Location = new System.Drawing.Point(411, 219);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(22, 19);
+            this.lblID.Size = new System.Drawing.Size(28, 21);
             this.lblID.TabIndex = 37;
             this.lblID.Text = "ID";
             // 
@@ -135,9 +143,10 @@ namespace UI
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.lblTelefono.Location = new System.Drawing.Point(307, 119);
+            this.lblTelefono.Location = new System.Drawing.Point(409, 146);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(66, 19);
+            this.lblTelefono.Size = new System.Drawing.Size(80, 21);
             this.lblTelefono.TabIndex = 36;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -146,9 +155,10 @@ namespace UI
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(308, 61);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(411, 75);
+            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(117, 19);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(142, 21);
             this.lblNombreUsuario.TabIndex = 35;
             this.lblNombreUsuario.Text = "Nombre Usuario";
             // 
@@ -157,10 +167,11 @@ namespace UI
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefono.Location = new System.Drawing.Point(310, 141);
+            this.txtTelefono.Location = new System.Drawing.Point(413, 174);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.MaxLength = 12;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(408, 27);
+            this.txtTelefono.Size = new System.Drawing.Size(543, 32);
             this.txtTelefono.TabIndex = 34;
             // 
             // btnCancelar
@@ -172,9 +183,10 @@ namespace UI
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnCancelar.Location = new System.Drawing.Point(311, 246);
+            this.btnCancelar.Location = new System.Drawing.Point(415, 303);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(202, 42);
+            this.btnCancelar.Size = new System.Drawing.Size(269, 52);
             this.btnCancelar.TabIndex = 33;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -185,9 +197,10 @@ namespace UI
             this.txtID.BackColor = System.Drawing.Color.White;
             this.txtID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.Black;
-            this.txtID.Location = new System.Drawing.Point(310, 200);
+            this.txtID.Location = new System.Drawing.Point(413, 246);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(408, 27);
+            this.txtID.Size = new System.Drawing.Size(543, 32);
             this.txtID.TabIndex = 32;
             // 
             // btnValidar
@@ -199,9 +212,10 @@ namespace UI
             this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnValidar.Location = new System.Drawing.Point(523, 246);
+            this.btnValidar.Location = new System.Drawing.Point(697, 303);
+            this.btnValidar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Size = new System.Drawing.Size(202, 42);
+            this.btnValidar.Size = new System.Drawing.Size(269, 52);
             this.btnValidar.TabIndex = 31;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = false;
@@ -212,17 +226,18 @@ namespace UI
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
-            this.txtUsuario.Location = new System.Drawing.Point(310, 83);
+            this.txtUsuario.Location = new System.Drawing.Point(413, 102);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(408, 27);
+            this.txtUsuario.Size = new System.Drawing.Size(543, 32);
             this.txtUsuario.TabIndex = 30;
             // 
             // frmRecuperarContrasena
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.ClientSize = new System.Drawing.Size(1040, 406);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblNombreUsuario);
@@ -234,6 +249,8 @@ namespace UI
             this.Controls.Add(this.barraLogin);
             this.Controls.Add(this.pnlLogoLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRecuperarContrasena";
             this.Opacity = 0.95D;
             this.Text = "frmRecuperarContrasena";
