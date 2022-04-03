@@ -49,6 +49,7 @@ namespace UI
             this.pnlEstacionamiento = new System.Windows.Forms.Panel();
             this.btnEstacionamiento = new System.Windows.Forms.Button();
             this.subMenuEmpleados = new System.Windows.Forms.Panel();
+            this.btnConsultarEmpleado = new System.Windows.Forms.Button();
             this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
             this.pnlEmpleados = new System.Windows.Forms.Panel();
             this.btnEmpleados = new System.Windows.Forms.Button();
@@ -88,7 +89,7 @@ namespace UI
             this.contenedorPantallasHijas = new System.Windows.Forms.Panel();
             this.pbIconHotel = new System.Windows.Forms.PictureBox();
             this.fechaHora = new System.Windows.Forms.Timer(this.components);
-            this.btnConsultarEmpleado = new System.Windows.Forms.Button();
+            this.btnConsultarFactura = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -247,7 +248,7 @@ namespace UI
             this.subMenuReportes.Controls.Add(this.btnGenerarReporte);
             this.subMenuReportes.Controls.Add(this.pnlReportes);
             this.subMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuReportes.Location = new System.Drawing.Point(0, 711);
+            this.subMenuReportes.Location = new System.Drawing.Point(0, 747);
             this.subMenuReportes.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuReportes.Name = "subMenuReportes";
             this.subMenuReportes.Size = new System.Drawing.Size(203, 81);
@@ -314,7 +315,7 @@ namespace UI
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = global::UI.Properties.Resources.reportes;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 672);
+            this.btnReportes.Location = new System.Drawing.Point(0, 708);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(203, 39);
@@ -330,7 +331,7 @@ namespace UI
             this.subMenuEstacionamiento.Controls.Add(this.btnRegistrarEstacionamiento);
             this.subMenuEstacionamiento.Controls.Add(this.pnlEstacionamiento);
             this.subMenuEstacionamiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuEstacionamiento.Location = new System.Drawing.Point(0, 627);
+            this.subMenuEstacionamiento.Location = new System.Drawing.Point(0, 663);
             this.subMenuEstacionamiento.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuEstacionamiento.Name = "subMenuEstacionamiento";
             this.subMenuEstacionamiento.Size = new System.Drawing.Size(203, 45);
@@ -377,7 +378,7 @@ namespace UI
             this.btnEstacionamiento.ForeColor = System.Drawing.Color.White;
             this.btnEstacionamiento.Image = global::UI.Properties.Resources.estacionamiento;
             this.btnEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstacionamiento.Location = new System.Drawing.Point(0, 588);
+            this.btnEstacionamiento.Location = new System.Drawing.Point(0, 624);
             this.btnEstacionamiento.Margin = new System.Windows.Forms.Padding(4);
             this.btnEstacionamiento.Name = "btnEstacionamiento";
             this.btnEstacionamiento.Size = new System.Drawing.Size(203, 39);
@@ -394,11 +395,32 @@ namespace UI
             this.subMenuEmpleados.Controls.Add(this.btnRegistrarEmpleado);
             this.subMenuEmpleados.Controls.Add(this.pnlEmpleados);
             this.subMenuEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuEmpleados.Location = new System.Drawing.Point(0, 504);
+            this.subMenuEmpleados.Location = new System.Drawing.Point(0, 540);
             this.subMenuEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuEmpleados.Name = "subMenuEmpleados";
             this.subMenuEmpleados.Size = new System.Drawing.Size(203, 84);
             this.subMenuEmpleados.TabIndex = 24;
+            // 
+            // btnConsultarEmpleado
+            // 
+            this.btnConsultarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
+            this.btnConsultarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btnConsultarEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
+            this.btnConsultarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarEmpleado.Location = new System.Drawing.Point(20, 37);
+            this.btnConsultarEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarEmpleado.Name = "btnConsultarEmpleado";
+            this.btnConsultarEmpleado.Size = new System.Drawing.Size(183, 37);
+            this.btnConsultarEmpleado.TabIndex = 14;
+            this.btnConsultarEmpleado.Text = "Consultar/Modificar";
+            this.btnConsultarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultarEmpleado.UseVisualStyleBackColor = false;
+            this.btnConsultarEmpleado.Click += new System.EventHandler(this.btnConsultarEmpleado_Click);
             // 
             // btnRegistrarEmpleado
             // 
@@ -442,7 +464,7 @@ namespace UI
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
             this.btnEmpleados.Image = global::UI.Properties.Resources.empleados;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 460);
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 496);
             this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(203, 44);
@@ -456,13 +478,14 @@ namespace UI
             // 
             // subMenuFacturas
             // 
+            this.subMenuFacturas.Controls.Add(this.btnConsultarFactura);
             this.subMenuFacturas.Controls.Add(this.btnFacturar);
             this.subMenuFacturas.Controls.Add(this.panel18);
             this.subMenuFacturas.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuFacturas.Location = new System.Drawing.Point(0, 416);
             this.subMenuFacturas.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuFacturas.Name = "subMenuFacturas";
-            this.subMenuFacturas.Size = new System.Drawing.Size(203, 44);
+            this.subMenuFacturas.Size = new System.Drawing.Size(203, 80);
             this.subMenuFacturas.TabIndex = 22;
             // 
             // btnFacturar
@@ -492,7 +515,7 @@ namespace UI
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(20, 44);
+            this.panel18.Size = new System.Drawing.Size(20, 80);
             this.panel18.TabIndex = 12;
             // 
             // btnFacturas
@@ -958,26 +981,26 @@ namespace UI
             this.fechaHora.Enabled = true;
             this.fechaHora.Tick += new System.EventHandler(this.fechaHora_Tick);
             // 
-            // btnConsultarEmpleado
+            // btnConsultarFactura
             // 
-            this.btnConsultarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
-            this.btnConsultarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsultarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnConsultarEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
-            this.btnConsultarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarEmpleado.Location = new System.Drawing.Point(20, 37);
-            this.btnConsultarEmpleado.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultarEmpleado.Name = "btnConsultarEmpleado";
-            this.btnConsultarEmpleado.Size = new System.Drawing.Size(183, 37);
-            this.btnConsultarEmpleado.TabIndex = 14;
-            this.btnConsultarEmpleado.Text = "Consultar/Modificar";
-            this.btnConsultarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConsultarEmpleado.UseVisualStyleBackColor = false;
-            this.btnConsultarEmpleado.Click += new System.EventHandler(this.btnConsultarEmpleado_Click);
+            this.btnConsultarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
+            this.btnConsultarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultarFactura.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
+            this.btnConsultarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFactura.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFactura.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarFactura.Location = new System.Drawing.Point(20, 37);
+            this.btnConsultarFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarFactura.Name = "btnConsultarFactura";
+            this.btnConsultarFactura.Size = new System.Drawing.Size(183, 37);
+            this.btnConsultarFactura.TabIndex = 14;
+            this.btnConsultarFactura.Text = "Consultar";
+            this.btnConsultarFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultarFactura.UseVisualStyleBackColor = false;
+            this.btnConsultarFactura.Click += new System.EventHandler(this.btnConsultarFactura_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -1082,6 +1105,7 @@ namespace UI
         private System.Windows.Forms.Panel pnlReportes;
         private System.Windows.Forms.PictureBox pcbImagen;
         private System.Windows.Forms.Button btnConsultarEmpleado;
+        private System.Windows.Forms.Button btnConsultarFactura;
     }
 }
 

@@ -237,6 +237,12 @@ namespace UI
             abrirFormularioHijo(new frmConsultarReportes());
             ocultarSubmenu();
         }
+
+        private void btnConsultarFactura_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmBuscarFactura());
+            ocultarSubmenu();
+        }
         #endregion
     }
 }

@@ -34,8 +34,6 @@ namespace UI
             this.pcbLogoRegistro = new System.Windows.Forms.PictureBox();
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.btnRegistrarse = new System.Windows.Forms.Button();
-            this.txtPuesto = new System.Windows.Forms.ComboBox();
-            this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
             this.grbUsuario = new System.Windows.Forms.GroupBox();
             this.altoTextBox9 = new AltoControls.AltoTextBox();
             this.lblConfirmarContrasena = new System.Windows.Forms.Label();
@@ -43,6 +41,23 @@ namespace UI
             this.label1 = new System.Windows.Forms.Label();
             this.txtRegistrarUsuario = new AltoControls.AltoTextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblRegistro = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.grbDireccion = new System.Windows.Forms.GroupBox();
+            this.cmbMunicipio = new System.Windows.Forms.ComboBox();
+            this.lblMunicipio = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.txtNumero = new AltoControls.AltoTextBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.txtColonia = new AltoControls.AltoTextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.lblColonia = new System.Windows.Forms.Label();
+            this.txtCalle = new AltoControls.AltoTextBox();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.grbDatosGenerales = new System.Windows.Forms.GroupBox();
+            this.txtPuesto = new System.Windows.Forms.ComboBox();
+            this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
             this.txtEmail = new AltoControls.AltoTextBox();
             this.txtTelefono = new AltoControls.AltoTextBox();
             this.txtRFC = new AltoControls.AltoTextBox();
@@ -57,15 +72,14 @@ namespace UI
             this.lblApellidoPaterno = new System.Windows.Forms.Label();
             this.lblNombreEmpleado = new System.Windows.Forms.Label();
             this.txtNombre = new AltoControls.AltoTextBox();
-            this.lblRegistro = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.pnlLogoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoRegistro)).BeginInit();
             this.pnlRegistro.SuspendLayout();
             this.grbUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            this.grbDireccion.SuspendLayout();
+            this.grbDatosGenerales.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogoRegistro
@@ -93,32 +107,20 @@ namespace UI
             // 
             // pnlRegistro
             // 
+            this.pnlRegistro.BackColor = System.Drawing.Color.White;
+            this.pnlRegistro.Controls.Add(this.grbDatosGenerales);
+            this.pnlRegistro.Controls.Add(this.grbDireccion);
             this.pnlRegistro.Controls.Add(this.btnRegistrarse);
-            this.pnlRegistro.Controls.Add(this.txtPuesto);
-            this.pnlRegistro.Controls.Add(this.cmbAreaTrabajo);
             this.pnlRegistro.Controls.Add(this.grbUsuario);
-            this.pnlRegistro.Controls.Add(this.txtEmail);
-            this.pnlRegistro.Controls.Add(this.txtTelefono);
-            this.pnlRegistro.Controls.Add(this.txtRFC);
-            this.pnlRegistro.Controls.Add(this.txtApellidoMaterno);
-            this.pnlRegistro.Controls.Add(this.txtApellidoParterno);
-            this.pnlRegistro.Controls.Add(this.lblPuesto);
-            this.pnlRegistro.Controls.Add(this.lblAreaTrabajo);
-            this.pnlRegistro.Controls.Add(this.lblEmail);
-            this.pnlRegistro.Controls.Add(this.lblTelefono);
-            this.pnlRegistro.Controls.Add(this.lblRFC);
-            this.pnlRegistro.Controls.Add(this.lblApellidoMaterno);
-            this.pnlRegistro.Controls.Add(this.lblApellidoPaterno);
-            this.pnlRegistro.Controls.Add(this.lblNombreEmpleado);
-            this.pnlRegistro.Controls.Add(this.txtNombre);
             this.pnlRegistro.Controls.Add(this.lblRegistro);
             this.pnlRegistro.Controls.Add(this.btnCerrar);
             this.pnlRegistro.Controls.Add(this.btnMinimizar);
             this.pnlRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRegistro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlRegistro.Location = new System.Drawing.Point(279, 0);
             this.pnlRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRegistro.Name = "pnlRegistro";
-            this.pnlRegistro.Size = new System.Drawing.Size(499, 590);
+            this.pnlRegistro.Size = new System.Drawing.Size(953, 590);
             this.pnlRegistro.TabIndex = 1;
             this.pnlRegistro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlRegistro_MouseDown);
             // 
@@ -132,32 +134,12 @@ namespace UI
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.Color.LightGray;
-            this.btnRegistrarse.Location = new System.Drawing.Point(353, 544);
+            this.btnRegistrarse.Location = new System.Drawing.Point(426, 525);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(121, 34);
             this.btnRegistrarse.TabIndex = 44;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
-            // 
-            // txtPuesto
-            // 
-            this.txtPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuesto.FormattingEnabled = true;
-            this.txtPuesto.Location = new System.Drawing.Point(211, 371);
-            this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(175, 28);
-            this.txtPuesto.TabIndex = 43;
-            // 
-            // cmbAreaTrabajo
-            // 
-            this.cmbAreaTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAreaTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAreaTrabajo.FormattingEnabled = true;
-            this.cmbAreaTrabajo.Location = new System.Drawing.Point(212, 327);
-            this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
-            this.cmbAreaTrabajo.Size = new System.Drawing.Size(175, 28);
-            this.cmbAreaTrabajo.TabIndex = 42;
             // 
             // grbUsuario
             // 
@@ -168,7 +150,7 @@ namespace UI
             this.grbUsuario.Controls.Add(this.txtRegistrarUsuario);
             this.grbUsuario.Controls.Add(this.lblUsuario);
             this.grbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbUsuario.Location = new System.Drawing.Point(28, 398);
+            this.grbUsuario.Location = new System.Drawing.Point(473, 64);
             this.grbUsuario.Name = "grbUsuario";
             this.grbUsuario.Size = new System.Drawing.Size(446, 127);
             this.grbUsuario.TabIndex = 41;
@@ -244,171 +226,11 @@ namespace UI
             this.lblUsuario.TabIndex = 42;
             this.lblUsuario.Text = "Usuario";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmail.Br = System.Drawing.Color.White;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(212, 280);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(230, 27);
-            this.txtEmail.TabIndex = 38;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.Transparent;
-            this.txtTelefono.Br = System.Drawing.Color.White;
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(212, 243);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(230, 27);
-            this.txtTelefono.TabIndex = 37;
-            // 
-            // txtRFC
-            // 
-            this.txtRFC.BackColor = System.Drawing.Color.Transparent;
-            this.txtRFC.Br = System.Drawing.Color.White;
-            this.txtRFC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRFC.ForeColor = System.Drawing.Color.DimGray;
-            this.txtRFC.Location = new System.Drawing.Point(211, 201);
-            this.txtRFC.Margin = new System.Windows.Forms.Padding(2);
-            this.txtRFC.Name = "txtRFC";
-            this.txtRFC.Size = new System.Drawing.Size(230, 27);
-            this.txtRFC.TabIndex = 36;
-            // 
-            // txtApellidoMaterno
-            // 
-            this.txtApellidoMaterno.BackColor = System.Drawing.Color.Transparent;
-            this.txtApellidoMaterno.Br = System.Drawing.Color.White;
-            this.txtApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoMaterno.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(211, 156);
-            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(2);
-            this.txtApellidoMaterno.Name = "txtApellidoMaterno";
-            this.txtApellidoMaterno.Size = new System.Drawing.Size(230, 27);
-            this.txtApellidoMaterno.TabIndex = 35;
-            // 
-            // txtApellidoParterno
-            // 
-            this.txtApellidoParterno.BackColor = System.Drawing.Color.Transparent;
-            this.txtApellidoParterno.Br = System.Drawing.Color.White;
-            this.txtApellidoParterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoParterno.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellidoParterno.Location = new System.Drawing.Point(211, 111);
-            this.txtApellidoParterno.Margin = new System.Windows.Forms.Padding(2);
-            this.txtApellidoParterno.Name = "txtApellidoParterno";
-            this.txtApellidoParterno.Size = new System.Drawing.Size(230, 27);
-            this.txtApellidoParterno.TabIndex = 34;
-            // 
-            // lblPuesto
-            // 
-            this.lblPuesto.AutoSize = true;
-            this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.Location = new System.Drawing.Point(136, 371);
-            this.lblPuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(58, 19);
-            this.lblPuesto.TabIndex = 33;
-            this.lblPuesto.Text = "Puesto";
-            // 
-            // lblAreaTrabajo
-            // 
-            this.lblAreaTrabajo.AutoSize = true;
-            this.lblAreaTrabajo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAreaTrabajo.Location = new System.Drawing.Point(89, 330);
-            this.lblAreaTrabajo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAreaTrabajo.Name = "lblAreaTrabajo";
-            this.lblAreaTrabajo.Size = new System.Drawing.Size(107, 19);
-            this.lblAreaTrabajo.TabIndex = 32;
-            this.lblAreaTrabajo.Text = "Área trabajo";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(136, 286);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(59, 19);
-            this.lblEmail.TabIndex = 31;
-            this.lblEmail.Text = "E-mail";
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(124, 247);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(74, 19);
-            this.lblTelefono.TabIndex = 30;
-            this.lblTelefono.Text = "Teléfono";
-            // 
-            // lblRFC
-            // 
-            this.lblRFC.AutoSize = true;
-            this.lblRFC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRFC.Location = new System.Drawing.Point(156, 207);
-            this.lblRFC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRFC.Name = "lblRFC";
-            this.lblRFC.Size = new System.Drawing.Size(38, 19);
-            this.lblRFC.TabIndex = 29;
-            this.lblRFC.Text = "RFC";
-            // 
-            // lblApellidoMaterno
-            // 
-            this.lblApellidoMaterno.AutoSize = true;
-            this.lblApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoMaterno.Location = new System.Drawing.Point(54, 160);
-            this.lblApellidoMaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblApellidoMaterno.Name = "lblApellidoMaterno";
-            this.lblApellidoMaterno.Size = new System.Drawing.Size(145, 19);
-            this.lblApellidoMaterno.TabIndex = 28;
-            this.lblApellidoMaterno.Text = "Apellido materno";
-            // 
-            // lblApellidoPaterno
-            // 
-            this.lblApellidoPaterno.AutoSize = true;
-            this.lblApellidoPaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoPaterno.Location = new System.Drawing.Point(59, 115);
-            this.lblApellidoPaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblApellidoPaterno.Name = "lblApellidoPaterno";
-            this.lblApellidoPaterno.Size = new System.Drawing.Size(140, 19);
-            this.lblApellidoPaterno.TabIndex = 27;
-            this.lblApellidoPaterno.Text = "Apellido paterno";
-            // 
-            // lblNombreEmpleado
-            // 
-            this.lblNombreEmpleado.AutoSize = true;
-            this.lblNombreEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEmpleado.Location = new System.Drawing.Point(120, 68);
-            this.lblNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombreEmpleado.Name = "lblNombreEmpleado";
-            this.lblNombreEmpleado.Size = new System.Drawing.Size(73, 19);
-            this.lblNombreEmpleado.TabIndex = 26;
-            this.lblNombreEmpleado.Text = "Nombre";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.Transparent;
-            this.txtNombre.Br = System.Drawing.Color.White;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(211, 64);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(230, 27);
-            this.txtNombre.TabIndex = 25;
-            // 
             // lblRegistro
             // 
             this.lblRegistro.AutoSize = true;
             this.lblRegistro.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistro.Location = new System.Drawing.Point(177, 24);
+            this.lblRegistro.Location = new System.Drawing.Point(397, 22);
             this.lblRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegistro.Name = "lblRegistro";
             this.lblRegistro.Size = new System.Drawing.Size(163, 23);
@@ -419,7 +241,7 @@ namespace UI
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::UI.Properties.Resources.cerrar;
-            this.btnCerrar.Location = new System.Drawing.Point(473, 11);
+            this.btnCerrar.Location = new System.Drawing.Point(926, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(15, 15);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -431,7 +253,7 @@ namespace UI
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar__1_;
-            this.btnMinimizar.Location = new System.Drawing.Point(452, 11);
+            this.btnMinimizar.Location = new System.Drawing.Point(905, 12);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -439,11 +261,343 @@ namespace UI
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
+            // grbDireccion
+            // 
+            this.grbDireccion.Controls.Add(this.cmbMunicipio);
+            this.grbDireccion.Controls.Add(this.lblMunicipio);
+            this.grbDireccion.Controls.Add(this.cmbEstado);
+            this.grbDireccion.Controls.Add(this.txtNumero);
+            this.grbDireccion.Controls.Add(this.lblEstado);
+            this.grbDireccion.Controls.Add(this.txtColonia);
+            this.grbDireccion.Controls.Add(this.lblNumero);
+            this.grbDireccion.Controls.Add(this.lblColonia);
+            this.grbDireccion.Controls.Add(this.txtCalle);
+            this.grbDireccion.Controls.Add(this.lblCalle);
+            this.grbDireccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDireccion.Location = new System.Drawing.Point(482, 207);
+            this.grbDireccion.Name = "grbDireccion";
+            this.grbDireccion.Size = new System.Drawing.Size(438, 279);
+            this.grbDireccion.TabIndex = 125;
+            this.grbDireccion.TabStop = false;
+            this.grbDireccion.Text = "Dirección";
+            // 
+            // cmbMunicipio
+            // 
+            this.cmbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMunicipio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMunicipio.FormattingEnabled = true;
+            this.cmbMunicipio.Location = new System.Drawing.Point(189, 75);
+            this.cmbMunicipio.Name = "cmbMunicipio";
+            this.cmbMunicipio.Size = new System.Drawing.Size(205, 29);
+            this.cmbMunicipio.TabIndex = 130;
+            // 
+            // lblMunicipio
+            // 
+            this.lblMunicipio.AutoSize = true;
+            this.lblMunicipio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMunicipio.Location = new System.Drawing.Point(89, 81);
+            this.lblMunicipio.Name = "lblMunicipio";
+            this.lblMunicipio.Size = new System.Drawing.Size(85, 21);
+            this.lblMunicipio.TabIndex = 129;
+            this.lblMunicipio.Text = "Municipio";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(189, 26);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(205, 29);
+            this.cmbEstado.TabIndex = 128;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.BackColor = System.Drawing.Color.Transparent;
+            this.txtNumero.Br = System.Drawing.Color.White;
+            this.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNumero.Location = new System.Drawing.Point(189, 223);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(205, 33);
+            this.txtNumero.TabIndex = 27;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(110, 32);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(64, 21);
+            this.lblEstado.TabIndex = 127;
+            this.lblEstado.Text = "Estado";
+            // 
+            // txtColonia
+            // 
+            this.txtColonia.BackColor = System.Drawing.Color.Transparent;
+            this.txtColonia.Br = System.Drawing.Color.White;
+            this.txtColonia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtColonia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtColonia.ForeColor = System.Drawing.Color.DimGray;
+            this.txtColonia.Location = new System.Drawing.Point(189, 179);
+            this.txtColonia.Name = "txtColonia";
+            this.txtColonia.Size = new System.Drawing.Size(205, 33);
+            this.txtColonia.TabIndex = 26;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Location = new System.Drawing.Point(100, 230);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(72, 21);
+            this.lblNumero.TabIndex = 24;
+            this.lblNumero.Text = "Número";
+            // 
+            // lblColonia
+            // 
+            this.lblColonia.AutoSize = true;
+            this.lblColonia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColonia.Location = new System.Drawing.Point(104, 184);
+            this.lblColonia.Name = "lblColonia";
+            this.lblColonia.Size = new System.Drawing.Size(70, 21);
+            this.lblColonia.TabIndex = 23;
+            this.lblColonia.Text = "Colonia";
+            // 
+            // txtCalle
+            // 
+            this.txtCalle.BackColor = System.Drawing.Color.Transparent;
+            this.txtCalle.Br = System.Drawing.Color.White;
+            this.txtCalle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCalle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalle.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCalle.Location = new System.Drawing.Point(189, 132);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(205, 33);
+            this.txtCalle.TabIndex = 20;
+            // 
+            // lblCalle
+            // 
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalle.Location = new System.Drawing.Point(120, 137);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(50, 21);
+            this.lblCalle.TabIndex = 13;
+            this.lblCalle.Text = "Calle";
+            // 
+            // grbDatosGenerales
+            // 
+            this.grbDatosGenerales.Controls.Add(this.txtPuesto);
+            this.grbDatosGenerales.Controls.Add(this.cmbAreaTrabajo);
+            this.grbDatosGenerales.Controls.Add(this.txtEmail);
+            this.grbDatosGenerales.Controls.Add(this.txtTelefono);
+            this.grbDatosGenerales.Controls.Add(this.txtRFC);
+            this.grbDatosGenerales.Controls.Add(this.txtApellidoMaterno);
+            this.grbDatosGenerales.Controls.Add(this.txtApellidoParterno);
+            this.grbDatosGenerales.Controls.Add(this.lblPuesto);
+            this.grbDatosGenerales.Controls.Add(this.lblAreaTrabajo);
+            this.grbDatosGenerales.Controls.Add(this.lblEmail);
+            this.grbDatosGenerales.Controls.Add(this.lblTelefono);
+            this.grbDatosGenerales.Controls.Add(this.lblRFC);
+            this.grbDatosGenerales.Controls.Add(this.lblApellidoMaterno);
+            this.grbDatosGenerales.Controls.Add(this.lblApellidoPaterno);
+            this.grbDatosGenerales.Controls.Add(this.lblNombreEmpleado);
+            this.grbDatosGenerales.Controls.Add(this.txtNombre);
+            this.grbDatosGenerales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDatosGenerales.Location = new System.Drawing.Point(20, 64);
+            this.grbDatosGenerales.Name = "grbDatosGenerales";
+            this.grbDatosGenerales.Size = new System.Drawing.Size(438, 422);
+            this.grbDatosGenerales.TabIndex = 131;
+            this.grbDatosGenerales.TabStop = false;
+            this.grbDatosGenerales.Text = "Datos Generales";
+            // 
+            // txtPuesto
+            // 
+            this.txtPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuesto.FormattingEnabled = true;
+            this.txtPuesto.Location = new System.Drawing.Point(182, 351);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(175, 28);
+            this.txtPuesto.TabIndex = 59;
+            // 
+            // cmbAreaTrabajo
+            // 
+            this.cmbAreaTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAreaTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAreaTrabajo.FormattingEnabled = true;
+            this.cmbAreaTrabajo.Location = new System.Drawing.Point(183, 307);
+            this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
+            this.cmbAreaTrabajo.Size = new System.Drawing.Size(175, 28);
+            this.cmbAreaTrabajo.TabIndex = 58;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.Br = System.Drawing.Color.White;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEmail.Location = new System.Drawing.Point(183, 260);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(230, 27);
+            this.txtEmail.TabIndex = 57;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.Transparent;
+            this.txtTelefono.Br = System.Drawing.Color.White;
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTelefono.Location = new System.Drawing.Point(183, 223);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(230, 27);
+            this.txtTelefono.TabIndex = 56;
+            // 
+            // txtRFC
+            // 
+            this.txtRFC.BackColor = System.Drawing.Color.Transparent;
+            this.txtRFC.Br = System.Drawing.Color.White;
+            this.txtRFC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRFC.ForeColor = System.Drawing.Color.DimGray;
+            this.txtRFC.Location = new System.Drawing.Point(182, 181);
+            this.txtRFC.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRFC.Name = "txtRFC";
+            this.txtRFC.Size = new System.Drawing.Size(230, 27);
+            this.txtRFC.TabIndex = 55;
+            // 
+            // txtApellidoMaterno
+            // 
+            this.txtApellidoMaterno.BackColor = System.Drawing.Color.Transparent;
+            this.txtApellidoMaterno.Br = System.Drawing.Color.White;
+            this.txtApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoMaterno.ForeColor = System.Drawing.Color.DimGray;
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(182, 136);
+            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidoMaterno.Name = "txtApellidoMaterno";
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(230, 27);
+            this.txtApellidoMaterno.TabIndex = 54;
+            // 
+            // txtApellidoParterno
+            // 
+            this.txtApellidoParterno.BackColor = System.Drawing.Color.Transparent;
+            this.txtApellidoParterno.Br = System.Drawing.Color.White;
+            this.txtApellidoParterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoParterno.ForeColor = System.Drawing.Color.DimGray;
+            this.txtApellidoParterno.Location = new System.Drawing.Point(182, 91);
+            this.txtApellidoParterno.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidoParterno.Name = "txtApellidoParterno";
+            this.txtApellidoParterno.Size = new System.Drawing.Size(230, 27);
+            this.txtApellidoParterno.TabIndex = 53;
+            // 
+            // lblPuesto
+            // 
+            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuesto.Location = new System.Drawing.Point(107, 351);
+            this.lblPuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPuesto.Name = "lblPuesto";
+            this.lblPuesto.Size = new System.Drawing.Size(58, 19);
+            this.lblPuesto.TabIndex = 52;
+            this.lblPuesto.Text = "Puesto";
+            // 
+            // lblAreaTrabajo
+            // 
+            this.lblAreaTrabajo.AutoSize = true;
+            this.lblAreaTrabajo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAreaTrabajo.Location = new System.Drawing.Point(60, 310);
+            this.lblAreaTrabajo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAreaTrabajo.Name = "lblAreaTrabajo";
+            this.lblAreaTrabajo.Size = new System.Drawing.Size(107, 19);
+            this.lblAreaTrabajo.TabIndex = 51;
+            this.lblAreaTrabajo.Text = "Área trabajo";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(107, 266);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(59, 19);
+            this.lblEmail.TabIndex = 50;
+            this.lblEmail.Text = "E-mail";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(95, 227);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(74, 19);
+            this.lblTelefono.TabIndex = 49;
+            this.lblTelefono.Text = "Teléfono";
+            // 
+            // lblRFC
+            // 
+            this.lblRFC.AutoSize = true;
+            this.lblRFC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRFC.Location = new System.Drawing.Point(127, 187);
+            this.lblRFC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRFC.Name = "lblRFC";
+            this.lblRFC.Size = new System.Drawing.Size(38, 19);
+            this.lblRFC.TabIndex = 48;
+            this.lblRFC.Text = "RFC";
+            // 
+            // lblApellidoMaterno
+            // 
+            this.lblApellidoMaterno.AutoSize = true;
+            this.lblApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoMaterno.Location = new System.Drawing.Point(25, 140);
+            this.lblApellidoMaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellidoMaterno.Name = "lblApellidoMaterno";
+            this.lblApellidoMaterno.Size = new System.Drawing.Size(145, 19);
+            this.lblApellidoMaterno.TabIndex = 47;
+            this.lblApellidoMaterno.Text = "Apellido materno";
+            // 
+            // lblApellidoPaterno
+            // 
+            this.lblApellidoPaterno.AutoSize = true;
+            this.lblApellidoPaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoPaterno.Location = new System.Drawing.Point(30, 95);
+            this.lblApellidoPaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellidoPaterno.Name = "lblApellidoPaterno";
+            this.lblApellidoPaterno.Size = new System.Drawing.Size(140, 19);
+            this.lblApellidoPaterno.TabIndex = 46;
+            this.lblApellidoPaterno.Text = "Apellido paterno";
+            // 
+            // lblNombreEmpleado
+            // 
+            this.lblNombreEmpleado.AutoSize = true;
+            this.lblNombreEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEmpleado.Location = new System.Drawing.Point(91, 48);
+            this.lblNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreEmpleado.Name = "lblNombreEmpleado";
+            this.lblNombreEmpleado.Size = new System.Drawing.Size(73, 19);
+            this.lblNombreEmpleado.TabIndex = 45;
+            this.lblNombreEmpleado.Text = "Nombre";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.Transparent;
+            this.txtNombre.Br = System.Drawing.Color.White;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombre.Location = new System.Drawing.Point(182, 44);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(230, 27);
+            this.txtNombre.TabIndex = 44;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 590);
+            this.ClientSize = new System.Drawing.Size(1232, 590);
             this.Controls.Add(this.pnlRegistro);
             this.Controls.Add(this.pnlLogoRegistro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -460,6 +614,10 @@ namespace UI
             this.grbUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            this.grbDireccion.ResumeLayout(false);
+            this.grbDireccion.PerformLayout();
+            this.grbDatosGenerales.ResumeLayout(false);
+            this.grbDatosGenerales.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -472,7 +630,22 @@ namespace UI
         private System.Windows.Forms.Label lblRegistro;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
-        private AltoControls.AltoTextBox txtNombre;
+        private System.Windows.Forms.GroupBox grbUsuario;
+        private AltoControls.AltoTextBox altoTextBox9;
+        private System.Windows.Forms.Label lblConfirmarContrasena;
+        private AltoControls.AltoTextBox txtContrasena;
+        private System.Windows.Forms.Label label1;
+        private AltoControls.AltoTextBox txtRegistrarUsuario;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.GroupBox grbDatosGenerales;
+        private System.Windows.Forms.ComboBox txtPuesto;
+        private System.Windows.Forms.ComboBox cmbAreaTrabajo;
+        private AltoControls.AltoTextBox txtEmail;
+        private AltoControls.AltoTextBox txtTelefono;
+        private AltoControls.AltoTextBox txtRFC;
+        private AltoControls.AltoTextBox txtApellidoMaterno;
+        private AltoControls.AltoTextBox txtApellidoParterno;
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.Label lblAreaTrabajo;
         private System.Windows.Forms.Label lblEmail;
@@ -481,20 +654,17 @@ namespace UI
         private System.Windows.Forms.Label lblApellidoMaterno;
         private System.Windows.Forms.Label lblApellidoPaterno;
         private System.Windows.Forms.Label lblNombreEmpleado;
-        private AltoControls.AltoTextBox txtEmail;
-        private AltoControls.AltoTextBox txtTelefono;
-        private AltoControls.AltoTextBox txtRFC;
-        private AltoControls.AltoTextBox txtApellidoMaterno;
-        private AltoControls.AltoTextBox txtApellidoParterno;
-        private System.Windows.Forms.GroupBox grbUsuario;
-        private AltoControls.AltoTextBox altoTextBox9;
-        private System.Windows.Forms.Label lblConfirmarContrasena;
-        private AltoControls.AltoTextBox txtContrasena;
-        private System.Windows.Forms.Label label1;
-        private AltoControls.AltoTextBox txtRegistrarUsuario;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.ComboBox txtPuesto;
-        private System.Windows.Forms.ComboBox cmbAreaTrabajo;
-        private System.Windows.Forms.Button btnRegistrarse;
+        private AltoControls.AltoTextBox txtNombre;
+        private System.Windows.Forms.GroupBox grbDireccion;
+        private System.Windows.Forms.ComboBox cmbMunicipio;
+        private System.Windows.Forms.Label lblMunicipio;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private AltoControls.AltoTextBox txtNumero;
+        private System.Windows.Forms.Label lblEstado;
+        private AltoControls.AltoTextBox txtColonia;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label lblColonia;
+        private AltoControls.AltoTextBox txtCalle;
+        private System.Windows.Forms.Label lblCalle;
     }
 }

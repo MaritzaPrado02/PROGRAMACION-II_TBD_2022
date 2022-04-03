@@ -39,13 +39,16 @@ namespace UI
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmRFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.clmAreaTrabajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -57,10 +60,9 @@ namespace UI
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(41, 11);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(31, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(235, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(185, 19);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "CONSULTAR EMPLEADO";
             // 
@@ -73,32 +75,33 @@ namespace UI
             this.clmRFC,
             this.clmTelefono,
             this.clmCorreo,
-            this.clmDireccion});
-            this.dataGridView1.Location = new System.Drawing.Point(47, 218);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clmDireccion,
+            this.clmAreaTrabajo,
+            this.clmPuesto});
+            this.dataGridView1.Location = new System.Drawing.Point(35, 177);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1188, 475);
+            this.dataGridView1.Size = new System.Drawing.Size(891, 386);
             this.dataGridView1.TabIndex = 37;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1260, 195);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Location = new System.Drawing.Point(945, 159);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(23, 584);
+            this.panel3.Size = new System.Drawing.Size(17, 474);
             this.panel3.TabIndex = 36;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 195);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 159);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(23, 584);
+            this.panel2.Size = new System.Drawing.Size(17, 474);
             this.panel2.TabIndex = 35;
             // 
             // panel1
@@ -109,20 +112,19 @@ namespace UI
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.lblBuscar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Location = new System.Drawing.Point(0, 36);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1283, 151);
+            this.panel1.Size = new System.Drawing.Size(962, 123);
             this.panel1.TabIndex = 34;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
-            this.btnBuscar.Location = new System.Drawing.Point(995, 47);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(60, 55);
+            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
@@ -137,19 +139,18 @@ namespace UI
             "ID",
             "PUESTO",
             "ÁREA TRABAJO"});
-            this.cmbFiltro.Location = new System.Drawing.Point(276, 59);
-            this.cmbFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbFiltro.Location = new System.Drawing.Point(207, 48);
             this.cmbFiltro.Name = "cmbFiltro";
-            this.cmbFiltro.Size = new System.Drawing.Size(160, 33);
+            this.cmbFiltro.Size = new System.Drawing.Size(121, 28);
             this.cmbFiltro.TabIndex = 6;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(447, 60);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtBuscar.Location = new System.Drawing.Point(335, 49);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(536, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(403, 26);
             this.txtBuscar.TabIndex = 5;
             // 
             // lblBuscar
@@ -157,10 +158,10 @@ namespace UI
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(180, 62);
-            this.lblBuscar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblBuscar.Location = new System.Drawing.Point(135, 50);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(81, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(64, 19);
             this.lblBuscar.TabIndex = 4;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -170,10 +171,43 @@ namespace UI
             this.pnlTitulo.Controls.Add(this.lblTitulo);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1283, 44);
+            this.pnlTitulo.Size = new System.Drawing.Size(962, 36);
             this.pnlTitulo.TabIndex = 33;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(203)))), ((int)(((byte)(82)))));
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.Black;
+            this.btnEditar.Location = new System.Drawing.Point(301, 579);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(175, 42);
+            this.btnEditar.TabIndex = 70;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(81)))), ((int)(((byte)(84)))));
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(524, 578);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(175, 42);
+            this.btnEliminar.TabIndex = 71;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // clmID
             // 
@@ -213,42 +247,34 @@ namespace UI
             // 
             // clmDireccion
             // 
-            this.clmDireccion.HeaderText = "Dirección";
+            this.clmDireccion.HeaderText = "DIRECCIÓN";
             this.clmDireccion.MinimumWidth = 6;
             this.clmDireccion.Name = "clmDireccion";
             this.clmDireccion.Width = 125;
             // 
-            // btnEditar
+            // clmAreaTrabajo
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(203)))), ((int)(((byte)(82)))));
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(543, 714);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(233, 52);
-            this.btnEditar.TabIndex = 70;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.clmAreaTrabajo.HeaderText = "ÁREA TRABAJO";
+            this.clmAreaTrabajo.Name = "clmAreaTrabajo";
+            // 
+            // clmPuesto
+            // 
+            this.clmPuesto.HeaderText = "PUESTO";
+            this.clmPuesto.Name = "clmPuesto";
             // 
             // frmBuscarEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1283, 779);
+            this.ClientSize = new System.Drawing.Size(962, 633);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBuscarEmpleado";
             this.Text = "frmBuscarEmpleado";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -273,12 +299,15 @@ namespace UI
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel pnlTitulo;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombreEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmRFC;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDireccion;
-        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAreaTrabajo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPuesto;
     }
 }

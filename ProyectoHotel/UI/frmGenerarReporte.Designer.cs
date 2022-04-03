@@ -45,6 +45,8 @@ namespace UI
             this.cmbEspecificar = new System.Windows.Forms.ComboBox();
             this.lblContenido = new System.Windows.Forms.Label();
             this.btnGenerarReporte = new System.Windows.Forms.Button();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
+            this.lblGeneroReporte = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContenidoReporte)).BeginInit();
             this.SuspendLayout();
@@ -224,12 +226,39 @@ namespace UI
             this.btnGenerarReporte.Text = "Generar reporte";
             this.btnGenerarReporte.UseVisualStyleBackColor = false;
             // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Items.AddRange(new object[] {
+            "TODAS LAS RESERVACIONES",
+            "HABITACIÓN",
+            "EMPLEADO",
+            "CLIENTE"});
+            this.cmbEmpleado.Location = new System.Drawing.Point(655, 103);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(227, 29);
+            this.cmbEmpleado.TabIndex = 63;
+            // 
+            // lblGeneroReporte
+            // 
+            this.lblGeneroReporte.AutoSize = true;
+            this.lblGeneroReporte.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneroReporte.Location = new System.Drawing.Point(702, 61);
+            this.lblGeneroReporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGeneroReporte.Name = "lblGeneroReporte";
+            this.lblGeneroReporte.Size = new System.Drawing.Size(135, 21);
+            this.lblGeneroReporte.TabIndex = 62;
+            this.lblGeneroReporte.Text = "Generó reporte:";
+            // 
             // frmGenerarReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(962, 633);
+            this.Controls.Add(this.cmbEmpleado);
+            this.Controls.Add(this.lblGeneroReporte);
             this.Controls.Add(this.btnGenerarReporte);
             this.Controls.Add(this.lblContenido);
             this.Controls.Add(this.cmbEspecificar);
@@ -273,5 +302,7 @@ namespace UI
         private System.Windows.Forms.ComboBox cmbEspecificar;
         private System.Windows.Forms.Label lblContenido;
         private System.Windows.Forms.Button btnGenerarReporte;
+        private System.Windows.Forms.ComboBox cmbEmpleado;
+        private System.Windows.Forms.Label lblGeneroReporte;
     }
 }
