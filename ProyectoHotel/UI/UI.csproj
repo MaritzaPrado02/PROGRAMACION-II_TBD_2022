@@ -414,5 +414,11 @@
   <ItemGroup>
     <None Include="Resources\trabajo-en-equipo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUSINESS\BUSINESS.csproj">
+      <Project>{4835a5c2-a966-4f00-b7ad-139c10159456}</Project>
+      <Name>BUSINESS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

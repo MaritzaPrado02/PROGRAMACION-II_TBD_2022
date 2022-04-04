@@ -38,6 +38,10 @@ namespace UI
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCorreoElectronico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbCliente = new System.Windows.Forms.GroupBox();
             this.txtEmail = new AltoControls.AltoTextBox();
             this.txtTelefono = new AltoControls.AltoTextBox();
@@ -51,10 +55,7 @@ namespace UI
             this.lblApellido = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
-            this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCorreoElectronico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.pnlTitulo.SuspendLayout();
@@ -67,7 +68,7 @@ namespace UI
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(1260, 195);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(23, 584);
             this.panel3.TabIndex = 29;
@@ -77,7 +78,7 @@ namespace UI
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 195);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(23, 584);
             this.panel2.TabIndex = 28;
@@ -85,12 +86,13 @@ namespace UI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.panel1.Controls.Add(this.cmbFiltro);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.lblBuscar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1283, 151);
             this.panel1.TabIndex = 27;
@@ -99,8 +101,8 @@ namespace UI
             // 
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
-            this.btnBuscar.Location = new System.Drawing.Point(937, 47);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(1004, 49);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(60, 55);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,8 +112,8 @@ namespace UI
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(389, 60);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtBuscar.Location = new System.Drawing.Point(456, 62);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(536, 30);
             this.txtBuscar.TabIndex = 5;
@@ -121,7 +123,7 @@ namespace UI
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(285, 62);
+            this.lblBuscar.Location = new System.Drawing.Point(192, 62);
             this.lblBuscar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(81, 23);
@@ -134,7 +136,7 @@ namespace UI
             this.pnlTitulo.Controls.Add(this.lblTitulo);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1283, 44);
             this.pnlTitulo.TabIndex = 26;
@@ -160,11 +162,40 @@ namespace UI
             this.clTelefono,
             this.clmCorreoElectronico});
             this.dgvClientes.Location = new System.Drawing.Point(47, 217);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.Size = new System.Drawing.Size(640, 473);
             this.dgvClientes.TabIndex = 62;
+            // 
+            // clID
+            // 
+            this.clID.HeaderText = "ID";
+            this.clID.MinimumWidth = 6;
+            this.clID.Name = "clID";
+            this.clID.Visible = false;
+            this.clID.Width = 125;
+            // 
+            // clmNombre
+            // 
+            this.clmNombre.HeaderText = "NOMBRE";
+            this.clmNombre.MinimumWidth = 6;
+            this.clmNombre.Name = "clmNombre";
+            this.clmNombre.Width = 125;
+            // 
+            // clTelefono
+            // 
+            this.clTelefono.HeaderText = "TELEFONO";
+            this.clTelefono.MinimumWidth = 6;
+            this.clTelefono.Name = "clTelefono";
+            this.clTelefono.Width = 125;
+            // 
+            // clmCorreoElectronico
+            // 
+            this.clmCorreoElectronico.HeaderText = "E-MAIL";
+            this.clmCorreoElectronico.MinimumWidth = 6;
+            this.clmCorreoElectronico.Name = "clmCorreoElectronico";
+            this.clmCorreoElectronico.Width = 125;
             // 
             // grbCliente
             // 
@@ -180,9 +211,9 @@ namespace UI
             this.grbCliente.Controls.Add(this.lblApellido);
             this.grbCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCliente.Location = new System.Drawing.Point(713, 217);
-            this.grbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbCliente.Margin = new System.Windows.Forms.Padding(4);
             this.grbCliente.Name = "grbCliente";
-            this.grbCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbCliente.Padding = new System.Windows.Forms.Padding(4);
             this.grbCliente.Size = new System.Drawing.Size(512, 473);
             this.grbCliente.TabIndex = 63;
             this.grbCliente.TabStop = false;
@@ -197,7 +228,7 @@ namespace UI
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
             this.txtEmail.Location = new System.Drawing.Point(219, 362);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(283, 41);
             this.txtEmail.TabIndex = 27;
@@ -210,7 +241,7 @@ namespace UI
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
             this.txtTelefono.Location = new System.Drawing.Point(219, 290);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(283, 41);
             this.txtTelefono.TabIndex = 26;
@@ -245,7 +276,7 @@ namespace UI
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellidoMaterno.Location = new System.Drawing.Point(219, 213);
-            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(283, 41);
             this.txtApellidoMaterno.TabIndex = 20;
@@ -258,7 +289,7 @@ namespace UI
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellidoPaterno.Location = new System.Drawing.Point(219, 137);
-            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(283, 41);
             this.txtApellidoPaterno.TabIndex = 19;
@@ -271,7 +302,7 @@ namespace UI
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombre.Location = new System.Drawing.Point(219, 62);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(283, 41);
             this.txtNombre.TabIndex = 18;
@@ -320,7 +351,7 @@ namespace UI
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.Location = new System.Drawing.Point(541, 713);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(233, 52);
             this.btnEditar.TabIndex = 64;
@@ -338,7 +369,7 @@ namespace UI
             this.btnGuardarCambios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
             this.btnGuardarCambios.Location = new System.Drawing.Point(865, 714);
-            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
             this.btnGuardarCambios.Size = new System.Drawing.Size(233, 52);
             this.btnGuardarCambios.TabIndex = 68;
@@ -347,34 +378,20 @@ namespace UI
             this.btnGuardarCambios.Visible = false;
             this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
-            // clID
+            // cmbFiltro
             // 
-            this.clID.HeaderText = "ID";
-            this.clID.MinimumWidth = 6;
-            this.clID.Name = "clID";
-            this.clID.Visible = false;
-            this.clID.Width = 125;
-            // 
-            // clmNombre
-            // 
-            this.clmNombre.HeaderText = "NOMBRE";
-            this.clmNombre.MinimumWidth = 6;
-            this.clmNombre.Name = "clmNombre";
-            this.clmNombre.Width = 125;
-            // 
-            // clTelefono
-            // 
-            this.clTelefono.HeaderText = "TELEFONO";
-            this.clTelefono.MinimumWidth = 6;
-            this.clTelefono.Name = "clTelefono";
-            this.clTelefono.Width = 125;
-            // 
-            // clmCorreoElectronico
-            // 
-            this.clmCorreoElectronico.HeaderText = "E-MAIL";
-            this.clmCorreoElectronico.MinimumWidth = 6;
-            this.clmCorreoElectronico.Name = "clmCorreoElectronico";
-            this.clmCorreoElectronico.Width = 125;
+            this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltro.FormattingEnabled = true;
+            this.cmbFiltro.Items.AddRange(new object[] {
+            "RESERVACIONES",
+            "HABITACIONES",
+            "FACTURAS"});
+            this.cmbFiltro.Location = new System.Drawing.Point(282, 60);
+            this.cmbFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbFiltro.Name = "cmbFiltro";
+            this.cmbFiltro.Size = new System.Drawing.Size(160, 33);
+            this.cmbFiltro.TabIndex = 8;
             // 
             // frmBuscarCliente
             // 
@@ -390,7 +407,7 @@ namespace UI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBuscarCliente";
             this.Text = "frmBuscarCliente";
             this.panel1.ResumeLayout(false);
@@ -433,5 +450,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCorreoElectronico;
+        private System.Windows.Forms.ComboBox cmbFiltro;
     }
 }

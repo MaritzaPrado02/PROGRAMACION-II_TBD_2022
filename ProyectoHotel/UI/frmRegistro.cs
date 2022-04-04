@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
+using BUSINESS;
+
 
 namespace UI
 {
@@ -50,5 +53,12 @@ namespace UI
         }
         #endregion
 
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            Regex reMotivo = new Regex("[A-Z]{1}[a-z]*", RegexOptions.Compiled);
+
+            #endregion
+        }
     }
 }
