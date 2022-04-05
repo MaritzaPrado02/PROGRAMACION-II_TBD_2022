@@ -49,5 +49,57 @@ namespace UI
             frmAgregarAreaTrabajo areaTrabajo = new frmAgregarAreaTrabajo();
             areaTrabajo.Show();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (cmbAreaTrabajo.Text == "")
+            {
+                errorProvider1.SetError(cmbAreaTrabajo, "Debe seleccionar el área de trabajo.");
+                cmbAreaTrabajo.Focus();
+                return;
+            }
+            errorProvider1.SetError(cmbAreaTrabajo, "");
+
+            if (txtNombrePuesto.Text == "")
+            {
+                errorProvider1.SetError(txtNombrePuesto, "Debe ingresar el nombre del puesto de trabajo.");
+                txtNombrePuesto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombrePuesto, "");
+
+            #endregion
+            limpiarControles();
+        }
+
+        public void limpiarControles()
+        {
+            cmbAreaTrabajo.SelectedIndex = -1;
+            txtNombrePuesto.Text = "";
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (cmbAreaTrabajo.Text == "")
+            {
+                errorProvider1.SetError(cmbAreaTrabajo, "Debe seleccionar el área de trabajo.");
+                cmbAreaTrabajo.Focus();
+                return;
+            }
+            errorProvider1.SetError(cmbAreaTrabajo, "");
+
+            if (txtNombrePuesto.Text == "")
+            {
+                errorProvider1.SetError(txtNombrePuesto, "Debe ingresar el nombre del puesto de trabajo.");
+                txtNombrePuesto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombrePuesto, "");
+
+            #endregion
+            limpiarControles();
+        }
     }
 }

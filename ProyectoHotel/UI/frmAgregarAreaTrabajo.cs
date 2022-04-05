@@ -43,5 +43,41 @@ namespace UI
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtAreaTrabajo.Text == "")
+            {
+                errorProvider1.SetError(txtAreaTrabajo, "Debe ingresar el nombre del área de trabajo.");
+                txtAreaTrabajo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtAreaTrabajo, "");
+
+            #endregion
+            limpiarControles();
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtAreaTrabajo.Text == "")
+            {
+                errorProvider1.SetError(txtAreaTrabajo, "Este campo no debe quedar vacio.");
+                txtAreaTrabajo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtAreaTrabajo, "");
+
+            #endregion
+            limpiarControles();
+        }
+
+        public void limpiarControles()
+        {
+            txtAreaTrabajo.Text = "";
+        }
+
     }
 }

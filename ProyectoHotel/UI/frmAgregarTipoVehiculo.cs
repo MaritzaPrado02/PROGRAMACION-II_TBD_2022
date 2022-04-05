@@ -42,5 +42,42 @@ namespace UI
             this.Hide();
         }
         #endregion
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtTipoVehiculo.Text == "")
+            {
+                errorProvider1.SetError(txtTipoVehiculo, "Debe seleccionar el área de trabajo.");
+                txtTipoVehiculo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtTipoVehiculo, "");
+
+           
+            #endregion
+            limpiarControles();
+        }
+
+        public void limpiarControles()
+        {
+            txtTipoVehiculo.Text = "";
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtTipoVehiculo.Text == "")
+            {
+                errorProvider1.SetError(txtTipoVehiculo, "Debe seleccionar el área de trabajo.");
+                txtTipoVehiculo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtTipoVehiculo, "");
+
+
+            #endregion
+            limpiarControles();
+        }
     }
 }

@@ -56,6 +56,7 @@ namespace UI
             this.lblComplemento = new System.Windows.Forms.Label();
             this.cmbComplementos = new System.Windows.Forms.ComboBox();
             this.lblCantidad = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -64,6 +65,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadComplemento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -125,6 +127,7 @@ namespace UI
             this.btnRegistrar.TabIndex = 73;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnGuardarCambios
             // 
@@ -142,6 +145,7 @@ namespace UI
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Visible = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // lblNombreCategoria
             // 
@@ -230,9 +234,19 @@ namespace UI
             // 
             this.nudCantidadComplemento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCantidadComplemento.Location = new System.Drawing.Point(237, 188);
+            this.nudCantidadComplemento.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudCantidadComplemento.Name = "nudCantidadComplemento";
             this.nudCantidadComplemento.Size = new System.Drawing.Size(51, 27);
             this.nudCantidadComplemento.TabIndex = 109;
+            this.nudCantidadComplemento.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnGuardarComplemento
             // 
@@ -250,6 +264,7 @@ namespace UI
             this.btnGuardarComplemento.TabIndex = 107;
             this.btnGuardarComplemento.Text = "Agregar complemento";
             this.btnGuardarComplemento.UseVisualStyleBackColor = false;
+            this.btnGuardarComplemento.Click += new System.EventHandler(this.btnGuardarComplemento_Click);
             // 
             // dgvComplementos
             // 
@@ -374,6 +389,10 @@ namespace UI
             this.lblCantidad.TabIndex = 117;
             this.lblCantidad.Text = "Cantidad:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAgregarCategoriaHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,6 +430,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadComplemento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,5 +464,6 @@ namespace UI
         private System.Windows.Forms.ComboBox cmbComplementos;
         private System.Windows.Forms.PictureBox btnAgregarComplemento;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

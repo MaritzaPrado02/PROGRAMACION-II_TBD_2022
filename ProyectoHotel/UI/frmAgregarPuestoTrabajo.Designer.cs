@@ -48,12 +48,14 @@ namespace UI
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnAgregarAreaTrabajo = new System.Windows.Forms.PictureBox();
             this.pcbImg = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAreaTrabajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraSuperior
@@ -130,6 +132,7 @@ namespace UI
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Visible = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // btnEliminar
             // 
@@ -175,12 +178,13 @@ namespace UI
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(408, 88);
+            this.btnRegistrar.Location = new System.Drawing.Point(408, 81);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(130, 30);
+            this.btnRegistrar.Size = new System.Drawing.Size(130, 37);
             this.btnRegistrar.TabIndex = 91;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dgvComplementos
             // 
@@ -254,6 +258,10 @@ namespace UI
             this.pcbImg.TabIndex = 89;
             this.pcbImg.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAgregarPuestoTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +289,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAreaTrabajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +315,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPuesto;
         private System.Windows.Forms.PictureBox btnAgregarAreaTrabajo;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

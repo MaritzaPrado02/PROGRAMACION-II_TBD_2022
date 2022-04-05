@@ -49,5 +49,113 @@ namespace UI
             frmAgregarComplemento agregarComplemento = new frmAgregarComplemento();
             agregarComplemento.Show();
         }
+
+        private void btnGuardarComplemento_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (cmbComplementos.Text == "")
+            {
+                errorProvider1.SetError(cmbComplementos, "Debe seleccionar el complemento que desea añadir.");
+                cmbComplementos.Focus();
+                return;
+            }
+            errorProvider1.SetError(cmbComplementos, "");
+
+            if (nudCantidadComplemento.Text == "")
+            {
+                errorProvider1.SetError(nudCantidadComplemento, "Debe especificar la cantidad de complementos.");
+                nudCantidadComplemento.Focus();
+                return;
+            }
+            errorProvider1.SetError(nudCantidadComplemento, "");
+
+
+            #endregion
+            cmbComplementos.SelectedIndex = -1;
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtNombreCategoria.Text == "")
+            {
+                errorProvider1.SetError(txtNombreCategoria, "Ingrese el nombre de la categoría.");
+                txtNombreCategoria.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreCategoria, "");
+
+            if (txtCosto.Text == "")
+            {
+                errorProvider1.SetError(txtCosto, "Debe ingresar el costo de las habitaciones de esa categoría.");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+
+            double costo;
+            if (!double.TryParse(txtCosto.Text, out costo))
+            {
+                errorProvider1.SetError(txtCosto, "Debe ingresar solo números en el campo de costo.");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+
+            if (costo < 0)
+            {
+                errorProvider1.SetError(txtCosto, "Solo puede ingresar números positivos");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+            #endregion
+            limpiarControles();
+        }
+
+        public void limpiarControles()
+        {
+            txtNombreCategoria.Text = "";
+            txtCosto.Text = "";
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtNombreCategoria.Text == "")
+            {
+                errorProvider1.SetError(txtNombreCategoria, "Ingrese el nombre de la categoría.");
+                txtNombreCategoria.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreCategoria, "");
+
+            if (txtCosto.Text == "")
+            {
+                errorProvider1.SetError(txtCosto, "Debe ingresar el costo de las habitaciones de esa categoría.");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+
+            double costo;
+            if (!double.TryParse(txtCosto.Text, out costo))
+            {
+                errorProvider1.SetError(txtCosto, "Debe ingresar solo números en el campo de costo.");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+
+            if (costo < 0)
+            {
+                errorProvider1.SetError(txtCosto, "Solo puede ingresar números positivos");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+            #endregion
+            limpiarControles();
+        }
     }
 }

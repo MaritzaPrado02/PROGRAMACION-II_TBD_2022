@@ -42,5 +42,26 @@ namespace UI
             this.Hide();
         }
         #endregion
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtNombreComplemento.Text == "")
+            {
+                errorProvider1.SetError(txtNombreComplemento, "Debe ingresar el nombre del áre de trabajo.");
+                txtNombreComplemento.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreComplemento, "");
+
+            #endregion
+            limpiarControles();
+
+        }
+
+        public void limpiarControles()
+        {
+            txtNombreComplemento.Text = "";
+        }
     }
 }

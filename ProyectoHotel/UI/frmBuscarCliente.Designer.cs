@@ -29,6 +29,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,11 +57,13 @@ namespace UI
             this.lblApellido = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.grbCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -121,6 +124,7 @@ namespace UI
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -227,7 +231,7 @@ namespace UI
             this.grbCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCliente.Location = new System.Drawing.Point(535, 176);
             this.grbCliente.Name = "grbCliente";
-            this.grbCliente.Size = new System.Drawing.Size(384, 384);
+            this.grbCliente.Size = new System.Drawing.Size(403, 384);
             this.grbCliente.TabIndex = 63;
             this.grbCliente.TabStop = false;
             this.grbCliente.Text = "Datos cliente";
@@ -381,6 +385,10 @@ namespace UI
             this.btnGuardarCambios.Visible = false;
             this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +413,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.grbCliente.ResumeLayout(false);
             this.grbCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,5 +447,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCorreoElectronico;
         private System.Windows.Forms.ComboBox cmbFiltro;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

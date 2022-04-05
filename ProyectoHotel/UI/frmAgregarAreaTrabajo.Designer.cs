@@ -29,7 +29,10 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlBarraSuperior = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.txtAreaTrabajo = new AltoControls.AltoTextBox();
             this.lblAreaTrabajo = new System.Windows.Forms.Label();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
@@ -37,16 +40,16 @@ namespace UI
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.dgvComplementos = new System.Windows.Forms.DataGridView();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.pcbImg = new System.Windows.Forms.PictureBox();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmComplemento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pcbImg = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlBarraSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraSuperior
@@ -60,6 +63,30 @@ namespace UI
             this.pnlBarraSuperior.Size = new System.Drawing.Size(515, 28);
             this.pnlBarraSuperior.TabIndex = 97;
             this.pnlBarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraSuperior_MouseDown);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::UI.Properties.Resources.cerrar;
+            this.btnCerrar.Location = new System.Drawing.Point(490, 8);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 81;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar__1_;
+            this.btnMinimizar.Location = new System.Drawing.Point(469, 8);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 80;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // txtAreaTrabajo
             // 
@@ -99,6 +126,7 @@ namespace UI
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Visible = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // btnEliminar
             // 
@@ -150,6 +178,7 @@ namespace UI
             this.btnRegistrar.TabIndex = 91;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dgvComplementos
             // 
@@ -162,29 +191,16 @@ namespace UI
             this.dgvComplementos.Size = new System.Drawing.Size(487, 159);
             this.dgvComplementos.TabIndex = 90;
             // 
-            // btnCerrar
+            // clmID
             // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::UI.Properties.Resources.cerrar;
-            this.btnCerrar.Location = new System.Drawing.Point(490, 8);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 81;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.clmID.HeaderText = "ID";
+            this.clmID.Name = "clmID";
+            this.clmID.Visible = false;
             // 
-            // btnMinimizar
+            // clmComplemento
             // 
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar__1_;
-            this.btnMinimizar.Location = new System.Drawing.Point(469, 8);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 80;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.clmComplemento.HeaderText = "ÁREA TRABAJO";
+            this.clmComplemento.Name = "clmComplemento";
             // 
             // pcbImg
             // 
@@ -196,16 +212,9 @@ namespace UI
             this.pcbImg.TabIndex = 89;
             this.pcbImg.TabStop = false;
             // 
-            // clmID
+            // errorProvider1
             // 
-            this.clmID.HeaderText = "ID";
-            this.clmID.Name = "clmID";
-            this.clmID.Visible = false;
-            // 
-            // clmComplemento
-            // 
-            this.clmComplemento.HeaderText = "ÁREA TRABAJO";
-            this.clmComplemento.Name = "clmComplemento";
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAgregarAreaTrabajo
             // 
@@ -226,10 +235,11 @@ namespace UI
             this.Name = "frmAgregarAreaTrabajo";
             this.Text = "frmAgregarAreaTrabajo";
             this.pnlBarraSuperior.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComplementos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +260,6 @@ namespace UI
         private System.Windows.Forms.PictureBox pcbImg;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmComplemento;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
