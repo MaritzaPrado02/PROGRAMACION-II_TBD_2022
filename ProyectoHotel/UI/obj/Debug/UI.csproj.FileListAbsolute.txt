@@ -41,10 +41,11 @@ D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmAgregarComplemento.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmEmpleado.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmBuscarEmpleado.resources
-D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmConsultarReportes.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmFactura.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmBuscarCliente.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmAgregarTipoVehiculo.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmAgregarAreaTrabajo.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmAgregarPuestoTrabajo.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmBuscarFactura.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\BUSINESS.dll
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\BUSINESS.pdb

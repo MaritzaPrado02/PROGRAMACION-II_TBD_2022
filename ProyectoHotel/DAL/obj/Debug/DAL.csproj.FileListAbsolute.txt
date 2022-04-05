@@ -1,0 +1,6 @@
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\DAL\bin\Debug\DAL.dll
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\DAL\bin\Debug\DAL.pdb
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\DAL\obj\Debug\DAL.dll
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\DAL\obj\Debug\DAL.pdb

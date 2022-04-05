@@ -33,25 +33,28 @@ namespace UI
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtpFechaBusqueda = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaFin = new System.Windows.Forms.Label();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.tlConsultarFactura = new System.Windows.Forms.ToolTip(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnVer = new System.Windows.Forms.Button();
+            this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFechaFacturacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTotalFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -77,7 +80,10 @@ namespace UI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.panel1.Controls.Add(this.dtpFechaBusqueda);
+            this.panel1.Controls.Add(this.lblFechaFin);
+            this.panel1.Controls.Add(this.dtpFechaFin);
+            this.panel1.Controls.Add(this.lblFechaInicio);
+            this.panel1.Controls.Add(this.dtpFechaInicio);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.cmbFiltro);
             this.panel1.Controls.Add(this.txtBuscar);
@@ -89,15 +95,63 @@ namespace UI
             this.panel1.Size = new System.Drawing.Size(962, 123);
             this.panel1.TabIndex = 33;
             // 
-            // dtpFechaBusqueda
+            // lblFechaFin
             // 
-            this.dtpFechaBusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaBusqueda.Location = new System.Drawing.Point(335, 82);
-            this.dtpFechaBusqueda.Name = "dtpFechaBusqueda";
-            this.dtpFechaBusqueda.Size = new System.Drawing.Size(118, 27);
-            this.dtpFechaBusqueda.TabIndex = 8;
-            this.dtpFechaBusqueda.Visible = false;
+            this.lblFechaFin.AutoSize = true;
+            this.lblFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFin.ForeColor = System.Drawing.Color.White;
+            this.lblFechaFin.Location = new System.Drawing.Point(486, 24);
+            this.lblFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaFin.Name = "lblFechaFin";
+            this.lblFechaFin.Size = new System.Drawing.Size(84, 19);
+            this.lblFechaFin.TabIndex = 11;
+            this.lblFechaFin.Text = "Fecha fin:";
+            this.lblFechaFin.Visible = false;
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaFin.Location = new System.Drawing.Point(484, 82);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(118, 27);
+            this.dtpFechaFin.TabIndex = 10;
+            this.dtpFechaFin.Visible = false;
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicio.ForeColor = System.Drawing.Color.White;
+            this.lblFechaInicio.Location = new System.Drawing.Point(337, 24);
+            this.lblFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(108, 19);
+            this.lblFechaInicio.TabIndex = 9;
+            this.lblFechaInicio.Text = "Fecha inicio:";
+            this.lblFechaInicio.Visible = false;
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(335, 82);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(118, 27);
+            this.dtpFechaInicio.TabIndex = 8;
+            this.dtpFechaInicio.Visible = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
+            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.TabStop = false;
+            this.tlConsultarFactura.SetToolTip(this.btnBuscar, "Buscar factura");
             // 
             // cmbFiltro
             // 
@@ -109,10 +163,11 @@ namespace UI
             "FECHA",
             "FOLIO",
             "EMPLEADO"});
-            this.cmbFiltro.Location = new System.Drawing.Point(207, 48);
+            this.cmbFiltro.Location = new System.Drawing.Point(176, 48);
             this.cmbFiltro.Name = "cmbFiltro";
-            this.cmbFiltro.Size = new System.Drawing.Size(121, 28);
+            this.cmbFiltro.Size = new System.Drawing.Size(152, 28);
             this.cmbFiltro.TabIndex = 6;
+            this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbFiltro_SelectedIndexChanged);
             // 
             // txtBuscar
             // 
@@ -128,7 +183,7 @@ namespace UI
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(135, 50);
+            this.lblBuscar.Location = new System.Drawing.Point(104, 50);
             this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(64, 19);
@@ -156,48 +211,22 @@ namespace UI
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "CONSULTAR FACTURAS";
             // 
-            // btnBuscar
+            // dgvFacturas
             // 
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
-            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.TabStop = false;
-            this.tlConsultarFactura.SetToolTip(this.btnBuscar, "Buscar factura");
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
             this.clmFechaFacturacion,
             this.clmEmpleado,
             this.clmCliente,
             this.clmTotalFactura});
-            this.dataGridView1.Location = new System.Drawing.Point(48, 189);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(868, 378);
-            this.dataGridView1.TabIndex = 36;
-            // 
-            // btnVer
-            // 
-            this.btnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(129)))), ((int)(((byte)(209)))));
-            this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVer.FlatAppearance.BorderSize = 0;
-            this.btnVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVer.ForeColor = System.Drawing.Color.White;
-            this.btnVer.Location = new System.Drawing.Point(396, 579);
-            this.btnVer.Name = "btnVer";
-            this.btnVer.Size = new System.Drawing.Size(175, 42);
-            this.btnVer.TabIndex = 129;
-            this.btnVer.Text = "Ver";
-            this.btnVer.UseVisualStyleBackColor = false;
+            this.dgvFacturas.Location = new System.Drawing.Point(48, 189);
+            this.dgvFacturas.Name = "dgvFacturas";
+            this.dgvFacturas.Size = new System.Drawing.Size(868, 378);
+            this.dgvFacturas.TabIndex = 36;
             // 
             // clmID
             // 
@@ -224,6 +253,24 @@ namespace UI
             this.clmTotalFactura.HeaderText = "COSTO TOTAL";
             this.clmTotalFactura.Name = "clmTotalFactura";
             // 
+            // btnVer
+            // 
+            this.btnVer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(129)))), ((int)(((byte)(209)))));
+            this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer.FlatAppearance.BorderSize = 0;
+            this.btnVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.Color.White;
+            this.btnVer.Location = new System.Drawing.Point(396, 579);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(175, 42);
+            this.btnVer.TabIndex = 129;
+            this.btnVer.Text = "Ver";
+            this.btnVer.UseVisualStyleBackColor = false;
+            // 
             // frmBuscarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +278,7 @@ namespace UI
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(962, 633);
             this.Controls.Add(this.btnVer);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFacturas);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -240,10 +287,10 @@ namespace UI
             this.Text = "frmBuscarFactura";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,7 +300,7 @@ namespace UI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker dtpFechaBusqueda;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.PictureBox btnBuscar;
         private System.Windows.Forms.ComboBox cmbFiltro;
         private System.Windows.Forms.TextBox txtBuscar;
@@ -261,12 +308,15 @@ namespace UI
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ToolTip tlConsultarFactura;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvFacturas;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaFacturacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalFactura;
         private System.Windows.Forms.Button btnVer;
+        private System.Windows.Forms.Label lblFechaFin;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
+        private System.Windows.Forms.Label lblFechaInicio;
     }
 }

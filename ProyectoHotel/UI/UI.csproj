@@ -115,12 +115,6 @@
     <Compile Include="frmCambiarContrasena.Designer.cs">
       <DependentUpon>frmCambiarContrasena.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultarReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsultarReportes.Designer.cs">
-      <DependentUpon>frmConsultarReportes.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,9 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCambiarContrasena.resx">
       <DependentUpon>frmCambiarContrasena.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultarReportes.resx">
-      <DependentUpon>frmConsultarReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>

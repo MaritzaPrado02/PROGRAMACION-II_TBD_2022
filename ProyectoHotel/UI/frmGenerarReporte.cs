@@ -16,5 +16,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void cmbEstatusReporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbEspecificar.Visible = true;
+        }
     }
 }

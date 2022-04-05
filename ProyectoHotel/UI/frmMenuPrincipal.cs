@@ -234,7 +234,7 @@ namespace UI
 
         private void btnConsultarReportes_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new frmConsultarReportes());
+            abrirFormularioHijo(new frmBuscarReportes());
             ocultarSubmenu();
         }
 

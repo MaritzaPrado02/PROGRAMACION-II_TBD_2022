@@ -33,5 +33,6 @@ namespace UI
             btnGuardarCambios.Visible = false;
             dgvClientes.Size = new Size(884, 384);
         }
+
     }
 }

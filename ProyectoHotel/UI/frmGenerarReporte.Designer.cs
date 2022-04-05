@@ -40,7 +40,7 @@ namespace UI
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.lblEstatus = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
             this.cmbEstatusReporte = new System.Windows.Forms.ComboBox();
             this.cmbEspecificar = new System.Windows.Forms.ComboBox();
             this.lblContenido = new System.Windows.Forms.Label();
@@ -94,17 +94,20 @@ namespace UI
             // 
             // dgvContenidoReporte
             // 
+            this.dgvContenidoReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvContenidoReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContenidoReporte.Location = new System.Drawing.Point(35, 287);
+            this.dgvContenidoReporte.Location = new System.Drawing.Point(35, 316);
             this.dgvContenidoReporte.Name = "dgvContenidoReporte";
-            this.dgvContenidoReporte.Size = new System.Drawing.Size(892, 289);
+            this.dgvContenidoReporte.Size = new System.Drawing.Size(892, 260);
             this.dgvContenidoReporte.TabIndex = 33;
             // 
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHasta.Location = new System.Drawing.Point(43, 207);
+            this.lblFechaHasta.Location = new System.Drawing.Point(43, 242);
             this.lblFechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(113, 21);
@@ -114,7 +117,7 @@ namespace UI
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaHasta.Location = new System.Drawing.Point(159, 205);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(159, 240);
             this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(227, 27);
@@ -146,7 +149,7 @@ namespace UI
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDesde.Location = new System.Drawing.Point(43, 158);
+            this.lblFechaDesde.Location = new System.Drawing.Point(43, 193);
             this.lblFechaDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(116, 21);
@@ -156,22 +159,22 @@ namespace UI
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaDesde.Location = new System.Drawing.Point(159, 156);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(159, 191);
             this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(227, 27);
             this.dtpFechaDesde.TabIndex = 42;
             // 
-            // lblEstatus
+            // lblTipo
             // 
-            this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatus.Location = new System.Drawing.Point(43, 111);
-            this.lblEstatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEstatus.Name = "lblEstatus";
-            this.lblEstatus.Size = new System.Drawing.Size(70, 21);
-            this.lblEstatus.TabIndex = 47;
-            this.lblEstatus.Text = "Estatus:";
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Location = new System.Drawing.Point(43, 111);
+            this.lblTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(46, 21);
+            this.lblTipo.TabIndex = 47;
+            this.lblTipo.Text = "Tipo:";
             // 
             // cmbEstatusReporte
             // 
@@ -179,30 +182,32 @@ namespace UI
             this.cmbEstatusReporte.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstatusReporte.FormattingEnabled = true;
             this.cmbEstatusReporte.Items.AddRange(new object[] {
-            "TODAS LAS RESERVACIONES",
             "HABITACIÓN",
             "EMPLEADO",
-            "CLIENTE"});
+            "CLIENTE",
+            "RESERVACIÓN"});
             this.cmbEstatusReporte.Location = new System.Drawing.Point(159, 111);
             this.cmbEstatusReporte.Name = "cmbEstatusReporte";
             this.cmbEstatusReporte.Size = new System.Drawing.Size(227, 29);
             this.cmbEstatusReporte.TabIndex = 48;
+            this.cmbEstatusReporte.SelectedIndexChanged += new System.EventHandler(this.cmbEstatusReporte_SelectedIndexChanged);
             // 
             // cmbEspecificar
             // 
             this.cmbEspecificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEspecificar.FormattingEnabled = true;
-            this.cmbEspecificar.Location = new System.Drawing.Point(401, 111);
+            this.cmbEspecificar.Location = new System.Drawing.Point(159, 149);
             this.cmbEspecificar.Name = "cmbEspecificar";
-            this.cmbEspecificar.Size = new System.Drawing.Size(173, 29);
+            this.cmbEspecificar.Size = new System.Drawing.Size(369, 29);
             this.cmbEspecificar.TabIndex = 49;
             this.cmbEspecificar.Visible = false;
             // 
             // lblContenido
             // 
+            this.lblContenido.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblContenido.AutoSize = true;
             this.lblContenido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContenido.Location = new System.Drawing.Point(397, 247);
+            this.lblContenido.Location = new System.Drawing.Point(397, 273);
             this.lblContenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContenido.Name = "lblContenido";
             this.lblContenido.Size = new System.Drawing.Size(182, 19);
@@ -211,6 +216,7 @@ namespace UI
             // 
             // btnGenerarReporte
             // 
+            this.btnGenerarReporte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGenerarReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(129)))), ((int)(((byte)(209)))));
             this.btnGenerarReporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
@@ -228,6 +234,7 @@ namespace UI
             // 
             // cmbEmpleado
             // 
+            this.cmbEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmpleado.FormattingEnabled = true;
             this.cmbEmpleado.Items.AddRange(new object[] {
@@ -242,6 +249,7 @@ namespace UI
             // 
             // lblGeneroReporte
             // 
+            this.lblGeneroReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGeneroReporte.AutoSize = true;
             this.lblGeneroReporte.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGeneroReporte.Location = new System.Drawing.Point(702, 61);
@@ -263,7 +271,7 @@ namespace UI
             this.Controls.Add(this.lblContenido);
             this.Controls.Add(this.cmbEspecificar);
             this.Controls.Add(this.cmbEstatusReporte);
-            this.Controls.Add(this.lblEstatus);
+            this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblFechaHasta);
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.txtDescripcion);
@@ -297,7 +305,7 @@ namespace UI
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblFechaDesde;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
-        private System.Windows.Forms.Label lblEstatus;
+        private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.ComboBox cmbEstatusReporte;
         private System.Windows.Forms.ComboBox cmbEspecificar;
         private System.Windows.Forms.Label lblContenido;

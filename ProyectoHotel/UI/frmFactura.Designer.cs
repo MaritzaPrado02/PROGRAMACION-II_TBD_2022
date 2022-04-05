@@ -58,10 +58,10 @@ namespace UI
             this.cmbIDEmpleado = new System.Windows.Forms.ComboBox();
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.dgvDetallesReservacion = new System.Windows.Forms.DataGridView();
-            this.dgvDetallesEstacionamiento = new System.Windows.Forms.DataGridView();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmClaveHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDetallesEstacionamiento = new System.Windows.Forms.DataGridView();
             this.clmIDEstacionamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCostoEstacionamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -300,6 +300,7 @@ namespace UI
             // 
             // btnFacturar
             // 
+            this.btnFacturar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnFacturar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(129)))), ((int)(((byte)(209)))));
             this.btnFacturar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFacturar.FlatAppearance.BorderSize = 0;
@@ -362,6 +363,8 @@ namespace UI
             // 
             // dgvDetallesReservacion
             // 
+            this.dgvDetallesReservacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDetallesReservacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetallesReservacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
@@ -371,18 +374,6 @@ namespace UI
             this.dgvDetallesReservacion.Name = "dgvDetallesReservacion";
             this.dgvDetallesReservacion.Size = new System.Drawing.Size(337, 240);
             this.dgvDetallesReservacion.TabIndex = 136;
-            // 
-            // dgvDetallesEstacionamiento
-            // 
-            this.dgvDetallesEstacionamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetallesEstacionamiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmIDEstacionamiento,
-            this.clmTipoVehiculo,
-            this.clmCostoEstacionamiento});
-            this.dgvDetallesEstacionamiento.Location = new System.Drawing.Point(589, 363);
-            this.dgvDetallesEstacionamiento.Name = "dgvDetallesEstacionamiento";
-            this.dgvDetallesEstacionamiento.Size = new System.Drawing.Size(337, 102);
-            this.dgvDetallesEstacionamiento.TabIndex = 137;
             // 
             // clmID
             // 
@@ -399,6 +390,21 @@ namespace UI
             // 
             this.clmCosto.HeaderText = "COSTO";
             this.clmCosto.Name = "clmCosto";
+            // 
+            // dgvDetallesEstacionamiento
+            // 
+            this.dgvDetallesEstacionamiento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDetallesEstacionamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetallesEstacionamiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmIDEstacionamiento,
+            this.clmTipoVehiculo,
+            this.clmCostoEstacionamiento});
+            this.dgvDetallesEstacionamiento.Location = new System.Drawing.Point(589, 363);
+            this.dgvDetallesEstacionamiento.Name = "dgvDetallesEstacionamiento";
+            this.dgvDetallesEstacionamiento.Size = new System.Drawing.Size(337, 102);
+            this.dgvDetallesEstacionamiento.TabIndex = 137;
             // 
             // clmIDEstacionamiento
             // 
@@ -418,6 +424,7 @@ namespace UI
             // 
             // lblDetalleHabitaciones
             // 
+            this.lblDetalleHabitaciones.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDetalleHabitaciones.AutoSize = true;
             this.lblDetalleHabitaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetalleHabitaciones.Location = new System.Drawing.Point(676, 65);
@@ -429,6 +436,7 @@ namespace UI
             // 
             // lblDetalleEstacionamiento
             // 
+            this.lblDetalleEstacionamiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDetalleEstacionamiento.AutoSize = true;
             this.lblDetalleEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetalleEstacionamiento.Location = new System.Drawing.Point(668, 339);

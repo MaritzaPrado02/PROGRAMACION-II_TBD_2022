@@ -56,9 +56,17 @@ namespace UI
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             #region Validaciones
-            Regex reMotivo = new Regex("[A-Z]{1}[a-z]*", RegexOptions.Compiled);
+            Regex reLetras = new Regex("[A-Z]{1}[a-z]*", RegexOptions.Compiled);
+            if (!reLetras.IsMatch(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "Solo debe ingresar letras.");
+                txtNombre.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombre, "");
 
             #endregion
         }
+
     }
 }

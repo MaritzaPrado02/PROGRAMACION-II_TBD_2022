@@ -31,7 +31,6 @@ namespace UI
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtpFechaBusqueda = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -39,7 +38,7 @@ namespace UI
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDatosReservaciones = new System.Windows.Forms.DataGridView();
             this.clmFolio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFechaReservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +48,14 @@ namespace UI
             this.clmEstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.lblFechaFin = new System.Windows.Forms.Label();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosReservaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -69,7 +72,10 @@ namespace UI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.panel1.Controls.Add(this.dtpFechaBusqueda);
+            this.panel1.Controls.Add(this.lblFechaFin);
+            this.panel1.Controls.Add(this.dtpFechaFin);
+            this.panel1.Controls.Add(this.lblFechaInicio);
+            this.panel1.Controls.Add(this.dtpFechaInicio);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.cmbFiltro);
             this.panel1.Controls.Add(this.txtBuscar);
@@ -80,16 +86,6 @@ namespace UI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(962, 123);
             this.panel1.TabIndex = 27;
-            // 
-            // dtpFechaBusqueda
-            // 
-            this.dtpFechaBusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaBusqueda.Location = new System.Drawing.Point(335, 83);
-            this.dtpFechaBusqueda.Name = "dtpFechaBusqueda";
-            this.dtpFechaBusqueda.Size = new System.Drawing.Size(118, 27);
-            this.dtpFechaBusqueda.TabIndex = 8;
-            this.dtpFechaBusqueda.Visible = false;
             // 
             // btnBuscar
             // 
@@ -116,6 +112,7 @@ namespace UI
             this.cmbFiltro.Name = "cmbFiltro";
             this.cmbFiltro.Size = new System.Drawing.Size(121, 28);
             this.cmbFiltro.TabIndex = 6;
+            this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbFiltro_SelectedIndexChanged);
             // 
             // txtBuscar
             // 
@@ -168,10 +165,13 @@ namespace UI
             this.panel3.Size = new System.Drawing.Size(17, 474);
             this.panel3.TabIndex = 31;
             // 
-            // dataGridView1
+            // dgvDatosReservaciones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDatosReservaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDatosReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatosReservaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmFolio,
             this.clmFechaReservacion,
             this.clmFechaIngreso,
@@ -179,10 +179,10 @@ namespace UI
             this.clmCliente,
             this.clmAtendio,
             this.clmEstatus});
-            this.dataGridView1.Location = new System.Drawing.Point(35, 177);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(891, 386);
-            this.dataGridView1.TabIndex = 32;
+            this.dgvDatosReservaciones.Location = new System.Drawing.Point(35, 177);
+            this.dgvDatosReservaciones.Name = "dgvDatosReservaciones";
+            this.dgvDatosReservaciones.Size = new System.Drawing.Size(891, 386);
+            this.dgvDatosReservaciones.TabIndex = 32;
             // 
             // clmFolio
             // 
@@ -221,6 +221,7 @@ namespace UI
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(81)))), ((int)(((byte)(84)))));
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
@@ -238,6 +239,7 @@ namespace UI
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(203)))), ((int)(((byte)(82)))));
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
@@ -253,6 +255,52 @@ namespace UI
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
+            // lblFechaFin
+            // 
+            this.lblFechaFin.AutoSize = true;
+            this.lblFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFin.ForeColor = System.Drawing.Color.White;
+            this.lblFechaFin.Location = new System.Drawing.Point(499, 22);
+            this.lblFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaFin.Name = "lblFechaFin";
+            this.lblFechaFin.Size = new System.Drawing.Size(108, 19);
+            this.lblFechaFin.TabIndex = 15;
+            this.lblFechaFin.Text = "Fecha inicio:";
+            this.lblFechaFin.Visible = false;
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaFin.Location = new System.Drawing.Point(497, 80);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(118, 27);
+            this.dtpFechaFin.TabIndex = 14;
+            this.dtpFechaFin.Visible = false;
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicio.ForeColor = System.Drawing.Color.White;
+            this.lblFechaInicio.Location = new System.Drawing.Point(350, 22);
+            this.lblFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(108, 19);
+            this.lblFechaInicio.TabIndex = 13;
+            this.lblFechaInicio.Text = "Fecha inicio:";
+            this.lblFechaInicio.Visible = false;
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(348, 80);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(118, 27);
+            this.dtpFechaInicio.TabIndex = 12;
+            this.dtpFechaInicio.Visible = false;
+            // 
             // frmBuscarReservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,7 +309,7 @@ namespace UI
             this.ClientSize = new System.Drawing.Size(962, 633);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDatosReservaciones);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -273,7 +321,7 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosReservaciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,7 +337,7 @@ namespace UI
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDatosReservaciones;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFolio;
@@ -299,6 +347,9 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmAtendio;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEstatus;
-        private System.Windows.Forms.DateTimePicker dtpFechaBusqueda;
+        private System.Windows.Forms.Label lblFechaFin;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
+        private System.Windows.Forms.Label lblFechaInicio;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
     }
 }

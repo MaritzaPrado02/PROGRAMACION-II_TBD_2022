@@ -1,0 +1,9 @@
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\bin\Debug\BUSINESS.dll
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\bin\Debug\BUSINESS.pdb
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\bin\Debug\DAL.dll
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\bin\Debug\DAL.pdb
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\obj\Debug\BUSINESS.csprojAssemblyReference.cache
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\obj\Debug\BUSINESS.csproj.CoreCompileInputs.cache
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\obj\Debug\BUSINESS.csproj.CopyComplete
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\obj\Debug\BUSINESS.dll
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\BUSINESS\obj\Debug\BUSINESS.pdb

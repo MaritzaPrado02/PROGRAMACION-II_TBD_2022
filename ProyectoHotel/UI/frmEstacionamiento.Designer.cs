@@ -31,9 +31,7 @@ namespace UI
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlTitulo = new System.Windows.Forms.Panel();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -56,59 +54,38 @@ namespace UI
             this.lblBuscar = new System.Windows.Forms.Label();
             this.cmbFiltroEstatus = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbFiltroTipoVehiculo = new System.Windows.Forms.ComboBox();
-            this.lblEstatusBusqueda = new System.Windows.Forms.Label();
             this.lblTipoVehiculoBusqueda = new System.Windows.Forms.Label();
-            this.pnlTitulo.SuspendLayout();
+            this.lblEstatusBusqueda = new System.Windows.Forms.Label();
+            this.cmbFiltroTipoVehiculo = new System.Windows.Forms.ComboBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlTitulo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromocion)).BeginInit();
             this.grbRegistroEstacionamiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarTipoVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.panel1.SuspendLayout();
+            this.pnlTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 195);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 159);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(23, 584);
+            this.panel2.Size = new System.Drawing.Size(17, 474);
             this.panel2.TabIndex = 28;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(41, 11);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(196, 23);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "ESTACIONAMIENTO";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1260, 195);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Location = new System.Drawing.Point(945, 159);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(23, 584);
+            this.panel3.Size = new System.Drawing.Size(17, 474);
             this.panel3.TabIndex = 29;
-            // 
-            // pnlTitulo
-            // 
-            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.pnlTitulo.Controls.Add(this.lblTitulo);
-            this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1283, 44);
-            this.pnlTitulo.TabIndex = 26;
             // 
             // btnGuardarCambios
             // 
@@ -119,16 +96,17 @@ namespace UI
             this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarCambios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCambios.Location = new System.Drawing.Point(153, 565);
-            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarCambios.Location = new System.Drawing.Point(115, 459);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
-            this.btnGuardarCambios.Size = new System.Drawing.Size(233, 52);
+            this.btnGuardarCambios.Size = new System.Drawing.Size(175, 42);
             this.btnGuardarCambios.TabIndex = 73;
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
+            this.btnGuardarCambios.Visible = false;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(81)))), ((int)(((byte)(84)))));
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
@@ -137,16 +115,16 @@ namespace UI
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(979, 710);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(734, 577);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(233, 52);
+            this.btnEliminar.Size = new System.Drawing.Size(175, 42);
             this.btnEliminar.TabIndex = 72;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(203)))), ((int)(((byte)(82)))));
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
@@ -155,27 +133,28 @@ namespace UI
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(653, 710);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(490, 577);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(233, 52);
+            this.btnEditar.Size = new System.Drawing.Size(175, 42);
             this.btnEditar.TabIndex = 71;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // dgvPromocion
             // 
+            this.dgvPromocion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPromocion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPromocion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idEstacionamiento,
             this.clmTipoVehiculo,
             this.clmCosto,
             this.clmEstatus});
-            this.dgvPromocion.Location = new System.Drawing.Point(553, 219);
-            this.dgvPromocion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPromocion.Location = new System.Drawing.Point(415, 178);
             this.dgvPromocion.Name = "dgvPromocion";
             this.dgvPromocion.RowHeadersWidth = 51;
-            this.dgvPromocion.Size = new System.Drawing.Size(693, 465);
+            this.dgvPromocion.Size = new System.Drawing.Size(520, 378);
             this.dgvPromocion.TabIndex = 70;
             // 
             // idEstacionamiento
@@ -216,10 +195,9 @@ namespace UI
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(153, 490);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrar.Location = new System.Drawing.Point(115, 398);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(233, 52);
+            this.btnRegistrar.Size = new System.Drawing.Size(175, 42);
             this.btnRegistrar.TabIndex = 69;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -234,11 +212,9 @@ namespace UI
             this.grbRegistroEstacionamiento.Controls.Add(this.cmbTipoVehiculo);
             this.grbRegistroEstacionamiento.Controls.Add(this.lblTipoVehiculo);
             this.grbRegistroEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbRegistroEstacionamiento.Location = new System.Drawing.Point(32, 204);
-            this.grbRegistroEstacionamiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbRegistroEstacionamiento.Location = new System.Drawing.Point(24, 166);
             this.grbRegistroEstacionamiento.Name = "grbRegistroEstacionamiento";
-            this.grbRegistroEstacionamiento.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grbRegistroEstacionamiento.Size = new System.Drawing.Size(493, 266);
+            this.grbRegistroEstacionamiento.Size = new System.Drawing.Size(370, 216);
             this.grbRegistroEstacionamiento.TabIndex = 68;
             this.grbRegistroEstacionamiento.TabStop = false;
             this.grbRegistroEstacionamiento.Text = "Detalles estacionamiento";
@@ -247,10 +223,9 @@ namespace UI
             // 
             this.btnAgregarTipoVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarTipoVehiculo.Image = global::UI.Properties.Resources.boton_agregar;
-            this.btnAgregarTipoVehiculo.Location = new System.Drawing.Point(440, 63);
-            this.btnAgregarTipoVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarTipoVehiculo.Location = new System.Drawing.Point(330, 51);
             this.btnAgregarTipoVehiculo.Name = "btnAgregarTipoVehiculo";
-            this.btnAgregarTipoVehiculo.Size = new System.Drawing.Size(43, 39);
+            this.btnAgregarTipoVehiculo.Size = new System.Drawing.Size(32, 32);
             this.btnAgregarTipoVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAgregarTipoVehiculo.TabIndex = 49;
             this.btnAgregarTipoVehiculo.TabStop = false;
@@ -261,20 +236,19 @@ namespace UI
             // 
             this.cmbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstatus.FormattingEnabled = true;
-            this.cmbEstatus.Location = new System.Drawing.Point(177, 177);
-            this.cmbEstatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstatus.Location = new System.Drawing.Point(133, 144);
             this.cmbEstatus.Name = "cmbEstatus";
-            this.cmbEstatus.Size = new System.Drawing.Size(292, 31);
+            this.cmbEstatus.Size = new System.Drawing.Size(220, 29);
             this.cmbEstatus.TabIndex = 48;
             // 
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
             this.lblEstatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatus.Location = new System.Drawing.Point(13, 181);
-            this.lblEstatus.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblEstatus.Location = new System.Drawing.Point(10, 147);
+            this.lblEstatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstatus.Name = "lblEstatus";
-            this.lblEstatus.Size = new System.Drawing.Size(82, 23);
+            this.lblEstatus.Size = new System.Drawing.Size(70, 21);
             this.lblEstatus.TabIndex = 47;
             this.lblEstatus.Text = "Estatus:";
             // 
@@ -284,20 +258,19 @@ namespace UI
             this.altoTextBox1.Br = System.Drawing.Color.White;
             this.altoTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.altoTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.altoTextBox1.Location = new System.Drawing.Point(220, 119);
-            this.altoTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.altoTextBox1.Location = new System.Drawing.Point(165, 97);
             this.altoTextBox1.Name = "altoTextBox1";
-            this.altoTextBox1.Size = new System.Drawing.Size(251, 41);
+            this.altoTextBox1.Size = new System.Drawing.Size(188, 33);
             this.altoTextBox1.TabIndex = 46;
             // 
             // lblCostoHabitacion
             // 
             this.lblCostoHabitacion.AutoSize = true;
             this.lblCostoHabitacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCostoHabitacion.Location = new System.Drawing.Point(13, 128);
-            this.lblCostoHabitacion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblCostoHabitacion.Location = new System.Drawing.Point(10, 104);
+            this.lblCostoHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCostoHabitacion.Name = "lblCostoHabitacion";
-            this.lblCostoHabitacion.Size = new System.Drawing.Size(184, 23);
+            this.lblCostoHabitacion.Size = new System.Drawing.Size(148, 21);
             this.lblCostoHabitacion.TabIndex = 45;
             this.lblCostoHabitacion.Text = "Costo promoción:";
             // 
@@ -305,20 +278,19 @@ namespace UI
             // 
             this.cmbTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoVehiculo.FormattingEnabled = true;
-            this.cmbTipoVehiculo.Location = new System.Drawing.Point(177, 65);
-            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoVehiculo.Location = new System.Drawing.Point(133, 53);
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
-            this.cmbTipoVehiculo.Size = new System.Drawing.Size(253, 31);
+            this.cmbTipoVehiculo.Size = new System.Drawing.Size(191, 29);
             this.cmbTipoVehiculo.TabIndex = 42;
             // 
             // lblTipoVehiculo
             // 
             this.lblTipoVehiculo.AutoSize = true;
             this.lblTipoVehiculo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoVehiculo.Location = new System.Drawing.Point(13, 69);
-            this.lblTipoVehiculo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTipoVehiculo.Location = new System.Drawing.Point(10, 56);
+            this.lblTipoVehiculo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoVehiculo.Name = "lblTipoVehiculo";
-            this.lblTipoVehiculo.Size = new System.Drawing.Size(143, 23);
+            this.lblTipoVehiculo.Size = new System.Drawing.Size(116, 21);
             this.lblTipoVehiculo.TabIndex = 41;
             this.lblTipoVehiculo.Text = "Tipo vehiculo:";
             // 
@@ -326,10 +298,9 @@ namespace UI
             // 
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
-            this.btnBuscar.Location = new System.Drawing.Point(995, 47);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(60, 55);
+            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
@@ -340,10 +311,10 @@ namespace UI
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(180, 62);
-            this.lblBuscar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblBuscar.Location = new System.Drawing.Point(135, 50);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(81, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(64, 19);
             this.lblBuscar.TabIndex = 4;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -353,12 +324,12 @@ namespace UI
             this.cmbFiltroEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltroEstatus.FormattingEnabled = true;
             this.cmbFiltroEstatus.Items.AddRange(new object[] {
-            "TIPO VEHICULO",
-            "ESTATUS"});
-            this.cmbFiltroEstatus.Location = new System.Drawing.Point(422, 58);
-            this.cmbFiltroEstatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            "DISPONIBLE",
+            "NO DISPONIBLE",
+            "OCUPADO"});
+            this.cmbFiltroEstatus.Location = new System.Drawing.Point(316, 47);
             this.cmbFiltroEstatus.Name = "cmbFiltroEstatus";
-            this.cmbFiltroEstatus.Size = new System.Drawing.Size(160, 33);
+            this.cmbFiltroEstatus.Size = new System.Drawing.Size(121, 28);
             this.cmbFiltroEstatus.TabIndex = 6;
             // 
             // panel1
@@ -371,56 +342,73 @@ namespace UI
             this.panel1.Controls.Add(this.cmbFiltroEstatus);
             this.panel1.Controls.Add(this.lblBuscar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Location = new System.Drawing.Point(0, 36);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1283, 151);
+            this.panel1.Size = new System.Drawing.Size(962, 123);
             this.panel1.TabIndex = 27;
-            // 
-            // cmbFiltroTipoVehiculo
-            // 
-            this.cmbFiltroTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltroTipoVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFiltroTipoVehiculo.FormattingEnabled = true;
-            this.cmbFiltroTipoVehiculo.Items.AddRange(new object[] {
-            "TIPO VEHICULO",
-            "ESTATUS"});
-            this.cmbFiltroTipoVehiculo.Location = new System.Drawing.Point(765, 58);
-            this.cmbFiltroTipoVehiculo.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbFiltroTipoVehiculo.Name = "cmbFiltroTipoVehiculo";
-            this.cmbFiltroTipoVehiculo.Size = new System.Drawing.Size(160, 33);
-            this.cmbFiltroTipoVehiculo.TabIndex = 8;
-            // 
-            // lblEstatusBusqueda
-            // 
-            this.lblEstatusBusqueda.AutoSize = true;
-            this.lblEstatusBusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatusBusqueda.ForeColor = System.Drawing.Color.LightGray;
-            this.lblEstatusBusqueda.Location = new System.Drawing.Point(329, 62);
-            this.lblEstatusBusqueda.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblEstatusBusqueda.Name = "lblEstatusBusqueda";
-            this.lblEstatusBusqueda.Size = new System.Drawing.Size(84, 23);
-            this.lblEstatusBusqueda.TabIndex = 9;
-            this.lblEstatusBusqueda.Text = "ESTATUS";
             // 
             // lblTipoVehiculoBusqueda
             // 
             this.lblTipoVehiculoBusqueda.AutoSize = true;
             this.lblTipoVehiculoBusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoVehiculoBusqueda.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTipoVehiculoBusqueda.Location = new System.Drawing.Point(599, 63);
-            this.lblTipoVehiculoBusqueda.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTipoVehiculoBusqueda.Location = new System.Drawing.Point(449, 51);
+            this.lblTipoVehiculoBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoVehiculoBusqueda.Name = "lblTipoVehiculoBusqueda";
-            this.lblTipoVehiculoBusqueda.Size = new System.Drawing.Size(157, 23);
+            this.lblTipoVehiculoBusqueda.Size = new System.Drawing.Size(122, 19);
             this.lblTipoVehiculoBusqueda.TabIndex = 10;
             this.lblTipoVehiculoBusqueda.Text = "TIPO VEHICULO";
             // 
+            // lblEstatusBusqueda
+            // 
+            this.lblEstatusBusqueda.AutoSize = true;
+            this.lblEstatusBusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatusBusqueda.ForeColor = System.Drawing.Color.LightGray;
+            this.lblEstatusBusqueda.Location = new System.Drawing.Point(247, 50);
+            this.lblEstatusBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstatusBusqueda.Name = "lblEstatusBusqueda";
+            this.lblEstatusBusqueda.Size = new System.Drawing.Size(69, 19);
+            this.lblEstatusBusqueda.TabIndex = 9;
+            this.lblEstatusBusqueda.Text = "ESTATUS";
+            // 
+            // cmbFiltroTipoVehiculo
+            // 
+            this.cmbFiltroTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroTipoVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltroTipoVehiculo.FormattingEnabled = true;
+            this.cmbFiltroTipoVehiculo.Location = new System.Drawing.Point(574, 47);
+            this.cmbFiltroTipoVehiculo.Name = "cmbFiltroTipoVehiculo";
+            this.cmbFiltroTipoVehiculo.Size = new System.Drawing.Size(121, 28);
+            this.cmbFiltroTipoVehiculo.TabIndex = 8;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(31, 9);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(155, 19);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "ESTACIONAMIENTO";
+            // 
+            // pnlTitulo
+            // 
+            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.pnlTitulo.Controls.Add(this.lblTitulo);
+            this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(962, 36);
+            this.pnlTitulo.TabIndex = 26;
+            // 
             // frmEstacionamiento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1283, 779);
+            this.ClientSize = new System.Drawing.Size(962, 633);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -431,11 +419,8 @@ namespace UI
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEstacionamiento";
             this.Text = "frmEstacionamiento";
-            this.pnlTitulo.ResumeLayout(false);
-            this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromocion)).EndInit();
             this.grbRegistroEstacionamiento.ResumeLayout(false);
             this.grbRegistroEstacionamiento.PerformLayout();
@@ -443,6 +428,8 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlTitulo.ResumeLayout(false);
+            this.pnlTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -450,9 +437,7 @@ namespace UI
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
@@ -478,5 +463,7 @@ namespace UI
         private System.Windows.Forms.Label lblEstatusBusqueda;
         private System.Windows.Forms.ComboBox cmbFiltroTipoVehiculo;
         private System.Windows.Forms.Label lblTipoVehiculoBusqueda;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel pnlTitulo;
     }
 }
