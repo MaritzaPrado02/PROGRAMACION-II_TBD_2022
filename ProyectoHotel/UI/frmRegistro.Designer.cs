@@ -603,7 +603,7 @@ namespace UI
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::UI.Properties.Resources.cerrar;
-            this.btnCerrar.Location = new System.Drawing.Point(858, 11);
+            this.btnCerrar.Location = new System.Drawing.Point(913, 11);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(15, 15);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -615,7 +615,7 @@ namespace UI
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::UI.Properties.Resources.minimizar__1_;
-            this.btnMinimizar.Location = new System.Drawing.Point(837, 11);
+            this.btnMinimizar.Location = new System.Drawing.Point(887, 11);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -44,6 +44,9 @@ namespace UI
             this.clmTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pcbImg = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCosto = new AltoControls.AltoTextBox();
+            this.lblCosto = new System.Windows.Forms.Label();
+            this.clmCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -96,7 +99,7 @@ namespace UI
             this.txtTipoVehiculo.ForeColor = System.Drawing.Color.DimGray;
             this.txtTipoVehiculo.Location = new System.Drawing.Point(132, 79);
             this.txtTipoVehiculo.Name = "txtTipoVehiculo";
-            this.txtTipoVehiculo.Size = new System.Drawing.Size(247, 33);
+            this.txtTipoVehiculo.Size = new System.Drawing.Size(219, 33);
             this.txtTipoVehiculo.TabIndex = 96;
             // 
             // lblTipoVehiculo
@@ -104,7 +107,7 @@ namespace UI
             this.lblTipoVehiculo.AutoSize = true;
             this.lblTipoVehiculo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoVehiculo.ForeColor = System.Drawing.Color.White;
-            this.lblTipoVehiculo.Location = new System.Drawing.Point(193, 52);
+            this.lblTipoVehiculo.Location = new System.Drawing.Point(185, 52);
             this.lblTipoVehiculo.Name = "lblTipoVehiculo";
             this.lblTipoVehiculo.Size = new System.Drawing.Size(116, 19);
             this.lblTipoVehiculo.TabIndex = 95;
@@ -119,7 +122,7 @@ namespace UI
             this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarCambios.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCambios.Location = new System.Drawing.Point(192, 158);
+            this.btnGuardarCambios.Location = new System.Drawing.Point(370, 121);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
             this.btnGuardarCambios.Size = new System.Drawing.Size(130, 49);
             this.btnGuardarCambios.TabIndex = 94;
@@ -172,7 +175,7 @@ namespace UI
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(192, 122);
+            this.btnRegistrar.Location = new System.Drawing.Point(370, 85);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(130, 30);
             this.btnRegistrar.TabIndex = 91;
@@ -185,7 +188,8 @@ namespace UI
             this.dgvTipoVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
-            this.clmTipoVehiculo});
+            this.clmTipoVehiculo,
+            this.clmCosto});
             this.dgvTipoVehiculo.Location = new System.Drawing.Point(13, 213);
             this.dgvTipoVehiculo.Name = "dgvTipoVehiculo";
             this.dgvTipoVehiculo.Size = new System.Drawing.Size(487, 159);
@@ -216,12 +220,41 @@ namespace UI
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // txtCosto
+            // 
+            this.txtCosto.BackColor = System.Drawing.Color.Transparent;
+            this.txtCosto.Br = System.Drawing.Color.White;
+            this.txtCosto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCosto.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCosto.Location = new System.Drawing.Point(132, 161);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(219, 33);
+            this.txtCosto.TabIndex = 99;
+            // 
+            // lblCosto
+            // 
+            this.lblCosto.AutoSize = true;
+            this.lblCosto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosto.ForeColor = System.Drawing.Color.White;
+            this.lblCosto.Location = new System.Drawing.Point(213, 134);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(55, 19);
+            this.lblCosto.TabIndex = 98;
+            this.lblCosto.Text = "Costo:";
+            // 
+            // clmCosto
+            // 
+            this.clmCosto.HeaderText = "COSTO";
+            this.clmCosto.Name = "clmCosto";
+            // 
             // frmAgregarTipoVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(98)))));
             this.ClientSize = new System.Drawing.Size(515, 419);
+            this.Controls.Add(this.txtCosto);
+            this.Controls.Add(this.lblCosto);
             this.Controls.Add(this.pnlBarraSuperior);
             this.Controls.Add(this.txtTipoVehiculo);
             this.Controls.Add(this.lblTipoVehiculo);
@@ -261,5 +294,8 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTipoVehiculo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private AltoControls.AltoTextBox txtCosto;
+        private System.Windows.Forms.Label lblCosto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCosto;
     }
 }

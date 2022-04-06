@@ -56,14 +56,14 @@ namespace UI
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             #region Validaciones
-            Regex reLetras = new Regex("[A-Z]{1}[a-z]*", RegexOptions.Compiled);
-            if (!reLetras.IsMatch(txtNombre.Text))
+            Regex reNombre = new Regex(@"\s\S*$", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtApellidoParterno.Text))
             {
-                errorProvider1.SetError(txtNombre, "Solo debe ingresar letras.");
-                txtNombre.Focus();
+                errorProvider1.SetError(txtApellidoParterno, "Debe colocar un apellido");
+                txtApellidoMaterno.Focus();
                 return;
             }
-            errorProvider1.SetError(txtNombre, "");
+            errorProvider1.SetError(txtApellidoMaterno, "");
 
             #endregion
         }

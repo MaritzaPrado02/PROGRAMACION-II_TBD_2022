@@ -49,6 +49,9 @@ namespace UI
             this.btnAgregarAreaTrabajo = new System.Windows.Forms.PictureBox();
             this.pcbImg = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtSueldo = new AltoControls.AltoTextBox();
+            this.lblSueldo = new System.Windows.Forms.Label();
+            this.clmSueldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -100,7 +103,7 @@ namespace UI
             this.txtNombrePuesto.Br = System.Drawing.Color.White;
             this.txtNombrePuesto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombrePuesto.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombrePuesto.Location = new System.Drawing.Point(129, 158);
+            this.txtNombrePuesto.Location = new System.Drawing.Point(129, 142);
             this.txtNombrePuesto.Name = "txtNombrePuesto";
             this.txtNombrePuesto.Size = new System.Drawing.Size(247, 33);
             this.txtNombrePuesto.TabIndex = 96;
@@ -110,7 +113,7 @@ namespace UI
             this.lblNombreComplemento.AutoSize = true;
             this.lblNombreComplemento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreComplemento.ForeColor = System.Drawing.Color.White;
-            this.lblNombreComplemento.Location = new System.Drawing.Point(187, 131);
+            this.lblNombreComplemento.Location = new System.Drawing.Point(187, 115);
             this.lblNombreComplemento.Name = "lblNombreComplemento";
             this.lblNombreComplemento.Size = new System.Drawing.Size(132, 19);
             this.lblNombreComplemento.TabIndex = 95;
@@ -192,10 +195,11 @@ namespace UI
             this.dgvComplementos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
             this.clmComplemento,
-            this.clmPuesto});
-            this.dgvComplementos.Location = new System.Drawing.Point(13, 217);
+            this.clmPuesto,
+            this.clmSueldo});
+            this.dgvComplementos.Location = new System.Drawing.Point(13, 254);
             this.dgvComplementos.Name = "dgvComplementos";
-            this.dgvComplementos.Size = new System.Drawing.Size(525, 159);
+            this.dgvComplementos.Size = new System.Drawing.Size(525, 122);
             this.dgvComplementos.TabIndex = 90;
             // 
             // clmID
@@ -219,7 +223,7 @@ namespace UI
             this.lblAreaTrabajo.AutoSize = true;
             this.lblAreaTrabajo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAreaTrabajo.ForeColor = System.Drawing.Color.White;
-            this.lblAreaTrabajo.Location = new System.Drawing.Point(192, 56);
+            this.lblAreaTrabajo.Location = new System.Drawing.Point(192, 46);
             this.lblAreaTrabajo.Name = "lblAreaTrabajo";
             this.lblAreaTrabajo.Size = new System.Drawing.Size(111, 19);
             this.lblAreaTrabajo.TabIndex = 98;
@@ -230,7 +234,7 @@ namespace UI
             this.cmbAreaTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAreaTrabajo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAreaTrabajo.FormattingEnabled = true;
-            this.cmbAreaTrabajo.Location = new System.Drawing.Point(129, 84);
+            this.cmbAreaTrabajo.Location = new System.Drawing.Point(129, 74);
             this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
             this.cmbAreaTrabajo.Size = new System.Drawing.Size(224, 29);
             this.cmbAreaTrabajo.TabIndex = 99;
@@ -239,7 +243,7 @@ namespace UI
             // 
             this.btnAgregarAreaTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarAreaTrabajo.Image = global::UI.Properties.Resources.boton_agregar;
-            this.btnAgregarAreaTrabajo.Location = new System.Drawing.Point(359, 81);
+            this.btnAgregarAreaTrabajo.Location = new System.Drawing.Point(359, 71);
             this.btnAgregarAreaTrabajo.Name = "btnAgregarAreaTrabajo";
             this.btnAgregarAreaTrabajo.Size = new System.Drawing.Size(32, 32);
             this.btnAgregarAreaTrabajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -262,12 +266,41 @@ namespace UI
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // txtSueldo
+            // 
+            this.txtSueldo.BackColor = System.Drawing.Color.Transparent;
+            this.txtSueldo.Br = System.Drawing.Color.White;
+            this.txtSueldo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSueldo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSueldo.Location = new System.Drawing.Point(129, 211);
+            this.txtSueldo.Name = "txtSueldo";
+            this.txtSueldo.Size = new System.Drawing.Size(247, 33);
+            this.txtSueldo.TabIndex = 120;
+            // 
+            // lblSueldo
+            // 
+            this.lblSueldo.AutoSize = true;
+            this.lblSueldo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSueldo.ForeColor = System.Drawing.Color.White;
+            this.lblSueldo.Location = new System.Drawing.Point(213, 184);
+            this.lblSueldo.Name = "lblSueldo";
+            this.lblSueldo.Size = new System.Drawing.Size(66, 19);
+            this.lblSueldo.TabIndex = 119;
+            this.lblSueldo.Text = "Sueldo:";
+            // 
+            // clmSueldo
+            // 
+            this.clmSueldo.HeaderText = "SUELDO";
+            this.clmSueldo.Name = "clmSueldo";
+            // 
             // frmAgregarPuestoTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(98)))));
             this.ClientSize = new System.Drawing.Size(550, 418);
+            this.Controls.Add(this.txtSueldo);
+            this.Controls.Add(this.lblSueldo);
             this.Controls.Add(this.btnAgregarAreaTrabajo);
             this.Controls.Add(this.cmbAreaTrabajo);
             this.Controls.Add(this.lblAreaTrabajo);
@@ -316,5 +349,8 @@ namespace UI
         private System.Windows.Forms.PictureBox btnAgregarAreaTrabajo;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private AltoControls.AltoTextBox txtSueldo;
+        private System.Windows.Forms.Label lblSueldo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmSueldo;
     }
 }

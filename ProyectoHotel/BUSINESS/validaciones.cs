@@ -8,5 +8,6 @@ namespace BUSINESS
 {
     public class validaciones
     {
+        
     }
 }

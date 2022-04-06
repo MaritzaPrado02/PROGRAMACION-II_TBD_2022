@@ -54,7 +54,31 @@ namespace UI
             }
             errorProvider1.SetError(txtTipoVehiculo, "");
 
-           
+            if (txtCosto.Text == "")
+            {
+                errorProvider1.SetError(txtCosto, "Debe ingresar el sueldo que le corresponde al puesto de trabajo.");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+
+            double costo;
+            if (!double.TryParse(txtCosto.Text, out costo))
+            {
+                errorProvider1.SetError(txtCosto, "Debe ingresar solo números en el campo de sueldo.");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+
+            if (costo < 0)
+            {
+                errorProvider1.SetError(txtCosto, "El sueldo tiene que un valor positivo.");
+                txtCosto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCosto, "");
+
             #endregion
             limpiarControles();
         }
@@ -62,6 +86,7 @@ namespace UI
         public void limpiarControles()
         {
             txtTipoVehiculo.Text = "";
+            txtCosto.Text = "";
         }
 
         private void btnGuardarCambios_Click(object sender, EventArgs e)

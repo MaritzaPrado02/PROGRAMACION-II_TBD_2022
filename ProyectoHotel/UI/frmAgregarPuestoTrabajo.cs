@@ -69,6 +69,32 @@ namespace UI
             }
             errorProvider1.SetError(txtNombrePuesto, "");
 
+            if (txtSueldo.Text == "")
+            {
+                errorProvider1.SetError(txtSueldo, "Debe ingresar el sueldo que le corresponde al puesto de trabajo.");
+                txtSueldo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtSueldo, "");
+
+            double sueldo;
+            if (!double.TryParse(txtSueldo.Text, out sueldo))
+            {
+                errorProvider1.SetError(txtSueldo, "Debe ingresar solo números en el campo de sueldo.");
+                txtSueldo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtSueldo, "");
+
+            if (sueldo < 0)
+            {
+                errorProvider1.SetError(txtSueldo, "El sueldo tiene que un valor positivo.");
+                txtSueldo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtSueldo, "");
+
+
             #endregion
             limpiarControles();
         }
@@ -77,6 +103,7 @@ namespace UI
         {
             cmbAreaTrabajo.SelectedIndex = -1;
             txtNombrePuesto.Text = "";
+            txtSueldo.Text = "";
         }
 
         private void btnGuardarCambios_Click(object sender, EventArgs e)
@@ -97,6 +124,31 @@ namespace UI
                 return;
             }
             errorProvider1.SetError(txtNombrePuesto, "");
+
+            if (txtSueldo.Text == "")
+            {
+                errorProvider1.SetError(txtSueldo, "Debe ingresar el sueldo que le corresponde al puesto de trabajo.");
+                txtSueldo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtSueldo, "");
+
+            double sueldo;
+            if (!double.TryParse(txtSueldo.Text, out sueldo))
+            {
+                errorProvider1.SetError(txtSueldo, "Debe ingresar solo números en el campo de sueldo.");
+                txtSueldo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtSueldo, "");
+
+            if (sueldo < 0)
+            {
+                errorProvider1.SetError(txtSueldo, "El sueldo tiene que un valor positivo.");
+                txtSueldo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtSueldo, "");
 
             #endregion
             limpiarControles();

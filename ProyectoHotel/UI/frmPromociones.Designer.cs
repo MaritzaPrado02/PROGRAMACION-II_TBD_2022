@@ -455,9 +455,8 @@ namespace UI
             this.cmbEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstatus.FormattingEnabled = true;
             this.cmbEstatus.Items.AddRange(new object[] {
-            "FECHA",
-            "ESTATUS",
-            "NOMBRE"});
+            "VIGENTE",
+            "NO VIGENTE"});
             this.cmbEstatus.Location = new System.Drawing.Point(632, 89);
             this.cmbEstatus.Name = "cmbEstatus";
             this.cmbEstatus.Size = new System.Drawing.Size(176, 28);

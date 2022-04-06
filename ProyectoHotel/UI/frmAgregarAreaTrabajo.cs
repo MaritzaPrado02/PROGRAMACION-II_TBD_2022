@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using BUSINESS;
 
 namespace UI
@@ -55,6 +56,15 @@ namespace UI
             }
             errorProvider1.SetError(txtAreaTrabajo, "");
 
+           Regex reNombre = new Regex("^[a-zA-Z]*$", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtAreaTrabajo.Text))
+            {
+                errorProvider1.SetError(txtAreaTrabajo, "Debe colocar un nombre de área válido.");
+                txtAreaTrabajo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtAreaTrabajo, "");
+
             #endregion
             limpiarControles();
         }
@@ -79,5 +89,7 @@ namespace UI
             txtAreaTrabajo.Text = "";
         }
 
+     
+       
     }
 }
