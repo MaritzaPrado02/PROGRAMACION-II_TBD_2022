@@ -35,13 +35,13 @@ namespace UI
             this.pcbLogoRegistro = new System.Windows.Forms.PictureBox();
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.grbDatosGenerales = new System.Windows.Forms.GroupBox();
-            this.txtPuesto = new System.Windows.Forms.ComboBox();
+            this.cmbPuesto = new System.Windows.Forms.ComboBox();
             this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
             this.txtEmail = new AltoControls.AltoTextBox();
             this.txtTelefono = new AltoControls.AltoTextBox();
             this.txtRFC = new AltoControls.AltoTextBox();
             this.txtApellidoMaterno = new AltoControls.AltoTextBox();
-            this.txtApellidoParterno = new AltoControls.AltoTextBox();
+            this.txtApellidoPaterno = new AltoControls.AltoTextBox();
             this.lblPuesto = new System.Windows.Forms.Label();
             this.lblAreaTrabajo = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@ namespace UI
             this.lblCalle = new System.Windows.Forms.Label();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.grbUsuario = new System.Windows.Forms.GroupBox();
-            this.altoTextBox9 = new AltoControls.AltoTextBox();
+            this.txtConfirmarContrasena = new AltoControls.AltoTextBox();
             this.lblConfirmarContrasena = new System.Windows.Forms.Label();
             this.txtContrasena = new AltoControls.AltoTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -131,13 +131,13 @@ namespace UI
             // 
             // grbDatosGenerales
             // 
-            this.grbDatosGenerales.Controls.Add(this.txtPuesto);
+            this.grbDatosGenerales.Controls.Add(this.cmbPuesto);
             this.grbDatosGenerales.Controls.Add(this.cmbAreaTrabajo);
             this.grbDatosGenerales.Controls.Add(this.txtEmail);
             this.grbDatosGenerales.Controls.Add(this.txtTelefono);
             this.grbDatosGenerales.Controls.Add(this.txtRFC);
             this.grbDatosGenerales.Controls.Add(this.txtApellidoMaterno);
-            this.grbDatosGenerales.Controls.Add(this.txtApellidoParterno);
+            this.grbDatosGenerales.Controls.Add(this.txtApellidoPaterno);
             this.grbDatosGenerales.Controls.Add(this.lblPuesto);
             this.grbDatosGenerales.Controls.Add(this.lblAreaTrabajo);
             this.grbDatosGenerales.Controls.Add(this.lblEmail);
@@ -155,15 +155,15 @@ namespace UI
             this.grbDatosGenerales.TabStop = false;
             this.grbDatosGenerales.Text = "Datos Generales";
             // 
-            // txtPuesto
+            // cmbPuesto
             // 
-            this.txtPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuesto.FormattingEnabled = true;
-            this.txtPuesto.Location = new System.Drawing.Point(170, 351);
-            this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(175, 28);
-            this.txtPuesto.TabIndex = 59;
+            this.cmbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPuesto.FormattingEnabled = true;
+            this.cmbPuesto.Location = new System.Drawing.Point(170, 351);
+            this.cmbPuesto.Name = "cmbPuesto";
+            this.cmbPuesto.Size = new System.Drawing.Size(175, 28);
+            this.cmbPuesto.TabIndex = 59;
             // 
             // cmbAreaTrabajo
             // 
@@ -223,17 +223,17 @@ namespace UI
             this.txtApellidoMaterno.Size = new System.Drawing.Size(230, 27);
             this.txtApellidoMaterno.TabIndex = 54;
             // 
-            // txtApellidoParterno
+            // txtApellidoPaterno
             // 
-            this.txtApellidoParterno.BackColor = System.Drawing.Color.Transparent;
-            this.txtApellidoParterno.Br = System.Drawing.Color.White;
-            this.txtApellidoParterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoParterno.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellidoParterno.Location = new System.Drawing.Point(170, 91);
-            this.txtApellidoParterno.Margin = new System.Windows.Forms.Padding(2);
-            this.txtApellidoParterno.Name = "txtApellidoParterno";
-            this.txtApellidoParterno.Size = new System.Drawing.Size(230, 27);
-            this.txtApellidoParterno.TabIndex = 53;
+            this.txtApellidoPaterno.BackColor = System.Drawing.Color.Transparent;
+            this.txtApellidoPaterno.Br = System.Drawing.Color.White;
+            this.txtApellidoPaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoPaterno.ForeColor = System.Drawing.Color.DimGray;
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(170, 91);
+            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidoPaterno.Name = "txtApellidoPaterno";
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(230, 27);
+            this.txtApellidoPaterno.TabIndex = 53;
             // 
             // lblPuesto
             // 
@@ -505,7 +505,7 @@ namespace UI
             // 
             // grbUsuario
             // 
-            this.grbUsuario.Controls.Add(this.altoTextBox9);
+            this.grbUsuario.Controls.Add(this.txtConfirmarContrasena);
             this.grbUsuario.Controls.Add(this.lblConfirmarContrasena);
             this.grbUsuario.Controls.Add(this.txtContrasena);
             this.grbUsuario.Controls.Add(this.label1);
@@ -519,17 +519,17 @@ namespace UI
             this.grbUsuario.TabStop = false;
             this.grbUsuario.Text = "Usuario";
             // 
-            // altoTextBox9
+            // txtConfirmarContrasena
             // 
-            this.altoTextBox9.BackColor = System.Drawing.Color.Transparent;
-            this.altoTextBox9.Br = System.Drawing.Color.White;
-            this.altoTextBox9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoTextBox9.ForeColor = System.Drawing.Color.DimGray;
-            this.altoTextBox9.Location = new System.Drawing.Point(186, 95);
-            this.altoTextBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.altoTextBox9.Name = "altoTextBox9";
-            this.altoTextBox9.Size = new System.Drawing.Size(228, 27);
-            this.altoTextBox9.TabIndex = 47;
+            this.txtConfirmarContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.txtConfirmarContrasena.Br = System.Drawing.Color.White;
+            this.txtConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarContrasena.ForeColor = System.Drawing.Color.DimGray;
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(186, 95);
+            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(228, 27);
+            this.txtConfirmarContrasena.TabIndex = 47;
             // 
             // lblConfirmarContrasena
             // 
@@ -666,7 +666,7 @@ namespace UI
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.GroupBox grbUsuario;
-        private AltoControls.AltoTextBox altoTextBox9;
+        private AltoControls.AltoTextBox txtConfirmarContrasena;
         private System.Windows.Forms.Label lblConfirmarContrasena;
         private AltoControls.AltoTextBox txtContrasena;
         private System.Windows.Forms.Label label1;
@@ -674,13 +674,13 @@ namespace UI
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.GroupBox grbDatosGenerales;
-        private System.Windows.Forms.ComboBox txtPuesto;
+        private System.Windows.Forms.ComboBox cmbPuesto;
         private System.Windows.Forms.ComboBox cmbAreaTrabajo;
         private AltoControls.AltoTextBox txtEmail;
         private AltoControls.AltoTextBox txtTelefono;
         private AltoControls.AltoTextBox txtRFC;
         private AltoControls.AltoTextBox txtApellidoMaterno;
-        private AltoControls.AltoTextBox txtApellidoParterno;
+        private AltoControls.AltoTextBox txtApellidoPaterno;
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.Label lblAreaTrabajo;
         private System.Windows.Forms.Label lblEmail;

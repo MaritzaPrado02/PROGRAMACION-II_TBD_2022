@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -64,6 +65,15 @@ namespace UI
             if (txtNombrePuesto.Text == "")
             {
                 errorProvider1.SetError(txtNombrePuesto, "Debe ingresar el nombre del puesto de trabajo.");
+                txtNombrePuesto.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombrePuesto, "");
+
+            Regex reNombre = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtNombrePuesto.Text))
+            {
+                errorProvider1.SetError(txtNombrePuesto, "Debe colocar un nombre de puesto válido.");
                 txtNombrePuesto.Focus();
                 return;
             }

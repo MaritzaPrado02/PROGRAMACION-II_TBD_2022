@@ -152,6 +152,7 @@ namespace UI
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
             this.tlConsultarFactura.SetToolTip(this.btnBuscar, "Buscar factura");
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cmbFiltro
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -80,6 +81,15 @@ namespace UI
             if (txtNombreCategoria.Text == "")
             {
                 errorProvider1.SetError(txtNombreCategoria, "Ingrese el nombre de la categoría.");
+                txtNombreCategoria.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreCategoria, "");
+
+            Regex reNombre = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtNombreCategoria.Text))
+            {
+                errorProvider1.SetError(txtNombreCategoria, "Debe colocar un nombre de categoría válido.");
                 txtNombreCategoria.Focus();
                 return;
             }

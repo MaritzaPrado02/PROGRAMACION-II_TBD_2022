@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -29,9 +30,18 @@ namespace UI
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
             #region Validaciones
+            Regex soloLetras = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
             if (txtNombre.Text == "")
             {
                 errorProvider1.SetError(txtNombre, "El campo de nombre no debe quedar vacio.");
+                txtNombre.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombre, "");
+
+            if (!soloLetras.IsMatch(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "Debe ingresar un nombre válido.");
                 txtNombre.Focus();
                 return;
             }
@@ -45,9 +55,37 @@ namespace UI
             }
             errorProvider1.SetError(txtApellidoPaterno, "");
 
+            if (!soloLetras.IsMatch(txtApellidoPaterno.Text))
+            {
+                errorProvider1.SetError(txtApellidoPaterno, "Debe ingresar un apellido válido.");
+                txtApellidoPaterno.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtApellidoPaterno, "");
+
+            if (txtApellidoMaterno.Text != "")
+            {
+                if (!soloLetras.IsMatch(txtApellidoMaterno.Text))
+                {
+                    errorProvider1.SetError(txtApellidoMaterno, "Debe ingresar un apellido válido.");
+                    txtApellidoMaterno.Focus();
+                    return;
+                }
+                errorProvider1.SetError(txtApellidoMaterno, "");
+            } 
+
             if (txtTelefono.Text == "")
             {
                 errorProvider1.SetError(txtTelefono, "El campo de número de teléfono no debe quedar vacio.");
+                txtTelefono.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtTelefono, "");
+          
+            Regex reTelefono = new Regex("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", RegexOptions.Compiled);
+            if (!reTelefono.IsMatch(txtTelefono.Text))
+            {
+                errorProvider1.SetError(txtTelefono, "Debe colocar un número de telefono válido.");
                 txtTelefono.Focus();
                 return;
             }
@@ -60,6 +98,21 @@ namespace UI
                 return;
             }
             errorProvider1.SetError(txtEmail, "");
+
+            Regex reEmail = new Regex(@"^(([^<>()[\]\\.,;:\s@\""]+"
+                                    + @"(\.[^<>()[\]\\.,;:\s@\""]+)*)|(\"".+\""))@"
+                                    + @"((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}]"
+                                    + @"\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+"
+                                    + @"[a-zA-Z]{2,}))$", RegexOptions.Compiled);
+
+            if (!reEmail.IsMatch(txtEmail.Text))
+            {
+                errorProvider1.SetError(txtEmail, "Debe ingresar una dirección de correo válida");
+                txtEmail.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtEmail, "");
+
             #endregion
 
             btnEditar.Visible = true;
@@ -67,7 +120,7 @@ namespace UI
             btnGuardarCambios.Visible = false;
             dgvClientes.Size = new Size(884, 384);
 
-            
+            limpiarControles();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -89,6 +142,15 @@ namespace UI
             }
             errorProvider1.SetError(txtBuscar, "");
             #endregion
+        }
+
+        public void limpiarControles()
+        {
+            txtNombre.Text = "";
+            txtApellidoPaterno.Text = "";
+            txtApellidoMaterno.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = "";       
         }
     }
 }

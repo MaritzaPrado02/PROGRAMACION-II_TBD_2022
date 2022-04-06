@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUSINESS
 {
-    public class validaciones
+    public class Class1
     {
-        
     }
 }

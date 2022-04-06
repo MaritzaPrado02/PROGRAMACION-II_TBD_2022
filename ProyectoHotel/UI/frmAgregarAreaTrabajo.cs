@@ -56,14 +56,25 @@ namespace UI
             }
             errorProvider1.SetError(txtAreaTrabajo, "");
 
-           Regex reNombre = new Regex("^[a-zA-Z]*$", RegexOptions.Compiled);
+            /*Regex reNombre = new Regex (@"[a-zA-ZñÑ\s]", RegexOptions.Compiled);
             if (!reNombre.IsMatch(txtAreaTrabajo.Text))
             {
                 errorProvider1.SetError(txtAreaTrabajo, "Debe colocar un nombre de área válido.");
                 txtAreaTrabajo.Focus();
                 return;
             }
-            errorProvider1.SetError(txtAreaTrabajo, "");
+            errorProvider1.SetError(txtAreaTrabajo, "");*/
+            
+            
+            //Copiar
+           Regex reNombre = new Regex (@"[a-zA-Z -']+$", RegexOptions.Compiled);
+           if (!reNombre.IsMatch(txtAreaTrabajo.Text))
+           {
+               errorProvider1.SetError(txtAreaTrabajo, "Debe colocar un nombre de área válido.");
+               txtAreaTrabajo.Focus();
+               return;
+           }
+           errorProvider1.SetError(txtAreaTrabajo, "");
 
             #endregion
             limpiarControles();
@@ -75,6 +86,15 @@ namespace UI
             if (txtAreaTrabajo.Text == "")
             {
                 errorProvider1.SetError(txtAreaTrabajo, "Este campo no debe quedar vacio.");
+                txtAreaTrabajo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtAreaTrabajo, "");
+
+            Regex reNombre = new Regex(@"[a-zA-ZñÑ\s]", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtAreaTrabajo.Text))
+            {
+                errorProvider1.SetError(txtAreaTrabajo, "Debe colocar un nombre de área válido.");
                 txtAreaTrabajo.Focus();
                 return;
             }

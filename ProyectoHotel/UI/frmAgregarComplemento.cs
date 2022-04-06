@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -54,6 +55,15 @@ namespace UI
             }
             errorProvider1.SetError(txtNombreComplemento, "");
 
+            Regex reNombre = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtNombreComplemento.Text))
+            {
+                errorProvider1.SetError(txtNombreComplemento, "Debe colocar un nombre de complemento válido.");
+                txtNombreComplemento.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreComplemento, "");
+
             #endregion
             limpiarControles();
 
@@ -62,6 +72,30 @@ namespace UI
         public void limpiarControles()
         {
             txtNombreComplemento.Text = "";
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            if (txtNombreComplemento.Text == "")
+            {
+                errorProvider1.SetError(txtNombreComplemento, "Debe ingresar el nombre del áre de trabajo.");
+                txtNombreComplemento.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreComplemento, "");
+
+            Regex reNombre = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtNombreComplemento.Text))
+            {
+                errorProvider1.SetError(txtNombreComplemento, "Debe colocar un nombre de complemento válido.");
+                txtNombreComplemento.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreComplemento, "");
+
+            #endregion
+            limpiarControles();
         }
     }
 }

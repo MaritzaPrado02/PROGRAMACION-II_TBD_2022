@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -41,6 +42,16 @@ namespace UI
                 btnBuscar.Location = new Point(746,38);
                 txtBuscar.Location = new Point(335, 49);
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            /*CLIENTE
+FECHA
+FOLIO
+EMPLEADO*/
+            #endregion
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -61,6 +62,15 @@ namespace UI
                 return;
             }
             errorProvider1.SetError(txtCosto, "");
+
+            Regex reNombre = new Regex(@"[a-zA-ZñÑ\s]", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtTipoVehiculo.Text))
+            {
+                errorProvider1.SetError(txtTipoVehiculo, "Debe colocar un nombre de tipo vehiculo válido.");
+                txtTipoVehiculo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtTipoVehiculo, "");
 
             double costo;
             if (!double.TryParse(txtCosto.Text, out costo))

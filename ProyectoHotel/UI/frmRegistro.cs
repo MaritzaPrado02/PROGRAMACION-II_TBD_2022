@@ -56,14 +56,132 @@ namespace UI
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             #region Validaciones
-            Regex reNombre = new Regex(@"\s\S*$", RegexOptions.Compiled);
-            if (!reNombre.IsMatch(txtApellidoParterno.Text))
+            Regex soloLetras = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
+
+            if (txtNombre.Text == "")
             {
-                errorProvider1.SetError(txtApellidoParterno, "Debe colocar un apellido");
+                errorProvider1.SetError(txtNombre, "Debe ingresar el nombre del nuevo empleado.");
+                txtNombre.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombre, "");
+    
+            if (!soloLetras.IsMatch(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "Debe colocar un nombre de área válido.");
+                txtNombre.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombre, "");
+
+            if (txtApellidoPaterno.Text == "")
+            {
+                errorProvider1.SetError(txtApellidoPaterno, "Debe ingresar el apellido paterno.");
+                txtApellidoPaterno.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtApellidoPaterno, "");
+
+            if (txtRFC.Text == "")
+            {
+                errorProvider1.SetError(txtRFC, "Debe ingresar el RFC del empleado.");
+                txtRFC.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtRFC, "");
+
+            if (txtTelefono.Text == "")
+            {
+                errorProvider1.SetError(txtTelefono, "Debe ingresar el telefono del empleado");
+                txtTelefono.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtTelefono, "");
+
+            if (txtEmail.Text == "")
+            {
+                errorProvider1.SetError(txtNombre, "Debe ingresar el nombre del nuevo empleado.");
+                txtNombre.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombre, "");
+
+            if (cmbAreaTrabajo.Text == "")
+            {
+                errorProvider1.SetError(cmbAreaTrabajo, "Seleccione el área de trabajo.");
+                cmbAreaTrabajo.Focus();
+                return;
+            }
+            errorProvider1.SetError(cmbAreaTrabajo, "");
+
+            if (cmbPuesto.Text == "")
+            {
+                errorProvider1.SetError(cmbPuesto, "Seleccione el puesto.");
+                cmbPuesto.Focus();
+                return;
+            }
+            errorProvider1.SetError(cmbPuesto, "");
+
+            if (txtRegistrarUsuario.Text == "")
+            {
+                errorProvider1.SetError(txtRegistrarUsuario, "Debe ingresar el nombre de usuario");
+                txtRegistrarUsuario.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtRegistrarUsuario, "");
+
+            if (txtContrasena.Text == "")
+            {
+                errorProvider1.SetError(txtContrasena, "Debe ingresar el nombre del nuevo empleado.");
+                txtContrasena.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtContrasena, "");
+
+            if (txtConfirmarContrasena.Text == "")
+            {
+                errorProvider1.SetError(txtConfirmarContrasena, "Debe confirmar la contraseña.");
+                txtConfirmarContrasena.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtConfirmarContrasena, "");
+
+            if (txtContrasena.Text == txtConfirmarContrasena.Text)
+            {
+                errorProvider1.SetError(txtConfirmarContrasena, "No coincide con la contraseña definida.");
+                txtConfirmarContrasena.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtConfirmarContrasena, "");
+
+            if (cmbEstado.Text == "")
+            {
+                errorProvider1.SetError(cmbEstado, "Debe seleccionar el estado.");
+                cmbEstado.Focus();
+                return;
+            }
+            errorProvider1.SetError(cmbEstado, "");
+
+            if (cmbMunicipio.Text == "")
+            {
+                errorProvider1.SetError(cmbMunicipio, "Debe seleccionar el municipio.");
+                cmbMunicipio.Focus();
+                return;
+            }
+            errorProvider1.SetError(cmbMunicipio, "");
+
+
+
+
+
+            /*Regex reNombre = new Regex(@"\s\S*$", RegexOptions.Compiled);
+            if (!reNombre.IsMatch(txtApellidoPaterno.Text))
+            {
+                errorProvider1.SetError(txtApellidoPaterno, "Debe colocar un apellido");
                 txtApellidoMaterno.Focus();
                 return;
             }
-            errorProvider1.SetError(txtApellidoMaterno, "");
+            errorProvider1.SetError(txtApellidoMaterno, "");*/
 
             #endregion
         }
