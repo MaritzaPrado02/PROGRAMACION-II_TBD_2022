@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -41,6 +42,57 @@ namespace UI
                 btnBuscar.Location = new Point(746, 38);
                 txtBuscar.Location = new Point(335, 49);
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            #region Validaciones
+            Regex reNombre = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
+            if (cmbFiltro.Text == "CLIENTE")
+            {
+                
+                if (!reNombre.IsMatch(txtBuscar.Text))
+                {
+                    errorProvider1.SetError(txtBuscar, "Debe colocar un nombre de área válido.");
+                    txtBuscar.Focus();
+                    return;
+                }
+                errorProvider1.SetError(txtBuscar, "");
+
+            }
+            if (cmbFiltro.Text == "FECHA")
+            {
+                if (dtpFechaFin.Value < dtpFechaInicio.Value)
+                {
+                    errorProvider1.SetError(dtpFechaFin, "Seleccione un lapso válido, ya que la fecha fin es menor que la fecha de inicio.");
+                    dtpFechaFin.Focus();
+                    return;
+                }
+                errorProvider1.SetError(dtpFechaFin, "");
+            }
+            if (cmbFiltro.Text == "FOLIO")
+            {
+                Regex soloNumeros = new Regex(@"^[0-9]+$", RegexOptions.Compiled);
+
+                if (!soloNumeros.IsMatch(txtBuscar.Text))
+                {
+                    errorProvider1.SetError(txtBuscar, "Solo puede ingresar un valor númerico.");
+                    txtBuscar.Focus();
+                    return;
+                }
+                errorProvider1.SetError(txtBuscar, "");
+            }
+            if (cmbFiltro.Text == "EMPLEADO")
+            {
+                if (!reNombre.IsMatch(txtBuscar.Text))
+                {
+                    errorProvider1.SetError(txtBuscar, "Debe colocar un nombre de área válido.");
+                    txtBuscar.Focus();
+                    return;
+                }
+                errorProvider1.SetError(txtBuscar, "");
+            }
+            #endregion
         }
     }
 }

@@ -54,6 +54,7 @@ namespace UI
             this.pnlEmpleados = new System.Windows.Forms.Panel();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.subMenuFacturas = new System.Windows.Forms.Panel();
+            this.btnConsultarFactura = new System.Windows.Forms.Button();
             this.btnFacturar = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btnFacturas = new System.Windows.Forms.Button();
@@ -89,7 +90,6 @@ namespace UI
             this.contenedorPantallasHijas = new System.Windows.Forms.Panel();
             this.pbIconHotel = new System.Windows.Forms.PictureBox();
             this.fechaHora = new System.Windows.Forms.Timer(this.components);
-            this.btnConsultarFactura = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -487,6 +487,27 @@ namespace UI
             this.subMenuFacturas.Name = "subMenuFacturas";
             this.subMenuFacturas.Size = new System.Drawing.Size(203, 80);
             this.subMenuFacturas.TabIndex = 22;
+            // 
+            // btnConsultarFactura
+            // 
+            this.btnConsultarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
+            this.btnConsultarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultarFactura.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
+            this.btnConsultarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFactura.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFactura.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarFactura.Location = new System.Drawing.Point(20, 37);
+            this.btnConsultarFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarFactura.Name = "btnConsultarFactura";
+            this.btnConsultarFactura.Size = new System.Drawing.Size(183, 37);
+            this.btnConsultarFactura.TabIndex = 14;
+            this.btnConsultarFactura.Text = "Consultar";
+            this.btnConsultarFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultarFactura.UseVisualStyleBackColor = false;
+            this.btnConsultarFactura.Click += new System.EventHandler(this.btnConsultarFactura_Click);
             // 
             // btnFacturar
             // 
@@ -902,9 +923,9 @@ namespace UI
             // pcbImagen
             // 
             this.pcbImagen.Image = global::UI.Properties.Resources.perfil_del_usuario;
-            this.pcbImagen.Location = new System.Drawing.Point(7, 4);
+            this.pcbImagen.Location = new System.Drawing.Point(14, 7);
             this.pcbImagen.Name = "pcbImagen";
-            this.pcbImagen.Size = new System.Drawing.Size(47, 40);
+            this.pcbImagen.Size = new System.Drawing.Size(40, 35);
             this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbImagen.TabIndex = 9;
             this.pcbImagen.TabStop = false;
@@ -980,27 +1001,6 @@ namespace UI
             // 
             this.fechaHora.Enabled = true;
             this.fechaHora.Tick += new System.EventHandler(this.fechaHora_Tick);
-            // 
-            // btnConsultarFactura
-            // 
-            this.btnConsultarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(118)))), ((int)(((byte)(172)))));
-            this.btnConsultarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsultarFactura.FlatAppearance.BorderSize = 0;
-            this.btnConsultarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(68)))));
-            this.btnConsultarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFactura.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarFactura.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFactura.Location = new System.Drawing.Point(20, 37);
-            this.btnConsultarFactura.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultarFactura.Name = "btnConsultarFactura";
-            this.btnConsultarFactura.Size = new System.Drawing.Size(183, 37);
-            this.btnConsultarFactura.TabIndex = 14;
-            this.btnConsultarFactura.Text = "Consultar";
-            this.btnConsultarFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConsultarFactura.UseVisualStyleBackColor = false;
-            this.btnConsultarFactura.Click += new System.EventHandler(this.btnConsultarFactura_Click);
             // 
             // frmMenuPrincipal
             // 

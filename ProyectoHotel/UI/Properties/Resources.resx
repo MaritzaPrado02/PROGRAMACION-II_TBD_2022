@@ -145,8 +145,8 @@
   <data name="factura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\factura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="empleados" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\empleados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boton-de-quitar-cuadrado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton-de-quitar-cuadrado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coche" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +172,8 @@
   <data name="restaurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimizarLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizarLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="habitaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\habitaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,11 +187,17 @@
   <data name="desbloquear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\desbloquear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="trabajo-en-equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trabajo-en-equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minimo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="habitaciones2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\habitaciones2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="empleados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\empleados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="puesto-de-trabajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\puesto-de-trabajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +211,20 @@
   <data name="hotel (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotel (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="check-in1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-in1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pagina-de-inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pagina-de-inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="promociones1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\promociones1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton-de-quitar-cuadrado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boton-de-quitar-cuadrado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimizarLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizarLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check-in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2022-03-21_01h42_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2022-03-21_01h42_34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +241,8 @@
   <data name="elipsis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elipsis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="habitaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\habitaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check-out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reserva (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reserva (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +259,7 @@
   <data name="clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trabajo-en-equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trabajo-en-equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check-out1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-out1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

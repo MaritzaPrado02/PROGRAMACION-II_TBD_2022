@@ -31,7 +31,7 @@ namespace UI
         {
             this.components = new System.ComponentModel.Container();
             this.grbRegistroNuevaPromocion = new System.Windows.Forms.GroupBox();
-            this.altoTextBox1 = new AltoControls.AltoTextBox();
+            this.txtCostoPromocion = new AltoControls.AltoTextBox();
             this.lblCostoHabitacion = new System.Windows.Forms.Label();
             this.nudNumeroHabitaciones = new System.Windows.Forms.NumericUpDown();
             this.lblNumeroHabitaciones = new System.Windows.Forms.Label();
@@ -68,19 +68,21 @@ namespace UI
             this.lblFechaInicioBusqueda = new System.Windows.Forms.Label();
             this.dtpFechaInicioBusqueda = new System.Windows.Forms.DateTimePicker();
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbRegistroNuevaPromocion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroHabitaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromocion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // grbRegistroNuevaPromocion
             // 
             this.grbRegistroNuevaPromocion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbRegistroNuevaPromocion.Controls.Add(this.altoTextBox1);
+            this.grbRegistroNuevaPromocion.Controls.Add(this.txtCostoPromocion);
             this.grbRegistroNuevaPromocion.Controls.Add(this.lblCostoHabitacion);
             this.grbRegistroNuevaPromocion.Controls.Add(this.nudNumeroHabitaciones);
             this.grbRegistroNuevaPromocion.Controls.Add(this.lblNumeroHabitaciones);
@@ -100,16 +102,16 @@ namespace UI
             this.grbRegistroNuevaPromocion.TabStop = false;
             this.grbRegistroNuevaPromocion.Text = "Detalles promoción";
             // 
-            // altoTextBox1
+            // txtCostoPromocion
             // 
-            this.altoTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.altoTextBox1.Br = System.Drawing.Color.White;
-            this.altoTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.altoTextBox1.Location = new System.Drawing.Point(162, 331);
-            this.altoTextBox1.Name = "altoTextBox1";
-            this.altoTextBox1.Size = new System.Drawing.Size(188, 33);
-            this.altoTextBox1.TabIndex = 46;
+            this.txtCostoPromocion.BackColor = System.Drawing.Color.Transparent;
+            this.txtCostoPromocion.Br = System.Drawing.Color.White;
+            this.txtCostoPromocion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCostoPromocion.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCostoPromocion.Location = new System.Drawing.Point(162, 331);
+            this.txtCostoPromocion.Name = "txtCostoPromocion";
+            this.txtCostoPromocion.Size = new System.Drawing.Size(188, 33);
+            this.txtCostoPromocion.TabIndex = 46;
             // 
             // lblCostoHabitacion
             // 
@@ -249,6 +251,7 @@ namespace UI
             this.btnRegistrar.TabIndex = 60;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dgvPromocion
             // 
@@ -350,6 +353,7 @@ namespace UI
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnBuscar, "Buscar promoción");
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnGuardarCambios
             // 
@@ -367,6 +371,7 @@ namespace UI
             this.btnGuardarCambios.TabIndex = 67;
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // panel2
             // 
@@ -524,6 +529,10 @@ namespace UI
             this.cmbFiltro.TabIndex = 6;
             this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbFiltro_SelectedIndexChanged);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmPromociones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -551,13 +560,14 @@ namespace UI
             this.pnlTitulo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox grbRegistroNuevaPromocion;
-        private AltoControls.AltoTextBox altoTextBox1;
+        private AltoControls.AltoTextBox txtCostoPromocion;
         private System.Windows.Forms.Label lblCostoHabitacion;
         private System.Windows.Forms.NumericUpDown nudNumeroHabitaciones;
         private System.Windows.Forms.Label lblNumeroHabitaciones;
@@ -594,5 +604,6 @@ namespace UI
         private System.Windows.Forms.Label lblFechaInicioBusqueda;
         private System.Windows.Forms.DateTimePicker dtpFechaInicioBusqueda;
         private System.Windows.Forms.ComboBox cmbEstatus;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

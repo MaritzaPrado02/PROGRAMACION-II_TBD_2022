@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using BUSINESS;
-
+//PENDIENTE VALIACIÓN RFC
 
 namespace UI
 {
@@ -57,6 +57,7 @@ namespace UI
         {
             #region Validaciones
             Regex soloLetras = new Regex(@"[a-zA-Z -']+$", RegexOptions.Compiled);
+            Regex reNombre = new Regex (@"[a-zA-ZñÑ\s]", RegexOptions.Compiled);
 
             if (txtNombre.Text == "")
             {
@@ -82,6 +83,14 @@ namespace UI
             }
             errorProvider1.SetError(txtApellidoPaterno, "");
 
+            if (!soloLetras.IsMatch(txtApellidoPaterno.Text))
+            {
+                errorProvider1.SetError(txtApellidoPaterno, "Debe colocar un nombre de área válido.");
+                txtApellidoPaterno.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtApellidoPaterno, "");
+
             if (txtRFC.Text == "")
             {
                 errorProvider1.SetError(txtRFC, "Debe ingresar el RFC del empleado.");
@@ -90,9 +99,32 @@ namespace UI
             }
             errorProvider1.SetError(txtRFC, "");
 
+            //EXPRESION REGULAR 
+            //
+            Regex reRFC = new Regex(@"^(([ÑA - Z | ña - z | &]{ 3 } |[AZ | az]{ 4})\d{ 2} ((0[1 - 9] | 1[012])(0[1 - 9] | 1\d |
+                2[0 - 8]) | (0[13456789] | 1[012])(29 | 30) | (0[13578] | 1[02])31) (\w{ 2})([A | a | 0 - 9]{ 1}))$|
+                ^(([ÑA - Z | ña - z | &]{ 3}|[AZ | az]{ 4} )([02468][048] |[13579][26])0229)(\w{ 2})([A | a | 0 - 9]{ 1})$", RegexOptions.Compiled);
+            if (!reRFC.IsMatch(txtRFC.Text))
+            {
+                errorProvider1.SetError(txtRFC, "Debe colocar RFC válido.");
+                txtRFC.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtRFC, "");
+
+
             if (txtTelefono.Text == "")
             {
                 errorProvider1.SetError(txtTelefono, "Debe ingresar el telefono del empleado");
+                txtTelefono.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtTelefono, "");
+
+            Regex reTelefono = new Regex("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", RegexOptions.Compiled);
+            if (!reTelefono.IsMatch(txtTelefono.Text))
+            {
+                errorProvider1.SetError(txtTelefono, "Debe colocar un número de telefono válido.");
                 txtTelefono.Focus();
                 return;
             }
@@ -105,6 +137,20 @@ namespace UI
                 return;
             }
             errorProvider1.SetError(txtNombre, "");
+
+            Regex reEmail = new Regex(@"^(([^<>()[\]\\.,;:\s@\""]+"
+                                   + @"(\.[^<>()[\]\\.,;:\s@\""]+)*)|(\"".+\""))@"
+                                   + @"((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}]"
+                                   + @"\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+"
+                                   + @"[a-zA-Z]{2,}))$", RegexOptions.Compiled);
+
+            if (!reEmail.IsMatch(txtEmail.Text))
+            {
+                errorProvider1.SetError(txtEmail, "Debe ingresar una dirección de correo válida");
+                txtEmail.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtEmail, "");
 
             if (cmbAreaTrabajo.Text == "")
             {
@@ -154,6 +200,7 @@ namespace UI
             }
             errorProvider1.SetError(txtConfirmarContrasena, "");
 
+
             if (cmbEstado.Text == "")
             {
                 errorProvider1.SetError(cmbEstado, "Debe seleccionar el estado.");
@@ -170,20 +217,77 @@ namespace UI
             }
             errorProvider1.SetError(cmbMunicipio, "");
 
-
-
-
-
-            /*Regex reNombre = new Regex(@"\s\S*$", RegexOptions.Compiled);
-            if (!reNombre.IsMatch(txtApellidoPaterno.Text))
+            if (txtCP.Text == "")
             {
-                errorProvider1.SetError(txtApellidoPaterno, "Debe colocar un apellido");
-                txtApellidoMaterno.Focus();
+                errorProvider1.SetError(txtCP, "Debe seleccionar el estado.");
+                txtCP.Focus();
                 return;
             }
-            errorProvider1.SetError(txtApellidoMaterno, "");*/
+            errorProvider1.SetError(txtCP, "");
 
+            Regex reCP = new Regex("[0-9][0-9][0-9][0-9][0-9]", RegexOptions.Compiled);
+            if (!reCP.IsMatch(txtCP.Text))
+            {
+                errorProvider1.SetError(txtCP, "Debe colocar un CP válido.");
+               txtCP.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCP, "");
+
+            if (txtCalle.Text == "")
+            {
+                errorProvider1.SetError(txtCalle, "Debe seleccionar el estado.");
+                txtCalle.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCalle, "");
+
+            if (txtColonia.Text == "")
+            {
+                errorProvider1.SetError(txtColonia, "Debe seleccionar el estado.");
+                txtColonia.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtColonia, "");
+
+             if (!soloLetras.IsMatch(txtCalle.Text))
+            {
+                errorProvider1.SetError(txtCalle, "Debe colocar un nombre de calle válido.");
+                txtCalle.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtCalle, "");
+
+            if (txtNumero.Text == "")
+            {
+                errorProvider1.SetError(txtNumero, "Debe seleccionar el estado.");
+                txtNumero.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNumero, "");
             #endregion
+            limpiarControles();
+        }
+
+        public void limpiarControles()
+        {
+            txtNombre.Text = "";
+            txtApellidoPaterno.Text = "";
+            txtApellidoMaterno.Text = "";
+            txtRFC.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = "";
+            cmbAreaTrabajo.SelectedIndex = -1;
+            cmbPuesto.SelectionLength = -1;
+            txtRegistrarUsuario.Text = "";
+            txtContrasena.Text = "";
+            txtConfirmarContrasena.Text = "";
+            cmbEstado.SelectedIndex = -1;
+            cmbMunicipio.SelectedIndex = -1;
+            txtCP.Text = "";
+            txtCalle.Text = "";
+            txtColonia.Text = "";
+            txtNumero.Text = "";
         }
 
     }

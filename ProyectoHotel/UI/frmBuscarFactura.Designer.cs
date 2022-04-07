@@ -37,7 +37,6 @@ namespace UI
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -51,10 +50,15 @@ namespace UI
             this.clmCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTotalFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVer = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -140,19 +144,6 @@ namespace UI
             this.dtpFechaInicio.Size = new System.Drawing.Size(118, 27);
             this.dtpFechaInicio.TabIndex = 8;
             this.dtpFechaInicio.Visible = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
-            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.TabStop = false;
-            this.tlConsultarFactura.SetToolTip(this.btnBuscar, "Buscar factura");
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cmbFiltro
             // 
@@ -272,6 +263,27 @@ namespace UI
             this.btnVer.Text = "Ver";
             this.btnVer.UseVisualStyleBackColor = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
+            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.TabStop = false;
+            this.tlConsultarFactura.SetToolTip(this.btnBuscar, "Buscar factura");
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // frmBuscarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,10 +300,12 @@ namespace UI
             this.Text = "frmBuscarFactura";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,5 +333,7 @@ namespace UI
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.Label lblFechaInicio;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

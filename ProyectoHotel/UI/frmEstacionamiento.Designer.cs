@@ -45,8 +45,6 @@ namespace UI
             this.btnAgregarTipoVehiculo = new System.Windows.Forms.PictureBox();
             this.cmbEstatus = new System.Windows.Forms.ComboBox();
             this.lblEstatus = new System.Windows.Forms.Label();
-            this.altoTextBox1 = new AltoControls.AltoTextBox();
-            this.lblCostoHabitacion = new System.Windows.Forms.Label();
             this.cmbTipoVehiculo = new System.Windows.Forms.ComboBox();
             this.lblTipoVehiculo = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -59,12 +57,14 @@ namespace UI
             this.cmbFiltroTipoVehiculo = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromocion)).BeginInit();
             this.grbRegistroEstacionamiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarTipoVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -103,6 +103,7 @@ namespace UI
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Visible = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // btnEliminar
             // 
@@ -201,20 +202,19 @@ namespace UI
             this.btnRegistrar.TabIndex = 69;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // grbRegistroEstacionamiento
             // 
             this.grbRegistroEstacionamiento.Controls.Add(this.btnAgregarTipoVehiculo);
             this.grbRegistroEstacionamiento.Controls.Add(this.cmbEstatus);
             this.grbRegistroEstacionamiento.Controls.Add(this.lblEstatus);
-            this.grbRegistroEstacionamiento.Controls.Add(this.altoTextBox1);
-            this.grbRegistroEstacionamiento.Controls.Add(this.lblCostoHabitacion);
             this.grbRegistroEstacionamiento.Controls.Add(this.cmbTipoVehiculo);
             this.grbRegistroEstacionamiento.Controls.Add(this.lblTipoVehiculo);
             this.grbRegistroEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbRegistroEstacionamiento.Location = new System.Drawing.Point(24, 166);
+            this.grbRegistroEstacionamiento.Location = new System.Drawing.Point(24, 212);
             this.grbRegistroEstacionamiento.Name = "grbRegistroEstacionamiento";
-            this.grbRegistroEstacionamiento.Size = new System.Drawing.Size(370, 216);
+            this.grbRegistroEstacionamiento.Size = new System.Drawing.Size(370, 171);
             this.grbRegistroEstacionamiento.TabIndex = 68;
             this.grbRegistroEstacionamiento.TabStop = false;
             this.grbRegistroEstacionamiento.Text = "Detalles estacionamiento";
@@ -236,7 +236,7 @@ namespace UI
             // 
             this.cmbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstatus.FormattingEnabled = true;
-            this.cmbEstatus.Location = new System.Drawing.Point(133, 144);
+            this.cmbEstatus.Location = new System.Drawing.Point(133, 100);
             this.cmbEstatus.Name = "cmbEstatus";
             this.cmbEstatus.Size = new System.Drawing.Size(220, 29);
             this.cmbEstatus.TabIndex = 48;
@@ -245,34 +245,12 @@ namespace UI
             // 
             this.lblEstatus.AutoSize = true;
             this.lblEstatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatus.Location = new System.Drawing.Point(10, 147);
+            this.lblEstatus.Location = new System.Drawing.Point(10, 103);
             this.lblEstatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(70, 21);
             this.lblEstatus.TabIndex = 47;
             this.lblEstatus.Text = "Estatus:";
-            // 
-            // altoTextBox1
-            // 
-            this.altoTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.altoTextBox1.Br = System.Drawing.Color.White;
-            this.altoTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.altoTextBox1.Location = new System.Drawing.Point(165, 97);
-            this.altoTextBox1.Name = "altoTextBox1";
-            this.altoTextBox1.Size = new System.Drawing.Size(188, 33);
-            this.altoTextBox1.TabIndex = 46;
-            // 
-            // lblCostoHabitacion
-            // 
-            this.lblCostoHabitacion.AutoSize = true;
-            this.lblCostoHabitacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCostoHabitacion.Location = new System.Drawing.Point(10, 104);
-            this.lblCostoHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCostoHabitacion.Name = "lblCostoHabitacion";
-            this.lblCostoHabitacion.Size = new System.Drawing.Size(148, 21);
-            this.lblCostoHabitacion.TabIndex = 45;
-            this.lblCostoHabitacion.Text = "Costo promoción:";
             // 
             // cmbTipoVehiculo
             // 
@@ -305,6 +283,7 @@ namespace UI
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnBuscar, "Buscar lugar de estacionamiento");
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblBuscar
             // 
@@ -403,6 +382,10 @@ namespace UI
             this.pnlTitulo.Size = new System.Drawing.Size(962, 36);
             this.pnlTitulo.TabIndex = 26;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmEstacionamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +413,7 @@ namespace UI
             this.panel1.PerformLayout();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -448,8 +432,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEstatus;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.GroupBox grbRegistroEstacionamiento;
-        private AltoControls.AltoTextBox altoTextBox1;
-        private System.Windows.Forms.Label lblCostoHabitacion;
         private System.Windows.Forms.ComboBox cmbTipoVehiculo;
         private System.Windows.Forms.Label lblTipoVehiculo;
         private System.Windows.Forms.ComboBox cmbEstatus;
@@ -465,5 +447,6 @@ namespace UI
         private System.Windows.Forms.Label lblTipoVehiculoBusqueda;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlTitulo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

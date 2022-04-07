@@ -45,7 +45,7 @@ namespace UI
             this.lblAreaTrabajo = new System.Windows.Forms.Label();
             this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnSeleccionarImagen = new System.Windows.Forms.PictureBox();
             this.btnPuestoTrabajo = new System.Windows.Forms.PictureBox();
             this.btnAgregarAreaTrabajo = new System.Windows.Forms.PictureBox();
             this.cmbPuestoTrabajo = new System.Windows.Forms.ComboBox();
@@ -68,14 +68,24 @@ namespace UI
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pcbImagenPerfil = new System.Windows.Forms.PictureBox();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grbUsuario = new System.Windows.Forms.GroupBox();
+            this.txtConfirmarContrasena = new AltoControls.AltoTextBox();
+            this.lblConfirmarContrasena = new System.Windows.Forms.Label();
+            this.txtContrasena = new AltoControls.AltoTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRegistrarUsuario = new AltoControls.AltoTextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSeleccionarImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPuestoTrabajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAreaTrabajo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             this.grbDireccion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagenPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.grbUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -87,7 +97,7 @@ namespace UI
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(197, 339);
+            this.txtEmail.Location = new System.Drawing.Point(205, 299);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(308, 33);
             this.txtEmail.TabIndex = 38;
@@ -101,7 +111,7 @@ namespace UI
             this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(197, 281);
+            this.txtTelefono.Location = new System.Drawing.Point(205, 241);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(308, 33);
             this.txtTelefono.TabIndex = 37;
@@ -110,7 +120,7 @@ namespace UI
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(41, 346);
+            this.label5.Location = new System.Drawing.Point(49, 306);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 21);
             this.label5.TabIndex = 35;
@@ -120,7 +130,7 @@ namespace UI
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(112, 286);
+            this.lblTelefono.Location = new System.Drawing.Point(120, 246);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(76, 21);
             this.lblTelefono.TabIndex = 34;
@@ -135,7 +145,7 @@ namespace UI
             this.txtApellidoMaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(197, 218);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(205, 178);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(308, 33);
             this.txtApellidoMaterno.TabIndex = 33;
@@ -149,7 +159,7 @@ namespace UI
             this.txtApellidoPaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(197, 156);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(205, 116);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(308, 33);
             this.txtApellidoPaterno.TabIndex = 32;
@@ -163,7 +173,7 @@ namespace UI
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(197, 95);
+            this.txtNombre.Location = new System.Drawing.Point(205, 55);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(308, 33);
             this.txtNombre.TabIndex = 31;
@@ -172,7 +182,7 @@ namespace UI
             // 
             this.lblApellidoMaterno.AutoSize = true;
             this.lblApellidoMaterno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoMaterno.Location = new System.Drawing.Point(45, 228);
+            this.lblApellidoMaterno.Location = new System.Drawing.Point(53, 188);
             this.lblApellidoMaterno.Name = "lblApellidoMaterno";
             this.lblApellidoMaterno.Size = new System.Drawing.Size(146, 21);
             this.lblApellidoMaterno.TabIndex = 30;
@@ -182,7 +192,7 @@ namespace UI
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(118, 100);
+            this.lblNombre.Location = new System.Drawing.Point(126, 60);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(73, 21);
             this.lblNombre.TabIndex = 28;
@@ -192,7 +202,7 @@ namespace UI
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(49, 163);
+            this.lblApellido.Location = new System.Drawing.Point(57, 123);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(142, 21);
             this.lblApellido.TabIndex = 29;
@@ -207,7 +217,7 @@ namespace UI
             this.txtRFC.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRFC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.DimGray;
-            this.txtRFC.Location = new System.Drawing.Point(197, 393);
+            this.txtRFC.Location = new System.Drawing.Point(205, 353);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(308, 33);
             this.txtRFC.TabIndex = 40;
@@ -216,7 +226,7 @@ namespace UI
             // 
             this.lblRFC.AutoSize = true;
             this.lblRFC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRFC.Location = new System.Drawing.Point(148, 400);
+            this.lblRFC.Location = new System.Drawing.Point(156, 360);
             this.lblRFC.Name = "lblRFC";
             this.lblRFC.Size = new System.Drawing.Size(41, 21);
             this.lblRFC.TabIndex = 39;
@@ -226,7 +236,7 @@ namespace UI
             // 
             this.lblAreaTrabajo.AutoSize = true;
             this.lblAreaTrabajo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAreaTrabajo.Location = new System.Drawing.Point(77, 453);
+            this.lblAreaTrabajo.Location = new System.Drawing.Point(85, 413);
             this.lblAreaTrabajo.Name = "lblAreaTrabajo";
             this.lblAreaTrabajo.Size = new System.Drawing.Size(111, 21);
             this.lblAreaTrabajo.TabIndex = 41;
@@ -239,30 +249,30 @@ namespace UI
             this.cmbAreaTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAreaTrabajo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAreaTrabajo.FormattingEnabled = true;
-            this.cmbAreaTrabajo.Location = new System.Drawing.Point(197, 447);
+            this.cmbAreaTrabajo.Location = new System.Drawing.Point(205, 407);
             this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
             this.cmbAreaTrabajo.Size = new System.Drawing.Size(278, 29);
             this.cmbAreaTrabajo.TabIndex = 42;
             // 
-            // pictureBox3
+            // btnSeleccionarImagen
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::UI.Properties.Resources.elipsis;
-            this.pictureBox3.Location = new System.Drawing.Point(834, 241);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 123;
-            this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, "Seleccionar imagen de perfil");
+            this.btnSeleccionarImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSeleccionarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionarImagen.Image = global::UI.Properties.Resources.elipsis;
+            this.btnSeleccionarImagen.Location = new System.Drawing.Point(805, 169);
+            this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(32, 32);
+            this.btnSeleccionarImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSeleccionarImagen.TabIndex = 123;
+            this.btnSeleccionarImagen.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnSeleccionarImagen, "Seleccionar imagen de perfil");
             // 
             // btnPuestoTrabajo
             // 
             this.btnPuestoTrabajo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPuestoTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPuestoTrabajo.Image = global::UI.Properties.Resources.boton_agregar;
-            this.btnPuestoTrabajo.Location = new System.Drawing.Point(481, 491);
+            this.btnPuestoTrabajo.Location = new System.Drawing.Point(489, 451);
             this.btnPuestoTrabajo.Name = "btnPuestoTrabajo";
             this.btnPuestoTrabajo.Size = new System.Drawing.Size(32, 32);
             this.btnPuestoTrabajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,7 +286,7 @@ namespace UI
             this.btnAgregarAreaTrabajo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarAreaTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarAreaTrabajo.Image = global::UI.Properties.Resources.boton_agregar;
-            this.btnAgregarAreaTrabajo.Location = new System.Drawing.Point(481, 444);
+            this.btnAgregarAreaTrabajo.Location = new System.Drawing.Point(489, 404);
             this.btnAgregarAreaTrabajo.Name = "btnAgregarAreaTrabajo";
             this.btnAgregarAreaTrabajo.Size = new System.Drawing.Size(32, 32);
             this.btnAgregarAreaTrabajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,7 +302,7 @@ namespace UI
             this.cmbPuestoTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPuestoTrabajo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPuestoTrabajo.FormattingEnabled = true;
-            this.cmbPuestoTrabajo.Location = new System.Drawing.Point(197, 494);
+            this.cmbPuestoTrabajo.Location = new System.Drawing.Point(205, 454);
             this.cmbPuestoTrabajo.Name = "cmbPuestoTrabajo";
             this.cmbPuestoTrabajo.Size = new System.Drawing.Size(278, 29);
             this.cmbPuestoTrabajo.TabIndex = 119;
@@ -301,7 +311,7 @@ namespace UI
             // 
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.Location = new System.Drawing.Point(122, 500);
+            this.lblPuesto.Location = new System.Drawing.Point(130, 460);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(62, 21);
             this.lblPuesto.TabIndex = 118;
@@ -344,7 +354,7 @@ namespace UI
             this.grbDireccion.Controls.Add(this.txtCalle);
             this.grbDireccion.Controls.Add(this.lblCalle);
             this.grbDireccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDireccion.Location = new System.Drawing.Point(547, 281);
+            this.grbDireccion.Location = new System.Drawing.Point(547, 217);
             this.grbDireccion.Name = "grbDireccion";
             this.grbDireccion.Size = new System.Drawing.Size(373, 279);
             this.grbDireccion.TabIndex = 124;
@@ -484,7 +494,7 @@ namespace UI
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(945, 36);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(17, 597);
             this.panel3.TabIndex = 126;
@@ -494,7 +504,7 @@ namespace UI
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 36);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(17, 597);
             this.panel2.TabIndex = 125;
@@ -510,22 +520,23 @@ namespace UI
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(398, 579);
+            this.btnRegistrar.Location = new System.Drawing.Point(564, 579);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(175, 42);
             this.btnRegistrar.TabIndex = 127;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // pictureBox2
+            // pcbImagenPerfil
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox2.Location = new System.Drawing.Point(628, 75);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.TabIndex = 122;
-            this.pictureBox2.TabStop = false;
+            this.pcbImagenPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcbImagenPerfil.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbImagenPerfil.Location = new System.Drawing.Point(654, 55);
+            this.pcbImagenPerfil.Name = "pcbImagenPerfil";
+            this.pcbImagenPerfil.Size = new System.Drawing.Size(145, 146);
+            this.pcbImagenPerfil.TabIndex = 122;
+            this.pcbImagenPerfil.TabStop = false;
             // 
             // btnGuardarCambios
             // 
@@ -544,6 +555,96 @@ namespace UI
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Visible = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // grbUsuario
+            // 
+            this.grbUsuario.Controls.Add(this.txtConfirmarContrasena);
+            this.grbUsuario.Controls.Add(this.lblConfirmarContrasena);
+            this.grbUsuario.Controls.Add(this.txtContrasena);
+            this.grbUsuario.Controls.Add(this.label1);
+            this.grbUsuario.Controls.Add(this.txtRegistrarUsuario);
+            this.grbUsuario.Controls.Add(this.lblUsuario);
+            this.grbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbUsuario.Location = new System.Drawing.Point(89, 494);
+            this.grbUsuario.Name = "grbUsuario";
+            this.grbUsuario.Size = new System.Drawing.Size(438, 127);
+            this.grbUsuario.TabIndex = 129;
+            this.grbUsuario.TabStop = false;
+            this.grbUsuario.Text = "Usuario";
+            // 
+            // txtConfirmarContrasena
+            // 
+            this.txtConfirmarContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.txtConfirmarContrasena.Br = System.Drawing.Color.White;
+            this.txtConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarContrasena.ForeColor = System.Drawing.Color.DimGray;
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(186, 95);
+            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(228, 27);
+            this.txtConfirmarContrasena.TabIndex = 47;
+            // 
+            // lblConfirmarContrasena
+            // 
+            this.lblConfirmarContrasena.AutoSize = true;
+            this.lblConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(5, 100);
+            this.lblConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(177, 19);
+            this.lblConfirmarContrasena.TabIndex = 46;
+            this.lblConfirmarContrasena.Text = "Confirmar contraseña";
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.txtContrasena.Br = System.Drawing.Color.White;
+            this.txtContrasena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContrasena.Location = new System.Drawing.Point(184, 59);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(229, 27);
+            this.txtContrasena.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(82, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 19);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Contraseña";
+            // 
+            // txtRegistrarUsuario
+            // 
+            this.txtRegistrarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.txtRegistrarUsuario.Br = System.Drawing.Color.White;
+            this.txtRegistrarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegistrarUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtRegistrarUsuario.Location = new System.Drawing.Point(184, 21);
+            this.txtRegistrarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRegistrarUsuario.Name = "txtRegistrarUsuario";
+            this.txtRegistrarUsuario.Size = new System.Drawing.Size(230, 27);
+            this.txtRegistrarUsuario.TabIndex = 43;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(111, 29);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(65, 19);
+            this.lblUsuario.TabIndex = 42;
+            this.lblUsuario.Text = "Usuario";
             // 
             // frmEmpleado
             // 
@@ -551,13 +652,14 @@ namespace UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(962, 633);
+            this.Controls.Add(this.grbUsuario);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.grbDireccion);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnSeleccionarImagen);
+            this.Controls.Add(this.pcbImagenPerfil);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.btnPuestoTrabajo);
             this.Controls.Add(this.cmbPuestoTrabajo);
@@ -579,14 +681,17 @@ namespace UI
             this.Controls.Add(this.lblApellido);
             this.Name = "frmEmpleado";
             this.Text = "frmEmpleado";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSeleccionarImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPuestoTrabajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAreaTrabajo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             this.grbDireccion.ResumeLayout(false);
             this.grbDireccion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagenPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.grbUsuario.ResumeLayout(false);
+            this.grbUsuario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,8 +720,8 @@ namespace UI
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pcbImagenPerfil;
+        private System.Windows.Forms.PictureBox btnSeleccionarImagen;
         private System.Windows.Forms.GroupBox grbDireccion;
         private AltoControls.AltoTextBox txtNumero;
         private AltoControls.AltoTextBox txtColonia;
@@ -634,5 +739,13 @@ namespace UI
         private AltoControls.AltoTextBox txtCP;
         private System.Windows.Forms.Label lblCP;
         private System.Windows.Forms.Button btnGuardarCambios;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox grbUsuario;
+        private AltoControls.AltoTextBox txtConfirmarContrasena;
+        private System.Windows.Forms.Label lblConfirmarContrasena;
+        private AltoControls.AltoTextBox txtContrasena;
+        private System.Windows.Forms.Label label1;
+        private AltoControls.AltoTextBox txtRegistrarUsuario;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

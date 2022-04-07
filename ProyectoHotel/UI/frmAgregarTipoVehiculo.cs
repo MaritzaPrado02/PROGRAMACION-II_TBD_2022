@@ -75,7 +75,7 @@ namespace UI
             double costo;
             if (!double.TryParse(txtCosto.Text, out costo))
             {
-                errorProvider1.SetError(txtCosto, "Debe ingresar solo números en el campo de sueldo.");
+                errorProvider1.SetError(txtCosto, "Debe ingresar solo números en el campo de costo.");
                 txtCosto.Focus();
                 return;
             }

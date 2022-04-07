@@ -22,5 +22,17 @@ namespace UI
             frmAgregarCategoriaHabitacion agregarCategoria = new frmAgregarCategoriaHabitacion();
             agregarCategoria.Show();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            /*ESTATUS
+            CLAVE
+            CUPO
+            CATEGORÍA*/
+
+            #region Validaciones
+
+            #endregion
+        }
     }
 }

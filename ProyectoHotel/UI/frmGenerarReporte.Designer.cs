@@ -29,6 +29,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,8 +48,10 @@ namespace UI
             this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.lblGeneroReporte = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContenidoReporte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -231,6 +234,7 @@ namespace UI
             this.btnGenerarReporte.TabIndex = 61;
             this.btnGenerarReporte.Text = "Generar reporte";
             this.btnGenerarReporte.UseVisualStyleBackColor = false;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // cmbEmpleado
             // 
@@ -258,6 +262,10 @@ namespace UI
             this.lblGeneroReporte.Size = new System.Drawing.Size(135, 21);
             this.lblGeneroReporte.TabIndex = 62;
             this.lblGeneroReporte.Text = "Generó reporte:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmGenerarReporte
             // 
@@ -287,6 +295,7 @@ namespace UI
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContenidoReporte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +321,6 @@ namespace UI
         private System.Windows.Forms.Button btnGenerarReporte;
         private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Windows.Forms.Label lblGeneroReporte;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

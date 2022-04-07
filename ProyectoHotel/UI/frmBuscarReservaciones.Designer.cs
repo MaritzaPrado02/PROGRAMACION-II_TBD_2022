@@ -29,9 +29,13 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.lblFechaFin = new System.Windows.Forms.Label();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -48,14 +52,13 @@ namespace UI
             this.clmEstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.lblFechaFin = new System.Windows.Forms.Label();
-            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaInicio = new System.Windows.Forms.Label();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosReservaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -87,16 +90,51 @@ namespace UI
             this.panel1.Size = new System.Drawing.Size(962, 123);
             this.panel1.TabIndex = 27;
             // 
-            // btnBuscar
+            // lblFechaFin
             // 
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
-            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.TabStop = false;
+            this.lblFechaFin.AutoSize = true;
+            this.lblFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFin.ForeColor = System.Drawing.Color.White;
+            this.lblFechaFin.Location = new System.Drawing.Point(499, 22);
+            this.lblFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaFin.Name = "lblFechaFin";
+            this.lblFechaFin.Size = new System.Drawing.Size(108, 19);
+            this.lblFechaFin.TabIndex = 15;
+            this.lblFechaFin.Text = "Fecha inicio:";
+            this.lblFechaFin.Visible = false;
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaFin.Location = new System.Drawing.Point(497, 80);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(118, 27);
+            this.dtpFechaFin.TabIndex = 14;
+            this.dtpFechaFin.Visible = false;
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicio.ForeColor = System.Drawing.Color.White;
+            this.lblFechaInicio.Location = new System.Drawing.Point(350, 22);
+            this.lblFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(108, 19);
+            this.lblFechaInicio.TabIndex = 13;
+            this.lblFechaInicio.Text = "Fecha inicio:";
+            this.lblFechaInicio.Visible = false;
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(348, 80);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(118, 27);
+            this.dtpFechaInicio.TabIndex = 12;
+            this.dtpFechaInicio.Visible = false;
             // 
             // cmbFiltro
             // 
@@ -255,51 +293,21 @@ namespace UI
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // lblFechaFin
+            // btnBuscar
             // 
-            this.lblFechaFin.AutoSize = true;
-            this.lblFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFin.ForeColor = System.Drawing.Color.White;
-            this.lblFechaFin.Location = new System.Drawing.Point(499, 22);
-            this.lblFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaFin.Name = "lblFechaFin";
-            this.lblFechaFin.Size = new System.Drawing.Size(108, 19);
-            this.lblFechaFin.TabIndex = 15;
-            this.lblFechaFin.Text = "Fecha inicio:";
-            this.lblFechaFin.Visible = false;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Image = global::UI.Properties.Resources.lupa1;
+            this.btnBuscar.Location = new System.Drawing.Point(746, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(45, 45);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dtpFechaFin
+            // errorProvider1
             // 
-            this.dtpFechaFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFin.Location = new System.Drawing.Point(497, 80);
-            this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(118, 27);
-            this.dtpFechaFin.TabIndex = 14;
-            this.dtpFechaFin.Visible = false;
-            // 
-            // lblFechaInicio
-            // 
-            this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.ForeColor = System.Drawing.Color.White;
-            this.lblFechaInicio.Location = new System.Drawing.Point(350, 22);
-            this.lblFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(108, 19);
-            this.lblFechaInicio.TabIndex = 13;
-            this.lblFechaInicio.Text = "Fecha inicio:";
-            this.lblFechaInicio.Visible = false;
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(348, 80);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(118, 27);
-            this.dtpFechaInicio.TabIndex = 12;
-            this.dtpFechaInicio.Visible = false;
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmBuscarReservaciones
             // 
@@ -318,10 +326,11 @@ namespace UI
             this.Text = "frmBuscarReservaciones";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosReservaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,5 +360,6 @@ namespace UI
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

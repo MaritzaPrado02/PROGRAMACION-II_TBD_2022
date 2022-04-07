@@ -122,6 +122,7 @@ namespace UI
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnBuscar, "Buscar habitacion");
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cmbFiltro
             // 
@@ -129,7 +130,6 @@ namespace UI
             this.cmbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltro.FormattingEnabled = true;
             this.cmbFiltro.Items.AddRange(new object[] {
-            "FECHA",
             "ESTATUS",
             "CLAVE",
             "CUPO",

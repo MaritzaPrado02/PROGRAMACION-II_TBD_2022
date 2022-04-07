@@ -49,3 +49,5 @@ D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmBuscarFactura.resources
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\BUSINESS.dll
 D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\bin\Debug\BUSINESS.pdb
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmCheckIn.resources
+D:\Escritorio\Repositorios GitHub\PROGRAMACION-II_TBD_2022\ProyectoHotel\UI\obj\Debug\UI.frmCheckOut.resources

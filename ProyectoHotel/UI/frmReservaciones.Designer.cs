@@ -49,39 +49,45 @@ namespace UI
             this.lblApellidoMaterno = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaSalida = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaReservacion = new System.Windows.Forms.DateTimePicker();
             this.lblFechaSalida = new System.Windows.Forms.Label();
             this.lblFechaIngreso = new System.Windows.Forms.Label();
             this.lblFechaReservacion = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCheckOut = new System.Windows.Forms.PictureBox();
+            this.btnCheckIn = new System.Windows.Forms.PictureBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.lblAplicaPromocion = new System.Windows.Forms.Label();
             this.ckbSiAplica = new System.Windows.Forms.CheckBox();
             this.lblPromocion = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbPromocion = new System.Windows.Forms.ComboBox();
             this.rdbNoEstacionamiento = new System.Windows.Forms.RadioButton();
             this.rdbSiEstacionamiento = new System.Windows.Forms.RadioButton();
             this.lblAplicaEstacionamiento = new System.Windows.Forms.Label();
             this.btnAgregarEstacionamiento = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEstacionamiento = new System.Windows.Forms.DataGridView();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbEstacionamiento = new System.Windows.Forms.ComboBox();
             this.lblEspacioEstacionamiento = new System.Windows.Forms.Label();
             this.cmbHabitacion = new System.Windows.Forms.ComboBox();
             this.lblHabitacion = new System.Windows.Forms.Label();
             this.btnAgregarHabitacion = new System.Windows.Forms.Button();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.lblEmpleado = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.grbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstacionamiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -122,6 +128,7 @@ namespace UI
             this.btnReservar.TabIndex = 59;
             this.btnReservar.Text = "Reservar";
             this.btnReservar.UseVisualStyleBackColor = false;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
             // dgvHabitaciones
             // 
@@ -174,9 +181,9 @@ namespace UI
             this.grbCliente.Controls.Add(this.lblNombre);
             this.grbCliente.Controls.Add(this.lblApellido);
             this.grbCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCliente.Location = new System.Drawing.Point(47, 288);
+            this.grbCliente.Location = new System.Drawing.Point(52, 315);
             this.grbCliente.Name = "grbCliente";
-            this.grbCliente.Size = new System.Drawing.Size(415, 285);
+            this.grbCliente.Size = new System.Drawing.Size(415, 259);
             this.grbCliente.TabIndex = 56;
             this.grbCliente.TabStop = false;
             this.grbCliente.Text = "Cliente";
@@ -313,38 +320,38 @@ namespace UI
             this.lblApellido.TabIndex = 12;
             this.lblApellido.Text = "Apellido paterno";
             // 
-            // dateTimePicker3
+            // dtpFechaSalida
             // 
-            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpFechaSalida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(243, 174);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(211, 27);
-            this.dateTimePicker3.TabIndex = 55;
+            this.dtpFechaSalida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpFechaSalida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaSalida.Location = new System.Drawing.Point(243, 174);
+            this.dtpFechaSalida.Name = "dtpFechaSalida";
+            this.dtpFechaSalida.Size = new System.Drawing.Size(211, 27);
+            this.dtpFechaSalida.TabIndex = 55;
             // 
-            // dateTimePicker2
+            // dtpFechaIngreso
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpFechaIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(243, 130);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(211, 27);
-            this.dateTimePicker2.TabIndex = 54;
+            this.dtpFechaIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpFechaIngreso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(243, 130);
+            this.dtpFechaIngreso.Name = "dtpFechaIngreso";
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(211, 27);
+            this.dtpFechaIngreso.TabIndex = 54;
             // 
-            // dateTimePicker1
+            // dtpFechaReservacion
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpFechaReservacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(243, 89);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(211, 27);
-            this.dateTimePicker1.TabIndex = 53;
+            this.dtpFechaReservacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpFechaReservacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaReservacion.Location = new System.Drawing.Point(243, 89);
+            this.dtpFechaReservacion.Name = "dtpFechaReservacion";
+            this.dtpFechaReservacion.Size = new System.Drawing.Size(211, 27);
+            this.dtpFechaReservacion.TabIndex = 53;
             // 
             // lblFechaSalida
             // 
@@ -375,6 +382,34 @@ namespace UI
             this.lblFechaReservacion.Size = new System.Drawing.Size(152, 19);
             this.lblFechaReservacion.TabIndex = 50;
             this.lblFechaReservacion.Text = "Fecha reservación";
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheckOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckOut.Image = global::UI.Properties.Resources.check_out;
+            this.btnCheckOut.Location = new System.Drawing.Point(886, 576);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(53, 50);
+            this.btnCheckOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCheckOut.TabIndex = 148;
+            this.btnCheckOut.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCheckOut, "Check-out");
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
+            // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheckIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckIn.Image = global::UI.Properties.Resources.check_in;
+            this.btnCheckIn.Location = new System.Drawing.Point(820, 576);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(53, 50);
+            this.btnCheckIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCheckIn.TabIndex = 147;
+            this.btnCheckIn.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCheckIn, "Check-in");
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // pnlLeft
             // 
@@ -409,6 +444,7 @@ namespace UI
             this.btnGuardarCambios.TabIndex = 67;
             this.btnGuardarCambios.Text = "Guardar cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // lblAplicaPromocion
             // 
@@ -441,18 +477,18 @@ namespace UI
             this.lblPromocion.Text = "Promoción";
             this.lblPromocion.Visible = false;
             // 
-            // comboBox1
+            // cmbPromocion
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbPromocion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(243, 258);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 29);
-            this.comboBox1.TabIndex = 72;
-            this.comboBox1.Visible = false;
+            this.cmbPromocion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPromocion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPromocion.FormattingEnabled = true;
+            this.cmbPromocion.Location = new System.Drawing.Point(243, 258);
+            this.cmbPromocion.Name = "cmbPromocion";
+            this.cmbPromocion.Size = new System.Drawing.Size(171, 29);
+            this.cmbPromocion.TabIndex = 72;
+            this.cmbPromocion.Visible = false;
             // 
             // rdbNoEstacionamiento
             // 
@@ -466,6 +502,7 @@ namespace UI
             this.rdbNoEstacionamiento.TabStop = true;
             this.rdbNoEstacionamiento.Text = "NO";
             this.rdbNoEstacionamiento.UseVisualStyleBackColor = true;
+            this.rdbNoEstacionamiento.Enter += new System.EventHandler(this.rdbNoEstacionamiento_Enter);
             // 
             // rdbSiEstacionamiento
             // 
@@ -479,6 +516,7 @@ namespace UI
             this.rdbSiEstacionamiento.TabStop = true;
             this.rdbSiEstacionamiento.Text = "SI";
             this.rdbSiEstacionamiento.UseVisualStyleBackColor = true;
+            this.rdbSiEstacionamiento.Enter += new System.EventHandler(this.rdbSiEstacionamiento_Enter);
             // 
             // lblAplicaEstacionamiento
             // 
@@ -508,19 +546,22 @@ namespace UI
             this.btnAgregarEstacionamiento.TabIndex = 138;
             this.btnAgregarEstacionamiento.Text = "Agregar";
             this.btnAgregarEstacionamiento.UseVisualStyleBackColor = false;
+            this.btnAgregarEstacionamiento.Visible = false;
+            this.btnAgregarEstacionamiento.Click += new System.EventHandler(this.btnAgregarEstacionamiento_Click);
             // 
-            // dataGridView1
+            // dgvEstacionamiento
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEstacionamiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEstacionamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstacionamiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
             this.clmTipoVehiculo});
-            this.dataGridView1.Location = new System.Drawing.Point(521, 429);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(352, 138);
-            this.dataGridView1.TabIndex = 137;
+            this.dgvEstacionamiento.Location = new System.Drawing.Point(521, 429);
+            this.dgvEstacionamiento.Name = "dgvEstacionamiento";
+            this.dgvEstacionamiento.RowHeadersWidth = 51;
+            this.dgvEstacionamiento.Size = new System.Drawing.Size(352, 138);
+            this.dgvEstacionamiento.TabIndex = 137;
+            this.dgvEstacionamiento.Visible = false;
             // 
             // clmID
             // 
@@ -536,23 +577,24 @@ namespace UI
             this.clmTipoVehiculo.Name = "clmTipoVehiculo";
             this.clmTipoVehiculo.Width = 125;
             // 
-            // comboBox4
+            // cmbEstacionamiento
             // 
-            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmbEstacionamiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbEstacionamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstacionamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstacionamiento.FormattingEnabled = true;
+            this.cmbEstacionamiento.Items.AddRange(new object[] {
             "TRANSFERENCIA BANCARIA",
             "PAGO EN EFECTIVO ",
             "PAYPAL",
             "TARJETA DE CREDITO",
             "TARJETA DEBITO "});
-            this.comboBox4.Location = new System.Drawing.Point(741, 336);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(133, 29);
-            this.comboBox4.TabIndex = 136;
+            this.cmbEstacionamiento.Location = new System.Drawing.Point(741, 336);
+            this.cmbEstacionamiento.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEstacionamiento.Name = "cmbEstacionamiento";
+            this.cmbEstacionamiento.Size = new System.Drawing.Size(133, 29);
+            this.cmbEstacionamiento.TabIndex = 136;
+            this.cmbEstacionamiento.Visible = false;
             // 
             // lblEspacioEstacionamiento
             // 
@@ -565,6 +607,7 @@ namespace UI
             this.lblEspacioEstacionamiento.Size = new System.Drawing.Size(146, 21);
             this.lblEspacioEstacionamiento.TabIndex = 135;
             this.lblEspacioEstacionamiento.Text = "Estacionamiento:";
+            this.lblEspacioEstacionamiento.Visible = false;
             // 
             // cmbHabitacion
             // 
@@ -604,6 +647,7 @@ namespace UI
             this.btnAgregarHabitacion.TabIndex = 144;
             this.btnAgregarHabitacion.Text = "Agregar";
             this.btnAgregarHabitacion.UseVisualStyleBackColor = false;
+            this.btnAgregarHabitacion.Click += new System.EventHandler(this.btnAgregarHabitacion_Click);
             // 
             // cmbEmpleado
             // 
@@ -626,12 +670,18 @@ namespace UI
             this.lblEmpleado.TabIndex = 145;
             this.lblEmpleado.Text = "Empleado";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmReservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(962, 633);
+            this.Controls.Add(this.btnCheckOut);
+            this.Controls.Add(this.btnCheckIn);
             this.Controls.Add(this.cmbEmpleado);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.btnAgregarHabitacion);
@@ -641,10 +691,10 @@ namespace UI
             this.Controls.Add(this.rdbSiEstacionamiento);
             this.Controls.Add(this.lblAplicaEstacionamiento);
             this.Controls.Add(this.btnAgregarEstacionamiento);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.dgvEstacionamiento);
+            this.Controls.Add(this.cmbEstacionamiento);
             this.Controls.Add(this.lblEspacioEstacionamiento);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbPromocion);
             this.Controls.Add(this.lblPromocion);
             this.Controls.Add(this.ckbSiAplica);
             this.Controls.Add(this.lblAplicaPromocion);
@@ -654,9 +704,9 @@ namespace UI
             this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.dgvHabitaciones);
             this.Controls.Add(this.grbCliente);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFechaSalida);
+            this.Controls.Add(this.dtpFechaIngreso);
+            this.Controls.Add(this.dtpFechaReservacion);
             this.Controls.Add(this.lblFechaSalida);
             this.Controls.Add(this.lblFechaIngreso);
             this.Controls.Add(this.lblFechaReservacion);
@@ -670,7 +720,10 @@ namespace UI
             this.grbCliente.ResumeLayout(false);
             this.grbCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstacionamiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -697,9 +750,9 @@ namespace UI
         private System.Windows.Forms.Label lblApellidoMaterno;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaSalida;
+        private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
+        private System.Windows.Forms.DateTimePicker dtpFechaReservacion;
         private System.Windows.Forms.Label lblFechaSalida;
         private System.Windows.Forms.Label lblFechaIngreso;
         private System.Windows.Forms.Label lblFechaReservacion;
@@ -710,13 +763,13 @@ namespace UI
         private System.Windows.Forms.Label lblAplicaPromocion;
         private System.Windows.Forms.CheckBox ckbSiAplica;
         private System.Windows.Forms.Label lblPromocion;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbPromocion;
         private System.Windows.Forms.RadioButton rdbNoEstacionamiento;
         private System.Windows.Forms.RadioButton rdbSiEstacionamiento;
         private System.Windows.Forms.Label lblAplicaEstacionamiento;
         private System.Windows.Forms.Button btnAgregarEstacionamiento;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.DataGridView dgvEstacionamiento;
+        private System.Windows.Forms.ComboBox cmbEstacionamiento;
         private System.Windows.Forms.Label lblEspacioEstacionamiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTipoVehiculo;
@@ -725,5 +778,8 @@ namespace UI
         private System.Windows.Forms.Button btnAgregarHabitacion;
         private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.PictureBox btnCheckIn;
+        private System.Windows.Forms.PictureBox btnCheckOut;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

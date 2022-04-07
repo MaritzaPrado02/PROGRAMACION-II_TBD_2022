@@ -67,9 +67,11 @@ namespace UI
             this.clmCostoEstacionamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDetalleHabitaciones = new System.Windows.Forms.Label();
             this.lblDetalleEstacionamiento = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesReservacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesEstacionamiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -315,6 +317,7 @@ namespace UI
             this.btnFacturar.TabIndex = 128;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = false;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // rdbSiEnvio
             // 
@@ -446,6 +449,10 @@ namespace UI
             this.lblDetalleEstacionamiento.TabIndex = 139;
             this.lblDetalleEstacionamiento.Text = "Detalle Estacionamiento";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,6 +494,7 @@ namespace UI
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesReservacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesEstacionamiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,5 +539,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCostoEstacionamiento;
         private System.Windows.Forms.Label lblDetalleHabitaciones;
         private System.Windows.Forms.Label lblDetalleEstacionamiento;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -29,6 +29,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -45,10 +46,12 @@ namespace UI
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.dgvBuscarReporte = new System.Windows.Forms.DataGridView();
             this.btnVer = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarReporte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -209,6 +212,7 @@ namespace UI
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // pnlTitulo
             // 
@@ -250,6 +254,10 @@ namespace UI
             this.btnVer.Text = "Ver";
             this.btnVer.UseVisualStyleBackColor = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmBuscarReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,6 +278,7 @@ namespace UI
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarReporte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,5 +301,6 @@ namespace UI
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
